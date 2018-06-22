@@ -1,6 +1,6 @@
 package com.bankcomm.framework.network.interceptor;
 
-import com.bankcomm.framework.network.NetWorkUtil;
+import com.bankcomm.framework.network.NetworkUtils;
 import com.bankcomm.ui.base.BaseApplication;
 
 import java.io.IOException;
@@ -18,12 +18,12 @@ public class CacheControlInterceptor implements Interceptor {
     @Override
     public Response intercept(Chain chain) throws IOException {
         Request request = chain.request();
-        if (!NetWorkUtil.isNetworkConnected(BaseApplication.mGlobalApp)) {
+        if (!NetworkUtils.isAvailable(BaseApplication.mGlobalApp)) {
             request = request.newBuilder().cacheControl(CacheControl.FORCE_CACHE).build();
         }
 
         Response originalResponse = chain.proceed(request);
-        if (NetWorkUtil.isNetworkConnected(BaseApplication.mGlobalApp)) {
+        if (NetworkUtils.isAvailable(BaseApplication.mGlobalApp)) {
             // 有网络时 设置缓存为默认值
             String cacheControl = request.cacheControl().toString();
             return originalResponse.newBuilder()
