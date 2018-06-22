@@ -1,0 +1,56 @@
+subprojects {
+// Checkstyle
+    apply plugin: 'checkstyle'
+    checkstyle {
+        //ignoreFailures = true
+        configFile = rootProject.file('codequality/checkstyle_simple.xml')
+    }
+
+    // FindBugs
+    apply plugin: 'findbugs'
+    findbugs {
+        ignoreFailures = true
+    }
+
+// PMD
+    apply plugin: 'pmd'
+//tasks.withType(Pmd) { reports.html.enabled true }
+
+//    apply plugin: 'cobertura'
+//    cobertura {
+//        sourceDirs = sourceSets.main.java.srcDirs
+//        format = 'html'
+//        includes = ['**/*.java', '**/*.groovy']
+//        excludes = []
+//    }
+}
+/*checkstyle{
+    toolVersion '7.2'
+    showViolations false
+}*/
+//task checkstyle(type:Checkstyle){
+//    def config  = rootProject.file('codequality/checkstyle_simple.xml')
+//    if (config.exists()) {
+//        ignoreFailures = true
+//        configFile = config
+//        classpath = files()
+//        source = android.sourceSets.main.java.srcDirs
+//        include '**/*.java'
+//        if (project.srcCheckExcludes!=null) {
+//            exclude project.srcCheckExcludes
+//        }
+//        reports.xml.enabled = false
+//        reports.html.enabled = true
+//
+//
+//    }
+//}
+
+//check.dependsOn 'checkstyle'
+//task reportCheckstyle(type: Copy){
+//    if (project.reportDir !=null) {
+//        dependsOn 'checkstyle'
+//        from("${project.buildDir}/reports/checkstyle/checkstyle.html")
+//        into (file(project.reportDir))
+//    }
+//}

@@ -1,0 +1,25 @@
+task checkstyle(type:Checkstyle){
+     def config  = rootProject.file('codequality/checkstyle.xml')
+     if (config.exists()) {
+         ignoreFailures = true
+         configFile = config
+         classpath = files()
+         source = android.sourceSets.main.java.srcDirs
+         include '**/*.java'
+         if (project.srcCheckExcludes!=null) {
+             exclude project.srcCheckExcludes
+         }
+         reports.xml.enabled = false
+         reports.html.enabled = true
+
+
+     }
+ }
+check.dependsOn 'checkstyle'
+task reportCheckstyle(type: Copy){
+            if (project.reportDir !=null) {
+                dependsOn 'checkstyle'
+                from("${project.buildDir}/reports/checkstyle/checkstyle.html")
+                into (file(project.reportDir))
+            }
+        }

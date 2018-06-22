@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+
+android {
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        multiDexEnabled true
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            buildConfigField "boolean", "ENABLE_LOG", "false"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            minifyEnabled false
+            buildConfigField "boolean", "ENABLE_LOG", "true"
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = false
+    }
+
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile "com.android.support:support-v4:$rootProject.ext.supportLibraryVersion"
+    compile "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
+    compile "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion"
+//    compile "com.squareup.retrofit2:adapter-rxjava:2.1.0"
+//    compile 'io.reactivex.rxjava2:rxjava:1.2.1'
+//    compile ("io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVersion"){
+//            exclude module: "rxjava"
+//    }
+    compile 'com.android.support:multidex:1.0.0'
+//    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile "com.squareup.okhttp3:logging-interceptor:$rootProject.loggingInterceptor"
+//    compile "com.squareup.sqlbrite:sqlbrite:$rootProject.sqlbriteVersion"
+}

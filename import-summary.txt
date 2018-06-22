@@ -1,0 +1,383 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .idea\
+* .idea\misc.xml
+* .idea\workspace.xml
+* Login_js.iml
+* app\
+* app\build.gradle
+* app\libs\
+* app\libs\DeviceControl.jar
+* app\libs\HS_CVR100U.jar
+* app\libs\SystemProperties.jar
+* app\libs\ant.jar
+* app\libs\device1.2.jar
+* app\libs\sdtapi.jar
+* app\src\
+* app\src\main\
+* app\src\main\AndroidManifest.xml
+* app\src\main\java\
+* app\src\main\java\com\
+* app\src\main\java\com\speedata\
+* app\src\main\java\com\speedata\libid2\
+* app\src\main\java\com\speedata\libid2\Config.java
+* app\src\main\java\com\speedata\libid2\DeviceType.java
+* app\src\main\java\com\speedata\libid2\FileUtils.java
+* app\src\main\java\com\speedata\libid2\HuaXuID.java
+* app\src\main\java\com\speedata\libid2\IDFileUtils.java
+* app\src\main\java\com\speedata\libid2\IDInfor.java
+* app\src\main\java\com\speedata\libid2\IDManager.java
+* app\src\main\java\com\speedata\libid2\IDReadCallBack.java
+* app\src\main\java\com\speedata\libid2\IID2Service.java
+* app\src\main\java\com\speedata\libid2\Nation.java
+* app\src\main\java\com\speedata\libid2\ParseIDInfor.java
+* app\src\main\java\com\speedata\libid2\jni\
+* app\src\main\java\com\speedata\libid2\jni\JniCall.java
+* app\src\main\java\com\speedata\libid2\utils\
+* app\src\main\java\com\speedata\libid2\utils\DataConversionUtils.java
+* app\src\main\java\com\speedata\libid2\utils\MyLogger.java
+* app\src\main\java\techown\
+* app\src\main\java\techown\login\
+* app\src\main\java\techown\login\BootCompletedReceiver.java
+* app\src\main\java\techown\login\CheckReturnActivity.java
+* app\src\main\java\techown\login\CurrentLoginInfo.java
+* app\src\main\java\techown\login\DownloadApksThread.java
+* app\src\main\java\techown\login\DownloadFileActivity.java
+* app\src\main\java\techown\login\DownloadFileThread.java
+* app\src\main\java\techown\login\EMailKeyBoard.java
+* app\src\main\java\techown\login\ExampleAppWidgetProvider.java
+* app\src\main\java\techown\login\FaceLoginActivity.java
+* app\src\main\java\techown\login\FaceLoginDialog.java
+* app\src\main\java\techown\login\HandleLogoutCollection.java
+* app\src\main\java\techown\login\LoginActivity.java
+* app\src\main\java\techown\login\LoginContent.java
+* app\src\main\java\techown\login\LoginDialog.java
+* app\src\main\java\techown\login\LoginThread.java
+* app\src\main\java\techown\login\MainActivity.java
+* app\src\main\java\techown\login\PublicNoticeAcitivty.java
+* app\src\main\java\techown\login\ShortcutMgr.java
+* app\src\main\java\techown\login\ShutDownActivity.java
+* app\src\main\java\techown\login\ShutDownReceiver.java
+* app\src\main\java\techown\login\activity\
+* app\src\main\java\techown\login\activity\abs\
+* app\src\main\java\techown\login\activity\abs\AbsLiveActivity.java
+* app\src\main\java\techown\login\activity\abs\BaseActivity.java
+* app\src\main\java\techown\login\activity\face\
+* app\src\main\java\techown\login\activity\face\FaceShowActivity.java
+* app\src\main\java\techown\login\activity\face\LoginShowActivity.java
+* app\src\main\java\techown\login\db\
+* app\src\main\java\techown\login\db\DBUtils.java
+* app\src\main\java\techown\login\db\MyDatabaseHelper.java
+* app\src\main\java\techown\login\face_regActivity.java
+* app\src\main\java\techown\login\https\
+* app\src\main\java\techown\login\https\Coder.java
+* app\src\main\java\techown\login\https\Compress.java
+* app\src\main\java\techown\login\https\DESUtil.java
+* app\src\main\java\techown\login\https\Des.java
+* app\src\main\java\techown\login\https\MD5Util.java
+* app\src\main\java\techown\login\https\SSLClient.java
+* app\src\main\java\techown\login\https\SecretkeyUtil.java
+* app\src\main\java\techown\login\https\ZIPUtil.java
+* app\src\main\java\techown\login\https\httpsUtil.java
+* app\src\main\java\techown\login\server\
+* app\src\main\java\techown\login\server\LoginSendFileService.java
+* app\src\main\java\techown\login\server\LoginSrv.java
+* app\src\main\java\techown\login\server\ShowLockViewSrv.java
+* app\src\main\java\techown\login\server\loginOutService.java
+* app\src\main\java\techown\login\utils\
+* app\src\main\java\techown\login\utils\CommonUtils.java
+* app\src\main\java\techown\login\utils\CrashApplication.java
+* app\src\main\java\techown\login\utils\CrashHandler.java
+* app\src\main\java\techown\login\utils\CustomDialog.java
+* app\src\main\java\techown\login\utils\DialogShow.java
+* app\src\main\java\techown\login\utils\Encrypt.java
+* app\src\main\java\techown\login\utils\EscapeUnescape.java
+* app\src\main\java\techown\login\utils\FileUtils.java
+* app\src\main\java\techown\login\utils\IdCardUtil.java
+* app\src\main\java\techown\login\utils\Log.java
+* app\src\main\java\techown\login\utils\OperateLog.java
+* app\src\main\java\techown\login\utils\PadUtiltiy.java
+* app\src\main\java\techown\login\utils\RootCmd.java
+* app\src\main\java\techown\login\utils\StrToPinyin.java
+* app\src\main\jniLibs\
+* app\src\main\jniLibs\armeabi\
+* app\src\main\jniLibs\armeabi\libdewlt2-jni.so
+* app\src\main\jniLibs\armeabi\libreader-jni.so
+* app\src\main\jniLibs\armeabi\libserial_port.so
+* app\src\main\jniLibs\armeabi\libserial_porter.so
+* app\src\main\jniLibs\armeabi\libwltdecode.so
+* app\src\main\res\
+* app\src\main\res\anim\
+* app\src\main\res\anim\anim_set_alpha_in.xml
+* app\src\main\res\anim\anim_set_alpha_out.xml
+* app\src\main\res\anim\anim_set_scale_out_view.xml
+* app\src\main\res\anim\anim_set_scale_view.xml
+* app\src\main\res\anim\leftin.xml
+* app\src\main\res\anim\leftout.xml
+* app\src\main\res\anim\loading.xml
+* app\src\main\res\anim\rightin.xml
+* app\src\main\res\anim\rightout.xml
+* app\src\main\res\drawable-hdpi\
+* app\src\main\res\drawable-hdpi\ic_launcher.png
+* app\src\main\res\drawable-ldpi\
+* app\src\main\res\drawable-ldpi\ic_launcher.png
+* app\src\main\res\drawable-mdpi\
+* app\src\main\res\drawable-mdpi\Thumbs.db
+* app\src\main\res\drawable-mdpi\awardexchange_icon.png
+* app\src\main\res\drawable-mdpi\background.png
+* app\src\main\res\drawable-mdpi\bg_bombbox.9.png
+* app\src\main\res\drawable-mdpi\bigdown.png
+* app\src\main\res\drawable-mdpi\bigup.png
+* app\src\main\res\drawable-mdpi\btn_cancel.9.png
+* app\src\main\res\drawable-mdpi\btn_cancel_pressed.9.png
+* app\src\main\res\drawable-mdpi\btn_cancel_selector.xml
+* app\src\main\res\drawable-mdpi\btn_ok_normal.9.png
+* app\src\main\res\drawable-mdpi\btn_ok_pressed.9.png
+* app\src\main\res\drawable-mdpi\btn_ok_selector.xml
+* app\src\main\res\drawable-mdpi\button_bg.png
+* app\src\main\res\drawable-mdpi\button_bg_pressed.png
+* app\src\main\res\drawable-mdpi\button_bg_selecter.xml
+* app\src\main\res\drawable-mdpi\canceldown.png
+* app\src\main\res\drawable-mdpi\cancelup.png
+* app\src\main\res\drawable-mdpi\cancle.png
+* app\src\main\res\drawable-mdpi\cancleok.png
+* app\src\main\res\drawable-mdpi\commontools_icon.png
+* app\src\main\res\drawable-mdpi\creditcard_icon.png
+* app\src\main\res\drawable-mdpi\deldown.png
+* app\src\main\res\drawable-mdpi\delup.png
+* app\src\main\res\drawable-mdpi\dialog_bottom_bg.xml
+* app\src\main\res\drawable-mdpi\dlg_bottom.png
+* app\src\main\res\drawable-mdpi\dlg_btn.png
+* app\src\main\res\drawable-mdpi\dlg_btn_down.png
+* app\src\main\res\drawable-mdpi\dlg_btn_selector.xml
+* app\src\main\res\drawable-mdpi\dlg_middle.png
+* app\src\main\res\drawable-mdpi\dlg_shape.xml
+* app\src\main\res\drawable-mdpi\dlg_top.png
+* app\src\main\res\drawable-mdpi\edit_bg.png
+* app\src\main\res\drawable-mdpi\etbackground.png
+* app\src\main\res\drawable-mdpi\facelogin_btn.png
+* app\src\main\res\drawable-mdpi\facelogin_btn_down.png
+* app\src\main\res\drawable-mdpi\facelogin_button_selector.xml
+* app\src\main\res\drawable-mdpi\fqb_icon.png
+* app\src\main\res\drawable-mdpi\graydown.png
+* app\src\main\res\drawable-mdpi\grayup.png
+* app\src\main\res\drawable-mdpi\ic_launcher.png
+* app\src\main\res\drawable-mdpi\loading_01.png
+* app\src\main\res\drawable-mdpi\loading_02.png
+* app\src\main\res\drawable-mdpi\loading_03.png
+* app\src\main\res\drawable-mdpi\loading_04.png
+* app\src\main\res\drawable-mdpi\loading_05.png
+* app\src\main\res\drawable-mdpi\loading_06.png
+* app\src\main\res\drawable-mdpi\loading_07.png
+* app\src\main\res\drawable-mdpi\login.png
+* app\src\main\res\drawable-mdpi\login_bg.png
+* app\src\main\res\drawable-mdpi\login_btn.png
+* app\src\main\res\drawable-mdpi\login_btn_down.png
+* app\src\main\res\drawable-mdpi\login_button_selector.xml
+* app\src\main\res\drawable-mdpi\login_icon.png
+* app\src\main\res\drawable-mdpi\main_applay_card_normal.png
+* app\src\main\res\drawable-mdpi\main_applay_card_pressed.png
+* app\src\main\res\drawable-mdpi\main_applay_normal_bg.png
+* app\src\main\res\drawable-mdpi\main_applaycard_normal.png
+* app\src\main\res\drawable-mdpi\main_applaycard_pressed.png
+* app\src\main\res\drawable-mdpi\main_bottom_left.png
+* app\src\main\res\drawable-mdpi\main_bottom_right.png
+* app\src\main\res\drawable-mdpi\main_business_bg.png
+* app\src\main\res\drawable-mdpi\main_business_normal.png
+* app\src\main\res\drawable-mdpi\main_business_pressed.png
+* app\src\main\res\drawable-mdpi\main_common_tools_normal.png
+* app\src\main\res\drawable-mdpi\main_common_tools_pressed.png
+* app\src\main\res\drawable-mdpi\main_knowledge_normal.png
+* app\src\main\res\drawable-mdpi\main_knowledge_pressed.png
+* app\src\main\res\drawable-mdpi\main_kuaibao_normal.png
+* app\src\main\res\drawable-mdpi\main_kuaibao_pressed.png
+* app\src\main\res\drawable-mdpi\main_logo.png
+* app\src\main\res\drawable-mdpi\main_power_off_bg.png
+* app\src\main\res\drawable-mdpi\main_power_off_normal.png
+* app\src\main\res\drawable-mdpi\main_power_off_pressed.png
+* app\src\main\res\drawable-mdpi\main_power_on.png
+* app\src\main\res\drawable-mdpi\main_power_on_bg.png
+* app\src\main\res\drawable-mdpi\main_power_on_pressed.png
+* app\src\main\res\drawable-mdpi\main_selfinfo_bg.png
+* app\src\main\res\drawable-mdpi\main_selfinfo_normal.png
+* app\src\main\res\drawable-mdpi\main_selfinfo_pressed.png
+* app\src\main\res\drawable-mdpi\main_study_normal.png
+* app\src\main\res\drawable-mdpi\main_study_pressed.png
+* app\src\main\res\drawable-mdpi\main_system_exam_normal.png
+* app\src\main\res\drawable-mdpi\main_system_exam_pressed.png
+* app\src\main\res\drawable-mdpi\main_tools_bg.png
+* app\src\main\res\drawable-mdpi\main_tools_normal.png
+* app\src\main\res\drawable-mdpi\main_tools_pressed.png
+* app\src\main\res\drawable-mdpi\map_icon.png
+* app\src\main\res\drawable-mdpi\ok.png
+* app\src\main\res\drawable-mdpi\picture.png
+* app\src\main\res\drawable-mdpi\poweroff.png
+* app\src\main\res\drawable-mdpi\poweroff_icon.png
+* app\src\main\res\drawable-mdpi\selfinfo_icon.png
+* app\src\main\res\drawable-mdpi\shang.png
+* app\src\main\res\drawable-mdpi\shangdown.png
+* app\src\main\res\drawable-mdpi\study_icon.png
+* app\src\main\res\drawable-mdpi\sure.png
+* app\src\main\res\drawable-mdpi\sureok.png
+* app\src\main\res\drawable-mdpi\tdsh_icon.png
+* app\src\main\res\drawable-mdpi\tvdialogbg.png
+* app\src\main\res\drawable-mdpi\view_bg.png
+* app\src\main\res\drawable-mdpi\wlg_icon.png
+* app\src\main\res\drawable-mdpi\xia.png
+* app\src\main\res\drawable-mdpi\xiadown.png
+* app\src\main\res\drawable-mdpi\xiao.png
+* app\src\main\res\drawable-mdpi\xiaodown.png
+* app\src\main\res\drawable-mdpi\yxzx_icon.png
+* app\src\main\res\drawable\
+* app\src\main\res\drawable\main_applay_selector.xml
+* app\src\main\res\drawable\main_business_selector.xml
+* app\src\main\res\drawable\main_common_tools_selector.xml
+* app\src\main\res\drawable\main_date_textview_bg.xml
+* app\src\main\res\drawable\main_knowledge_selector.xml
+* app\src\main\res\drawable\main_kuaibao_selector.xml
+* app\src\main\res\drawable\main_power_off_selector.xml
+* app\src\main\res\drawable\main_power_on_selector.xml
+* app\src\main\res\drawable\main_selfinfo_selector.xml
+* app\src\main\res\drawable\main_study_selector.xml
+* app\src\main\res\drawable\main_system_exam_selector.xml
+* app\src\main\res\drawable\main_tools_selector.xml
+* app\src\main\res\drawable\textview_border_all_gray.xml
+* app\src\main\res\drawable\textview_border_gray.xml
+* app\src\main\res\drawable\tvcancle.xml
+* app\src\main\res\drawable\tvok.xml
+* app\src\main\res\layout\
+* app\src\main\res\layout\activity_check_return.xml
+* app\src\main\res\layout\activity_face_show.xml
+* app\src\main\res\layout\activity_login.xml
+* app\src\main\res\layout\activity_main.xml
+* app\src\main\res\layout\device_locked.xml
+* app\src\main\res\layout\device_unbind.xml
+* app\src\main\res\layout\dialog_feedback.xml
+* app\src\main\res\layout\download_file.xml
+* app\src\main\res\layout\download_file_listitem.xml
+* app\src\main\res\layout\email_keyboard.xml
+* app\src\main\res\layout\etdialog.xml
+* app\src\main\res\layout\face_register.xml
+* app\src\main\res\layout\face_register1.xml
+* app\src\main\res\layout\facelogin_dlg.xml
+* app\src\main\res\layout\loading_process_dialog_anim.xml
+* app\src\main\res\layout\login.xml
+* app\src\main\res\layout\login_dlg.xml
+* app\src\main\res\layout\login_dlgg.xml
+* app\src\main\res\layout\login_wait_dlg.xml
+* app\src\main\res\layout\main.xml
+* app\src\main\res\layout\modify_pwd.xml
+* app\src\main\res\layout\myappwidget.xml
+* app\src\main\res\layout\offline.xml
+* app\src\main\res\layout\pinsim.xml
+* app\src\main\res\layout\pub_notic_list_item.xml
+* app\src\main\res\layout\public_notice.xml
+* app\src\main\res\layout\unbind.xml
+* app\src\main\res\layout\update_ver_dlg.xml
+* app\src\main\res\raw\
+* app\src\main\res\raw\base.dat
+* app\src\main\res\raw\license.lic
+* app\src\main\res\values\
+* app\src\main\res\values\attrs.xml
+* app\src\main\res\values\colors.xml
+* app\src\main\res\values\dimens.xml
+* app\src\main\res\values\jiesai_string.xml
+* app\src\main\res\values\strings.xml
+* app\src\main\res\values\strings_activity_login.xml
+* app\src\main\res\values\styles.xml
+* app\src\main\res\xml\
+* app\src\main\res\xml\myappwidgetprovider.xml
+* build.gradle
+* gradle\
+* gradle\wrapper\
+* gradle\wrapper\gradle-wrapper.jar
+* gradle\wrapper\gradle-wrapper.properties
+* gradlew
+* gradlew.bat
+* proguard.cfg
+* proguard\
+* proguard\dump.txt
+* proguard\mapping.txt
+* proguard\seeds.txt
+* proguard\usage.txt
+* settings.gradle
+* techown.keystore
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:19.1.0
+gson-2.8.0.jar => com.google.code.gson:gson:2.8.0
+
+Potentially Missing Dependency:
+-------------------------------
+When we replaced the following .jar files with a Gradle dependency, we
+inferred the dependency version number from the filename. This
+specific version may not actually be available from the repository.
+If you get a build error stating that the dependency is missing, edit
+the version number to for example "+" to pick up the latest version
+instead. (This may require you to update your code if the library APIs
+have changed.)
+
+gson-2.8.0.jar => version 2.8.0 in com.google.code.gson:gson:2.8.0
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* awardexchange_icon.PNG => awardexchange_icon.png
+* commontools_icon.PNG => commontools_icon.png
+* creditcard_icon.PNG => creditcard_icon.png
+* AndroidManifest.xml => app\src\main\AndroidManifest.xml
+* assets\ => app\src\main\assets
+* libs\ant.jar => app\libs\ant.jar
+* libs\armeabi\libdewlt2-jni.so => app\src\main\jniLibs\armeabi\libdewlt2-jni.so
+* libs\armeabi\libreader-jni.so => app\src\main\jniLibs\armeabi\libreader-jni.so
+* libs\armeabi\libserial_port.so => app\src\main\jniLibs\armeabi\libserial_port.so
+* libs\armeabi\libserial_porter.so => app\src\main\jniLibs\armeabi\libserial_porter.so
+* libs\armeabi\libwltdecode.so => app\src\main\jniLibs\armeabi\libwltdecode.so
+* libs\device1.2.jar => app\libs\device1.2.jar
+* libs\DeviceControl.jar => app\libs\DeviceControl.jar
+* libs\HS_CVR100U.jar => app\libs\HS_CVR100U.jar
+* libs\sdtapi.jar => app\libs\sdtapi.jar
+* libs\SystemProperties.jar => app\libs\SystemProperties.jar
+* res\ => app\src\main\res\
+* src\ => app\src\main\java\
+* fqb_icon.PNG => fqb_icon.png
+* login_icon.PNG => login_icon.png
+* map_icon.PNG => map_icon.png
+* selfinfo_icon.PNG => selfinfo_icon.png
+* study_icon.PNG => study_icon.png
+* tdsh_icon.PNG => tdsh_icon.png
+* wlg_icon.PNG => wlg_icon.png
+* yxzx_icon.PNG => yxzx_icon.png
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)
