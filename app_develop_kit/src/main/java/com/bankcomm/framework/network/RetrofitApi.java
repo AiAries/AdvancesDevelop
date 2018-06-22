@@ -43,7 +43,7 @@ public class RetrofitApi {
     //这里是设置拦截器，供下面的函数调用，辅助作用。
     private static final Interceptor cacheControlInterceptor = new CacheControlInterceptor();
 
-    public Retrofit getRetrofit() {
+    public static Retrofit getRetrofit() {
         synchronized (Object) {
             if (retrofit == null) {
                 // 指定缓存路径,缓存大小 50Mb
@@ -76,12 +76,5 @@ public class RetrofitApi {
             }
             return retrofit;
         }
-    }
-
-    public <T> T getObjectApi(Class<T> clazz) {
-        if (retrofit == null) {
-            throw new RuntimeException("必须先调用该类的--getRetrofit方法--获取实例");
-        }
-        return retrofit.create(clazz);
     }
 }

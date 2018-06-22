@@ -31,7 +31,7 @@ public class TestRxJava {
 
 	public static void getUser() throws IOException{
 
-		LoginApi commonApi = RetrofitApi.getIntance().getObjectApi(LoginApi.class);
+		LoginApi commonApi = RetrofitApi.getRetrofit().create(LoginApi.class);
 		Call<BaseEntity<User>> call = commonApi.getUserByCall();
 		retrofit2.Response<BaseEntity<User>> resp = call.execute();
 		String string = resp.body().getData().get(0).getUsername()+"::"+
@@ -41,7 +41,7 @@ public class TestRxJava {
 	}
 	public static void getUserByRxjava() throws IOException{
 
-		LoginApi commonApi = RetrofitApi.getIntance().getObjectApi(LoginApi.class);
+		LoginApi commonApi = RetrofitApi.getRetrofit().create(LoginApi.class);
 //		Call<String> call = commonApi.login("lili", "1234");
 		Observable<BaseEntity<User>> user = commonApi.getUser();
 		user.map(new Function<BaseEntity<User>, List<User>>() {
