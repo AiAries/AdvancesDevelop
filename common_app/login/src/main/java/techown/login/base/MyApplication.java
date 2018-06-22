@@ -3,6 +3,8 @@ package techown.login.base;
 
 import android.support.multidex.MultiDex;
 
+import com.bankcomm.framework.config.ConfigConstant;
+import com.bankcomm.framework.network.FrameworkConstant;
 import com.bankcomm.ui.base.BaseApplication;
 
 /**
@@ -10,6 +12,7 @@ import com.bankcomm.ui.base.BaseApplication;
  */
 
 public class MyApplication extends BaseApplication {
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -18,5 +21,6 @@ public class MyApplication extends BaseApplication {
 
     private void initConfig() {
         MultiDex.install(this);
+        FrameworkConstant.BASE_URL = ConfigConstant.BASE_URL;
     }
 }

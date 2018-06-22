@@ -3,8 +3,15 @@ package com.bankcomm.framework.network;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.wifi.WifiConfiguration;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
+import android.text.TextUtils;
 
 import com.bankcomm.framework.utils.StringUtil;
+import com.bankcomm.ui.base.BaseApplication;
+
+import java.util.List;
 
 /**
  * Created by A170860 on 2018/6/21.
@@ -22,7 +29,7 @@ public class NetworkUtils {
 
         ConnectivityManager connMgr = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo ni = connMgr.getActiveNetworkInfo();
-        if (ni != null && ni.isAvailable()){
+        if (ni != null && ni.isAvailable()) {
             result = true;
         }
 
@@ -32,7 +39,7 @@ public class NetworkUtils {
     public static boolean isWifi(Context context) {
         ConnectivityManager connectivity = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeInfo = connectivity.getActiveNetworkInfo();
-        if(activeInfo == null)
+        if (activeInfo == null)
             return false;
         int networkType = activeInfo.getType();
         if (networkType == ConnectivityManager.TYPE_WIFI) {
@@ -41,9 +48,10 @@ public class NetworkUtils {
             return false;
         }
     }
+
     public static boolean isWifiOpen(Context context) {
         boolean isWifiConnect = false;
-        ConnectivityManager cm = (ConnectivityManager)context.getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager cm = (ConnectivityManager) context.getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         // check the networkInfos numbers
         NetworkInfo[] networkInfos = cm.getAllNetworkInfo();
         for (int i = 0; i < networkInfos.length; i++) {
@@ -60,7 +68,6 @@ public class NetworkUtils {
     }
 
     /**
-     *
      * @return
      */
     public static int getNetworkType(Context context) {
@@ -84,6 +91,52 @@ public class NetworkUtils {
             netType = NETTYPE_WIFI;
         }
         return netType;
+    }
+
+    /**
+     * 利用WifiConfiguration.KeyMgmt的管理机制，来判断当前wifi是否需要连接密码
+     *
+     * @return true：需要密码连接，false：不需要密码连接
+     */
+    public static boolean isCurrentWifiHasPassword() {
+        try {
+            WifiManager wifiManager = (WifiManager) BaseApplication.mGlobalApp.getSystemService(Context.WIFI_SERVICE);
+
+            // 得到当前连接的wifi热点的信息
+            WifiInfo wifiInfo = wifiManager.getConnectionInfo();
+
+            // 得到当前WifiConfiguration列表，此列表包含所有已经连过的wifi的热点信息，未连过的热点不包含在此表中
+            List<WifiConfiguration> wifiConfiguration = wifiManager.getConfiguredNetworks();
+
+            String currentSSID = wifiInfo.getSSID();
+            if (currentSSID != null && currentSSID.length() > 2) {
+                if (currentSSID.startsWith("\"") && currentSSID.endsWith("\"")) {
+                    currentSSID = currentSSID.substring(1, currentSSID.length() - 1);
+                }
+
+                if (wifiConfiguration != null && wifiConfiguration.size() > 0) {
+                    for (WifiConfiguration configuration : wifiConfiguration) {
+                        if (configuration != null && configuration.status == WifiConfiguration.Status.CURRENT) {
+                            String ssid = null;
+                            if (!TextUtils.isEmpty(configuration.SSID)) {
+                                ssid = configuration.SSID;
+                                if (configuration.SSID.startsWith("\"") && configuration.SSID.endsWith("\"")) {
+                                    ssid = configuration.SSID.substring(1, configuration.SSID.length() - 1);
+                                }
+                            }
+                            if (TextUtils.isEmpty(currentSSID) || currentSSID.equalsIgnoreCase(ssid)) {
+                                //KeyMgmt.NONE表示无需密码
+                                return (!configuration.allowedKeyManagement.get(WifiConfiguration.KeyMgmt.NONE));
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        //默认为需要连接密码
+        return true;
     }
 
 }

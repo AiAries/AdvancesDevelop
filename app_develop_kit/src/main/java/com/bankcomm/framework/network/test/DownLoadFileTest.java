@@ -18,11 +18,11 @@ public class DownLoadFileTest {
 	public static String fileName = "twodimen2.png";
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		download();
+		downloadByOkHttp();
 //		downloadByUrlConnection();
 	}
 
-	public static void download() throws IOException {
+	public static void downloadByOkHttp() throws IOException {
 		final OkHttpClient client = new OkHttpClient();
 		Request request = new Request.Builder().url(
 				"http://127.0.0.1:8099/"+fileName).build();

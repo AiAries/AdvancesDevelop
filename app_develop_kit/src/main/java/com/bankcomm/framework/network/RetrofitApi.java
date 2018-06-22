@@ -69,7 +69,7 @@ public class RetrofitApi {
                     builder = SDKManager.initInterceptor(builder);
                 }
 
-                retrofit = new Retrofit.Builder().baseUrl(Constant.BASE_URL)
+                retrofit = new Retrofit.Builder().baseUrl(FrameworkConstant.BASE_URL)
                         .client(builder.build())
                         .addConverterFactory(GsonConverterFactory.create())
                         .addCallAdapterFactory(RxJavaCallAdapterFactory.create())

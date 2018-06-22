@@ -8,5 +8,5 @@ public class ConfigConstant {
     private ConfigConstant() {
 
     }
-    public static String BASE_URL = "https://182.180.50.105:443/tjbproxy/proxy.do";
+    public static final String BASE_URL = "https://paymenttest.bankcomm.com/mmp_UAT/";//sit环境mmp_sit；uat环境mmp_uat
 }

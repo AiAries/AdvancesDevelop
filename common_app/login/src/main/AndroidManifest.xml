@@ -20,6 +20,8 @@
         <activity android:name=".business.games.TrainActivity"/>
         <activity android:name=".business.cookie.CookieActivity">
         </activity>
+        <activity android:name=".business.main_page.MainPageActivity">
+        </activity>
     </application>
 
 </manifest>
