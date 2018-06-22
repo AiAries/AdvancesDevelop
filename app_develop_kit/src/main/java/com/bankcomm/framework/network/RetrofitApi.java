@@ -7,6 +7,7 @@ import com.bankcomm.framework.network.cookie.PersistentCookieJar;
 import com.bankcomm.framework.network.cookie.cache.SetCookieCache;
 import com.bankcomm.framework.network.cookie.persistence.SharedPrefsCookiePersistor;
 import com.bankcomm.framework.network.interceptor.CacheControlInterceptor;
+import com.bankcomm.framework.network.listener.ConcurrentPrintingEventListener;
 import com.bankcomm.ui.base.BaseApplication;
 
 import java.io.File;
@@ -60,7 +61,8 @@ public class RetrofitApi {
                         .connectTimeout(10, TimeUnit.SECONDS)
                         .readTimeout(15, TimeUnit.SECONDS)
                         .writeTimeout(15, TimeUnit.SECONDS)
-                        .retryOnConnectionFailure(true);
+                        .retryOnConnectionFailure(true)
+                        .eventListenerFactory(ConcurrentPrintingEventListener.FACTORY);
 
                 // Log 拦截器
                 if (BuildConfig.DEBUG) {
