@@ -6,6 +6,7 @@ import com.bankcomm.framework.utils.schedulers.SchedulerProvider;
 
 import io.reactivex.disposables.CompositeDisposable;
 import techown.login.data.MainRepository;
+import techown.login.network.bean.main.MainTabVo;
 
 import static com.bankcomm.framework.utils.Utils.checkNotNull;
 
@@ -16,6 +17,7 @@ import static com.bankcomm.framework.utils.Utils.checkNotNull;
 
 public class MainPresenterImp implements MainContract.Presenter {
 
+    public static final String TAG = MainPresenterImp.class.getSimpleName();
     private final MainRepository mMainRepository;
     private final MainContract.View mMainView;
     private final SchedulerProvider mSchedulerProvider;
@@ -24,7 +26,7 @@ public class MainPresenterImp implements MainContract.Presenter {
     public MainPresenterImp(@NonNull MainContract.View mainView,
                             @NonNull MainRepository mainRepository,
                             @NonNull SchedulerProvider schedulerProvider
-                            ) {
+    ) {
         //非空的校验的处理
         mMainRepository = checkNotNull(mainRepository, "tasksRepository cannot be null");
         mMainView = checkNotNull(mainView, "mainView cannot be null!");
@@ -32,17 +34,22 @@ public class MainPresenterImp implements MainContract.Presenter {
 
         mCompositeDisposable = new CompositeDisposable();
         mMainView.setPresenter(this);//让View获取Presenter的实例
-
     }
 
 
     @Override
     public void subscribe() {
-
+        getMainData();
     }
 
     @Override
     public void unsubscribe() {
-
+        mCompositeDisposable.clear();
     }
+
+    @Override
+    public void getMainData() {
+        MainTabVo mainTabData = mMainRepository.getMainTabData();
+    }
+
 }

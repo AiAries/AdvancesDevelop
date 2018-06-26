@@ -30,4 +30,16 @@ public class MainFragment extends BaseFragment implements MainContract.View {
 
         return super.onCreateView(inflater, container, savedInstanceState);
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mPresenter.subscribe();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mPresenter.unsubscribe();
+    }
 }

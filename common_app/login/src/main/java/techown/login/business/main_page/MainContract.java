@@ -10,10 +10,9 @@ import com.bankcomm.framework.mvp.BaseView;
 public interface MainContract {
 
     public interface View extends BaseView<Presenter> {
-
     }
 
     public interface Presenter extends BasePresenter {
-
+        void getMainData();
     }
 }
