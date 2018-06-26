@@ -5,5 +5,5 @@ package com.bankcomm.framework.mvp;
  */
 
 public interface BaseView<T> {
-    void setPresent(T t);
+    void setPresenter(T t);
 }

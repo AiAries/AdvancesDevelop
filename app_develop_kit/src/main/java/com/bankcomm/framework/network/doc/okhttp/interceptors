@@ -154,7 +154,7 @@ final class GzipRequestInterceptor implements Interceptor {
     };
   }
 }
-======
+======violate 违反，侵犯，妨碍；expectations 期望
 Rewriting Responses
 Symmetrically, interceptors can rewrite response headers and transform the response body. This is generally more dangerous than rewriting request headers because it may violate the webserver's expectations!
 

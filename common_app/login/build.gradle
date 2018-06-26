@@ -104,9 +104,8 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     //    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     //带有资源文件的包，必须每个项目拥有自己的依赖，而不能通过依赖module的方式进行继承
-    compile(name: 'rxandroid-2.0.1', ext: 'aar')
+//    compile(name: 'rxandroid-2.0.1', ext: 'aar')
 //    compile(name: 'sqlbrite-2.0.0', ext: 'aar')
     compile project(':app_develop_kit')
 
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
 }
