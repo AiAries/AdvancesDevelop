@@ -2,7 +2,7 @@ package techown.login.network.api;
 
 import java.util.Map;
 
-import io.reactivex.Observable;
+import io.reactivex.Flowable;
 import retrofit2.http.GET;
 import retrofit2.http.QueryMap;
 import techown.login.network.bean.main.MainTabVo;
@@ -14,5 +14,5 @@ import techown.login.network.bean.main.MainTabVo;
 public interface MainApi {
 
     @GET("common/visualmenumodule.do")
-    Observable<MainTabVo> getMainData(@QueryMap Map<String, Object> options);
+    Flowable<MainTabVo> getMainData(@QueryMap Map<String, Object> options);
 }

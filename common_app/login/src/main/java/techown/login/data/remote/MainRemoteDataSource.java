@@ -8,6 +8,7 @@ import com.bankcomm.ui.base.BaseApplication;
 import java.util.HashMap;
 import java.util.Map;
 
+import io.reactivex.Flowable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
@@ -23,11 +24,12 @@ import static android.content.ContentValues.TAG;
 
 public class MainRemoteDataSource implements MainDataSource {
     @Override
-    public MainTabVo getMainTabData() {
-        return null;
+    public Flowable<MainTabVo> getMainTabData() {
+        Map<String, Object> params = getParams();
+        return RetrofitApi.getRetrofit().create(MainApi.class).getMainData(params);
     }
 
-    /**
+    /**s
      * get tab'info
      */
     public void getTabInfo() {
