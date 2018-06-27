@@ -5,6 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main_container"
-    tools:context="techown.login.business.main_page.MainPageActivity">
+    tools:context="techown.login.business.main_page.MainActivity">
 
 </FrameLayout>

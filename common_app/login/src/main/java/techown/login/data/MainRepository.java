@@ -2,6 +2,7 @@ package techown.login.data;
 
 import android.support.annotation.NonNull;
 
+import io.reactivex.Flowable;
 import techown.login.network.bean.main.MainTabVo;
 
 import static com.google.gson.internal.$Gson$Preconditions.checkNotNull;
@@ -44,7 +45,7 @@ public class MainRepository implements MainDataSource{
     }
 
     @Override
-    public MainTabVo getMainTabData() {
-        return null;
+    public Flowable<MainTabVo> getMainTabData() {
+        return mMainRemoteDataSource.getMainTabData();
     }
 }

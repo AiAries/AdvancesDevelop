@@ -12,7 +12,7 @@ import techown.login.data.local.MainLocalDataSource;
 import techown.login.data.remote.MainRemoteDataSource;
 
 
-public class MainPageActivity extends ShadeBaseActivity {
+public class MainActivity extends ShadeBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,7 @@ public class MainPageActivity extends ShadeBaseActivity {
             mainFragment = new MainFragment();
             ActivityUtils.addFragmentToActivity(getSupportFragmentManager(),mainFragment,R.id.main_container);
         }
-        MainPresenterImp presenterImp = new MainPresenterImp(
+        new MainPresenterImp(
                 mainFragment,
                 MainRepository.getInstance(new MainRemoteDataSource(),new MainLocalDataSource()),
                 SchedulerProvider.getInstance()

@@ -2,9 +2,12 @@ package techown.login.business.main_page;
 
 import android.support.annotation.NonNull;
 
+import com.bankcomm.framework.log.AresLog;
 import com.bankcomm.framework.utils.schedulers.SchedulerProvider;
 
 import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
 import techown.login.data.MainRepository;
 import techown.login.network.bean.main.MainTabVo;
 
@@ -49,7 +52,23 @@ public class MainPresenterImp implements MainContract.Presenter {
 
     @Override
     public void getMainData() {
-        MainTabVo mainTabData = mMainRepository.getMainTabData();
+        mCompositeDisposable.clear();
+        Disposable disposable = mMainRepository.getMainTabData().observeOn(mSchedulerProvider.ui())
+                .subscribeOn(mSchedulerProvider.io())
+                .subscribe(new Consumer<MainTabVo>() {
+                    @Override
+                    public void accept(MainTabVo mainTabVo) throws Exception {
+                        mMainView.setText(mainTabVo.getSTATUS());
+                        AresLog.d(TAG, "accept: mainTabVo" + mainTabVo.getSTATUS());
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) throws Exception {
+                        AresLog.d(TAG, "accept: throwable" + throwable);
+                        mMainView.setText(throwable.getMessage());
+                    }
+                });
+        mCompositeDisposable.add(disposable);
     }
 
 }
