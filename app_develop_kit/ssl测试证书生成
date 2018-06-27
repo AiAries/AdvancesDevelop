@@ -1,0 +1,29 @@
+本地安装jdk开发环境，打开cmd命令窗口，输入如下指令 生成服务器证书容器
+	keytool -validity 36500 -genkey -alias tomcat -keyalg RSA -keystore E:\ssl\wms.keystore -dname "CN=server, OU=aiGod, O=ai, L=shanghai, ST=shanghai, C=china" -storepass 123456 -keypass 123456
+配置 tomcat下的config/server.xml
+	 <!-- 服务器添加ssl安全证书 -->
+   <!--  <Connector port="8443" protocol="org.apache.coyote.http11.Http11Protocol"
+               maxThreads="150" SSLEnabled="true" scheme="https" secure="true"
+               clientAuth="false" sslProtocol="TLS" 
+               keystoreFile="E:\ssl\wms.keystore" keystorePass="123456"
+               /> -->
+               
+https://127.0.0.1:8443/java_test_interface/LoginApiServlet
+
+===
+2.生成信赖的客户端证书容器--authority
+keytool -genkey -alias client_auth -keyalg RSA -keystore E:\ssl\server_trust.keystore -dname "CN=aizhiping, OU=aiGod, O=ai, L=shanghai, ST=shanghai, C=china" -storepass 123456 -keypass 123456
+3.生成客户端用的密钥对
+keytool -genkeypair -v -alias client_1 -keyalg RSA -storetype PKCS12 -keystore E:\ssl\client_1.p12 -dname "CN=client, OU=aiGod, O=ai, L=shanghai, ST=shanghai, C=china" -storepass 123456 -keypass 123456
+4.导出客户端用的证书
+keytool -export -v -alias client_1  -keystore E:\ssl\client_1.p12 -storetype PKCS12 -storepass 123456 -rfc -file E:\ssl\client_1.cer
+5.将客户端用的证书导入服务器端信赖的客户端的证书容器
+keytool -import -v -alias client_1 -file E:\ssl\client_1.cer -keystore E:\ssl\server_trust.keystore -storepass 123456
+
+           <!-- 服务器添加ssl安全证书 ，客户端添加安全证书认证 -->
+   <Connector port="8443" protocol="org.apache.coyote.http11.Http11Protocol"
+               maxThreads="150" SSLEnabled="true" scheme="https" secure="true"
+               clientAuth="true" sslProtocol="TLS" 
+               keystoreFile="E:\ssl\wms.keystore" keystorePass="123456"
+               truststoreFile="E:\ssl\server_trust.keystore" truststorePass="123456"
+               />
