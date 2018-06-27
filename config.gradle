@@ -7,6 +7,7 @@ ext {
 
     // App dependencies
     supportLibraryVersion = '25.3.1'
+    constraintVersion = '1.0.0-alpha7'
     guavaVersion = '18.0'
     junitVersion = '4.12'
     mockitoVersion = '1.10.19'

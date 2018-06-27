@@ -37,14 +37,16 @@ dependencies {
     compile "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
     compile "com.android.support:design:$rootProject.ext.supportLibraryVersion"
     compile "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion"
+    compile "com.android.support.constraint:constraint-layout:$rootProject.ext.constraintVersion"
+
     compile "io.reactivex.rxjava2:rxjava:$rootProject.rxjavaVersion"
     compile "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVersion"
-    compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha7'
 
     compile "com.squareup.retrofit2:retrofit:$rootProject.retrofitVersion"
     compile "com.squareup.retrofit2:adapter-rxjava:$rootProject.adapterrxjavaVersion"
     compile "com.squareup.retrofit2:converter-gson:$rootProject.convertergsonVersion"
     compile "com.squareup.okhttp3:logging-interceptor:$rootProject.loggingInterceptor"
+
 //    compile "com.squareup.sqlbrite:sqlbrite:$rootProject.sqlbriteVersion"
 //	debugImplementation "com.amitshekhar.android:debug-db:1.0.4"
 }
