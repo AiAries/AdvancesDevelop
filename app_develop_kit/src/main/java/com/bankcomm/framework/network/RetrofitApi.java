@@ -26,7 +26,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * todo RetrofitApi的配置通过Builder来实现
  */
 
-public class RetrofitApi {
+public final class RetrofitApi {
     private RetrofitApi() {
 
     }
@@ -47,6 +47,8 @@ public class RetrofitApi {
                 OkHttpClient.Builder builder = new OkHttpClient.Builder()
                         .cookieJar(cookieJar)
                         .cache(cache)
+                        .sslSocketFactory(new CustomSSLSocketFactory(),new CustomX509TrustManager())
+                        .authenticator(new ClientAuthenticator())
                         .addInterceptor(new CacheControlInterceptor())
                         .addInterceptor(new GzipRequestInterceptor())
                         .connectTimeout(10, TimeUnit.SECONDS)
