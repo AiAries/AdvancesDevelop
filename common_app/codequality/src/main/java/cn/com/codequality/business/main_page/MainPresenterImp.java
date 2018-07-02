@@ -5,11 +5,11 @@ import android.support.annotation.NonNull;
 import com.bankcomm.framework.log.AresLog;
 import com.bankcomm.framework.utils.schedulers.SchedulerProvider;
 
+import cn.com.codequality.data.MainRepository;
+import cn.com.codequality.network.bean.main.MainTabVo;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
-import techown.login.data.MainRepository;
-import techown.login.network.bean.main.MainTabVo;
 
 import static com.bankcomm.framework.utils.Utils.checkNotNull;
 

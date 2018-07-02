@@ -12,7 +12,8 @@ import android.widget.Toast;
 
 import com.bankcomm.framework.log.AresLog;
 
-import techown.login.R;
+import cn.com.codequality.R;
+
 
 public class GameActivity extends AppCompatActivity {
 

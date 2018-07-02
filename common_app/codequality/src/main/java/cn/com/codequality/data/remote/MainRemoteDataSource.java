@@ -8,13 +8,13 @@ import com.bankcomm.ui.base.BaseApplication;
 import java.util.HashMap;
 import java.util.Map;
 
+import cn.com.codequality.data.MainDataSource;
+import cn.com.codequality.network.api.MainApi;
+import cn.com.codequality.network.bean.main.MainTabVo;
 import io.reactivex.Flowable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
-import techown.login.data.MainDataSource;
-import techown.login.network.api.MainApi;
-import techown.login.network.bean.main.MainTabVo;
 
 import static android.content.ContentValues.TAG;
 
