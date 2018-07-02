@@ -21,7 +21,7 @@ import javax.crypto.spec.SecretKeySpec;
  *        Co.,Ltd. All rights reserved.
  */
 public final class AESCryptUtil {
-	private static final String TAG = "AESCrypt";
+	private static final String TAG = "AESCryptUtil";
 	private static final String AES_MODE = "AES/ECB/PKCS7Padding";// 加密算法/工作模式/填充方式
 	private static final String CHARSET = "UTF-8";
 

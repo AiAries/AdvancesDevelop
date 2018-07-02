@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="techown.login.business.games.LoginActivity">
+
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+       <LinearLayout
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content">
+           <EditText
+               android:id="@+id/username"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:hint="@string/hint_username"
+               android:visibility="gone"
+               />
+
+           <EditText
+               android:id="@+id/bracket"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="请输入数字,1表示有括号，其他的无括号运算"
+               android:inputType="number"
+               />
+
+          <LinearLayout
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+              <EditText
+                  android:layout_weight="1.0"
+                  android:id="@+id/num1"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:hint="数字1"
+                  android:inputType="number"
+                  />
+
+              <EditText
+                  android:layout_weight="1.0"
+                  android:id="@+id/num2"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:hint="数字2"
+                  android:inputType="number"
+                  />
+
+              <EditText
+                  android:layout_weight="1.0"
+                  android:id="@+id/num3"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:hint="数字3"
+                  android:inputType="number"
+                  />
+
+              <EditText
+                  android:layout_weight="1.0"
+                  android:id="@+id/num4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:hint="数字4"
+                  android:inputType="number"
+                  />
+          </LinearLayout>
+
+           <Button
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="计算结果"
+               android:id="@+id/calc"
+               />
+           <TextView
+               android:id="@+id/express"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="正确答案的表达式"
+               />
+
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+               <EditText
+                   android:layout_weight="1.0"
+                   android:id="@+id/game_num"
+                   android:inputType="number"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:hint="36 or 24 game"
+                   />
+               <Button
+                   android:layout_weight="1"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="设置游戏数字"
+               android:id="@+id/setting_num"
+               />
+
+           </LinearLayout>
+           <Button
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="清空内容"
+               android:id="@+id/clean"
+               />
+           <Button
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="进行随机训练"
+               android:id="@+id/translation"
+               />
+       </LinearLayout>
+   </ScrollView>
+</LinearLayout>

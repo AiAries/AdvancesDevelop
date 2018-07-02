@@ -1,4 +1,4 @@
-package com.bankcomm.framework.network.test;
+package cn.com.codequality.network.test;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -26,8 +26,8 @@ public class TestInterface {
 	public static void get() throws Exception{
 		OkHttpClient.Builder build = new OkHttpClient.Builder();
 		OkHttpClient client = build.build();
-//		String url = "https://www.baidu.com/";
-		String url = "https://127.0.0.1:8080/java_test_interface/LoginApiServlet";
+		String url = "https://www.baidu.com/";
+//		String url = "https://127.0.0.1:8080/java_test_interface/LoginApiServlet";
 		Request request = new Request.Builder().url(url).build();
 
 		// 创建TLS类型的SSLContext对象， that uses our TrustManager

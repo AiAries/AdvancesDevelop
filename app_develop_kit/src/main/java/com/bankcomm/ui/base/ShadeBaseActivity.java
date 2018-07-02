@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 
 import com.bankcomm.ui.helper.shade.IShade;
-import com.bankcomm.ui.helper.shade.ProgressShadeImp;
 
 /**
  * Created by A170860 on 2018/6/14.
@@ -16,6 +15,6 @@ public abstract class ShadeBaseActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mShade = new ProgressShadeImp(this);
+//        mShade = new ProgressShadeImp(this);
     }
 }

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CodeQuality</string>
+    <string name="hint_username">请输入用户名</string>
 </resources>
