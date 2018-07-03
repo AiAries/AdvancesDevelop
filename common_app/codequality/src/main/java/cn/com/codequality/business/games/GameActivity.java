@@ -16,7 +16,6 @@ import cn.com.codequality.R;
 
 
 public class GameActivity extends AppCompatActivity {
-
     private String name = "zhangsan";
     private static final String TAG = "GameActivity";
     @Override

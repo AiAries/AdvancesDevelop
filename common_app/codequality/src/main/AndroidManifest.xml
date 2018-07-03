@@ -18,8 +18,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".business.games.TrainActivity"/>
-        <activity android:name=".business.cookie.CookieActivity">
-        </activity>
     </application>
 
 </manifest>

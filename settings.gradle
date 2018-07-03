@@ -1,5 +1,5 @@
 rootProject.name='feiqiu'
 include ':app_develop_kit',
-        /*'common_app:login',*/
+        'common_app:login',
         'common_app:codequality'
 

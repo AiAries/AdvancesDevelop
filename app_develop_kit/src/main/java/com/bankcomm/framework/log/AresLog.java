@@ -1,7 +1,7 @@
 package com.bankcomm.framework.log;
 
 
-import static com.bankcomm.framework.BuildConfig.ENABLE_LOG;
+import static com.bankcomm.framework.network.FrameworkConstant.ENABLE_LOG;
 
 /**
  * 
