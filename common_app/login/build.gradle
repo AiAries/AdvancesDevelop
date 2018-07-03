@@ -55,6 +55,7 @@ android {
 
         pro {
             dimension 'env'
+            applicationIdSuffix '.pro'
             buildConfigField "boolean", "ENABLE_PRO_ENV", "false"
             buildConfigField "boolean", "ENABLE_CATCH_CRASHLOG", "true"
             manifestPlaceholders = [
@@ -67,6 +68,7 @@ android {
 
         uat {
             dimension 'env'
+            applicationIdSuffix '.uat'
             buildConfigField "boolean", "ENABLE_PRO_ENV", "false"
             buildConfigField "boolean", "ENABLE_CATCH_CRASHLOG", "true"
             manifestPlaceholders = [
@@ -78,21 +80,9 @@ android {
         }
 
     }
-//    android.applicationVariants.all {
-//        variant ->
-//            variant.outputs.each {
-//                output ->
-//                    def outputFile = output.outputFile
-//                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
-//                        def buildType = variant.buildType.name
-//                        def fileName =
-//                                rootProject.name + "@" +
-//                                        "${defaultConfig.versionName}-${defaultConfig.versionCode}-" +
-//                                        "${buildType}.apk"
-//                        output.outputFile = new File("E:/apk/2", fileName)
-//                    }
-//            }
-//    }
+    dexOptions {
+        preDexLibraries = true
+    }
 }
 repositories {
     flatDir {
@@ -106,6 +96,6 @@ dependencies {
     //带有资源文件的包，必须每个项目拥有自己的依赖，而不能通过依赖module的方式进行继承
 //    compile(name: 'rxandroid-2.0.1', ext: 'aar')
 //    compile(name: 'sqlbrite-2.0.0', ext: 'aar')
-    compile project(':app_develop_kit')
+//    compile project(':app_develop_kit')
 
 }

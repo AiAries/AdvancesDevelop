@@ -9,6 +9,7 @@ android {
         checkReleaseBuilds false
         abortOnError false
     }
+
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
@@ -33,7 +34,7 @@ android {
             signingConfig signingConfigs.release
             shrinkResources false
             minifyEnabled false
-            proguardFiles 'proguard-project.txt'
+            //proguardFiles 'proguard-project.txt'
         }
         debug {
             signingConfig signingConfigs.release
@@ -41,6 +42,37 @@ android {
             applicationIdSuffix ".debug"
 //            proguardFiles 'proguard-project.txt'
         }
+    }
+    flavorDimensions 'env'
+    productFlavors {
+
+        pro {
+            dimension 'env'
+            buildConfigField "boolean", "ENABLE_PRO_ENV", "false"
+            buildConfigField "boolean", "ENABLE_CATCH_CRASHLOG", "true"
+            manifestPlaceholders = [
+                    GETUI_APP_ID    : "iLtcRTrZpB6pHmvBFRTUL2",
+                    GETUI_APP_KEY   : "nTBayrol6MAtlKDzvnFsk1",
+                    GETUI_APP_SECRET: "3Zvaaxt7H1Ad2eSTdlkyf2",
+            ]
+
+        }
+
+        uat {
+            dimension 'env'
+            buildConfigField "boolean", "ENABLE_PRO_ENV", "false"
+            buildConfigField "boolean", "ENABLE_CATCH_CRASHLOG", "true"
+            manifestPlaceholders = [
+                    GETUI_APP_ID    : "iLtcRTrZpB6pHmvBFRTUL2",
+                    GETUI_APP_KEY   : "nTBayrol6MAtlKDzvnFsk1",
+                    GETUI_APP_SECRET: "3Zvaaxt7H1Ad2eSTdlkyf2",
+            ]
+
+        }
+
+    }
+    dexOptions {
+        preDexLibraries = true
     }
 }
 
