@@ -77,4 +77,5 @@ dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
     //noinspection GradleDynamicVersion
     api project(':app_develop_kit')
+    implementation "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
 }

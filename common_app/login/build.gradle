@@ -20,8 +20,6 @@ android {
      * Error:Execution failed for task ':mergeDebugResources'.
      > Error: Some file crunching failed, see logs for details
      */
-    aaptOptions.cruncherEnabled false
-    aaptOptions.useNewCruncher false
     signingConfigs {
         apply plugin: 'signing'
 
@@ -94,5 +92,6 @@ dependencies {
     //    implementation(name: 'rxandroid-2.0.1', ext: 'aar')
     //    implementation(name: 'sqlbrite-2.0.0', ext: 'aar')
     api project(':app_develop_kit')
+    implementation "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
 
 }
