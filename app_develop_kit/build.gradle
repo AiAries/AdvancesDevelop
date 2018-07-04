@@ -30,20 +30,20 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
-    compile "com.android.support:design:$rootProject.ext.supportLibraryVersion"
-    compile "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion"
-    compile "com.android.support.constraint:constraint-layout:$rootProject.ext.constraintVersion"
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
+    api "com.android.support:design:$rootProject.ext.supportLibraryVersion"
+    api "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion"
+    api "com.android.support.constraint:constraint-layout:$rootProject.ext.constraintVersion"
 
-    compile "io.reactivex.rxjava2:rxjava:$rootProject.ext.rxjavaVersion"
-    compile "io.reactivex.rxjava2:rxandroid:$rootProject.ext.rxandroidVersion"
+    api "io.reactivex.rxjava2:rxjava:$rootProject.ext.rxjavaVersion"
+    api "io.reactivex.rxjava2:rxandroid:$rootProject.ext.rxandroidVersion"
 
-    compile "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
-    compile "com.squareup.retrofit2:adapter-rxjava:$rootProject.ext.adapterrxjavaVersion"
-    compile "com.squareup.retrofit2:converter-gson:$rootProject.ext.convertergsonVersion"
-    compile "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.loggingInterceptor"
-    //compile a
-//    compile "com.squareup.sqlbrite:sqlbrite:$rootProject.sqlbriteVersion"
-//	compile "com.amitshekhar.android:debug-db:1.0.4"
+    api "com.squareup.retrofit2:retrofit:$rootProject.ext.retrofitVersion"
+    api "com.squareup.retrofit2:adapter-rxjava:$rootProject.ext.adapterrxjavaVersion"
+    api "com.squareup.retrofit2:converter-gson:$rootProject.ext.convertergsonVersion"
+    api "com.squareup.okhttp3:logging-interceptor:$rootProject.ext.loggingInterceptor"
+    //api a
+//    api "com.squareup.sqlbrite:sqlbrite:$rootProject.sqlbriteVersion"
+//	api "com.amitshekhar.android:debug-db:1.0.4"
 }

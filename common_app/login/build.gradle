@@ -10,7 +10,6 @@ android {
         abortOnError false
     }
     defaultConfig {
-        multiDexEnabled true
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         applicationId "techown.login"
@@ -89,11 +88,11 @@ repositories {
 
 }
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
+    api fileTree(include: ['*.jar'], dir: 'libs')
     //    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     //带有资源文件的包，必须每个项目拥有自己的依赖，而不能通过依赖module的方式进行继承
     //    implementation(name: 'rxandroid-2.0.1', ext: 'aar')
     //    implementation(name: 'sqlbrite-2.0.0', ext: 'aar')
-    compile project(':app_develop_kit')
+    api project(':app_develop_kit')
 
 }

@@ -70,13 +70,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/pro/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/pro/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/pro/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testPro/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testPro/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testPro/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testPro/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testPro/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testPro/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testPro/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestPro/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestPro/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestPro/assets" type="java-test-resource" />
@@ -84,6 +77,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestPro/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestPro/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTestPro/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testPro/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testPro/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testPro/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testPro/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testPro/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testPro/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testPro/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/assets" type="java-resource" />
@@ -112,13 +112,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/assets" type="java-test-resource" />
@@ -126,16 +119,24 @@
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTest/shaders" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/assets" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/blame" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/check-manifest" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javaPrecompile" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-safeguard" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/lint" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/multi-dex" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/pre-dexed" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/prebuild" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
@@ -149,6 +150,7 @@
     <orderEntry type="jdk" jdkName="Android API 25 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Gradle: com.android.support:appcompat-v7-25.3.1" level="project" />
+    <orderEntry type="library" name="Gradle: __local_aars__:E.\pda-project\Login_js\app_develop_kit\libs\glide-3.7.0.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-fragment-25.3.1" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.retrofit2:converter-gson:2.1.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-annotations:25.3.1@jar" level="project" />
@@ -161,7 +163,6 @@
     <orderEntry type="library" name="Gradle: com.android.support:animated-vector-drawable-25.3.1" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:multidex-1.0.2" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:support-compat-25.3.1" level="project" />
-    <orderEntry type="library" name="Gradle: __local_aars__:E.\Dev\AndroidSample\AdvancesDevelop\app_develop_kit\libs\glide-3.7.0.jar:unspecified@jar" level="project" />
     <orderEntry type="library" name="Gradle: com.android.support:transition-25.3.1" level="project" />
     <orderEntry type="library" name="Gradle: com.squareup.okio:okio:1.14.0@jar" level="project" />
     <orderEntry type="library" name="Gradle: io.reactivex.rxjava2:rxandroid-2.0.1" level="project" />
