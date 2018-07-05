@@ -1,6 +1,6 @@
 package techown.login.data.local;
 
-import io.reactivex.Flowable;
+import io.reactivex.Observable;
 import techown.login.data.MainDataSource;
 import techown.login.network.bean.main.MainTabVo;
 
@@ -10,7 +10,7 @@ import techown.login.network.bean.main.MainTabVo;
 
 public class MainLocalDataSource implements MainDataSource {
     @Override
-    public Flowable<MainTabVo> getMainTabData() {
+    public Observable<MainTabVo> getMainTabData() {
         return null;
     }
 }

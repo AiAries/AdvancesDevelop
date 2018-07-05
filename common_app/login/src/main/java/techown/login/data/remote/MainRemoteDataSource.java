@@ -8,8 +8,9 @@ import com.bankcomm.ui.base.BaseApplication;
 import java.util.HashMap;
 import java.util.Map;
 
-import io.reactivex.Flowable;
+import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 import techown.login.data.MainDataSource;
@@ -24,7 +25,7 @@ import static android.content.ContentValues.TAG;
 
 public class MainRemoteDataSource implements MainDataSource {
     @Override
-    public Flowable<MainTabVo> getMainTabData() {
+    public Observable<MainTabVo> getMainTabData() {
         Map<String, Object> params = getParams();
         return RetrofitApi.getRetrofit().create(MainApi.class).getMainData(params);
     }
@@ -34,7 +35,7 @@ public class MainRemoteDataSource implements MainDataSource {
      */
     public void getTabInfo() {
         Map<String, Object> params = getParams();
-        RetrofitApi.getRetrofit().create(MainApi.class).getMainData(params)
+        Disposable disposable = RetrofitApi.getRetrofit().create(MainApi.class).getMainData(params)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(new Consumer<MainTabVo>() {

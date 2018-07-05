@@ -1,6 +1,6 @@
 package techown.login.data;
 
-import io.reactivex.Flowable;
+import io.reactivex.Observable;
 import techown.login.network.bean.main.MainTabVo;
 
 /**
@@ -8,5 +8,5 @@ import techown.login.network.bean.main.MainTabVo;
  */
 
 public interface MainDataSource {
-    Flowable<MainTabVo> getMainTabData();
+    Observable<MainTabVo> getMainTabData();
 }
