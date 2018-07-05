@@ -1,2 +1,0 @@
-# AdvancesDevelop
-Hello!
