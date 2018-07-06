@@ -57,13 +57,13 @@ public class MainPresenterImp implements MainContract.Presenter {
                 .subscribeOn(mSchedulerProvider.io())
                 .subscribe(new Consumer<MainTabVo>() {
                     @Override
-                    public void accept(MainTabVo mainTabVo) throws Exception {
+                    public void accept(MainTabVo mainTabVo) {
                         mMainView.setText(mainTabVo.getSTATUS());
                         AresLog.d(TAG, "accept: mainTabVo" + mainTabVo.getSTATUS());
                     }
                 }, new Consumer<Throwable>() {
                     @Override
-                    public void accept(Throwable throwable) throws Exception {
+                    public void accept(Throwable throwable) {
                         AresLog.d(TAG, "accept: throwable" + throwable);
                         mMainView.setText(throwable.getMessage());
                     }
