@@ -10,6 +10,7 @@ import com.bankcomm.framework.network.interceptor.CacheControlInterceptor;
 import com.bankcomm.framework.network.interceptor.GzipRequestInterceptor;
 import com.bankcomm.framework.network.listener.ConcurrentPrintingEventListener;
 import com.bankcomm.ui.base.BaseApplication;
+import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
@@ -17,7 +18,6 @@ import java.util.concurrent.TimeUnit;
 import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 /**
@@ -65,7 +65,7 @@ public final class RetrofitApi {
                 retrofit = new Retrofit.Builder().baseUrl(FrameworkConstant.BASE_URL)
                         .client(builder.build())
                         .addConverterFactory(GsonConverterFactory.create())
-                        .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                        .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                         .build();
 
             }
