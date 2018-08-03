@@ -1,16 +1,16 @@
-package cn.com.codequality.data.remote;
+package cn.com.codequality.data.main.remote;
 
 import com.bankcomm.framework.log.AresLog;
-import com.bankcomm.framework.network.RetrofitApi;
+import com.bankcomm.framework.network.RetrofitManager;
 import com.bankcomm.framework.utils.android.AndroidUtil;
 import com.bankcomm.ui.base.BaseApplication;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import cn.com.codequality.data.MainDataSource;
-import cn.com.codequality.network.api.MainApi;
-import cn.com.codequality.network.bean.main.MainTabVo;
+import cn.com.codequality.data.main.MainDataSource;
+import cn.com.codequality.data.main.api.MainApi;
+import cn.com.codequality.data.main.bean.MainTabVo;
 import io.reactivex.Flowable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
@@ -26,7 +26,7 @@ public class MainRemoteDataSource implements MainDataSource {
     @Override
     public Flowable<MainTabVo> getMainTabData() {
         Map<String, Object> params = getParams();
-        return RetrofitApi.getRetrofit().create(MainApi.class).getMainData(params);
+        return RetrofitManager.getRetrofit().create(MainApi.class).getMainData(params);
     }
 
     /**s
@@ -34,7 +34,7 @@ public class MainRemoteDataSource implements MainDataSource {
      */
     public void getTabInfo() {
         Map<String, Object> params = getParams();
-        RetrofitApi.getRetrofit().create(MainApi.class).getMainData(params)
+        RetrofitManager.getRetrofit().create(MainApi.class).getMainData(params)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(new Consumer<MainTabVo>() {

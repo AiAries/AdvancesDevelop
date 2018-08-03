@@ -1,7 +1,7 @@
-package cn.com.codequality.data.local;
+package cn.com.codequality.data.main.local;
 
-import cn.com.codequality.data.MainDataSource;
-import cn.com.codequality.network.bean.main.MainTabVo;
+import cn.com.codequality.data.main.MainDataSource;
+import cn.com.codequality.data.main.bean.MainTabVo;
 import io.reactivex.Flowable;
 
 /**

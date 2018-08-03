@@ -1,4 +1,4 @@
-package cn.com.codequality.network.bean.main;
+package cn.com.codequality.data.main.bean;
 
 /**
  * Copyright (C)2016 JYQF Inc.

@@ -1,8 +1,8 @@
-package cn.com.codequality.network.api;
+package cn.com.codequality.data.main.api;
 
 import java.util.Map;
 
-import cn.com.codequality.network.bean.main.MainTabVo;
+import cn.com.codequality.data.main.bean.MainTabVo;
 import io.reactivex.Flowable;
 import retrofit2.http.GET;
 import retrofit2.http.QueryMap;

@@ -7,9 +7,9 @@ import com.bankcomm.framework.utils.ActivityUtils;
 import com.bankcomm.framework.utils.schedulers.SchedulerProvider;
 
 import cn.com.codequality.R;
-import cn.com.codequality.data.MainRepository;
-import cn.com.codequality.data.local.MainLocalDataSource;
-import cn.com.codequality.data.remote.MainRemoteDataSource;
+import cn.com.codequality.data.main.MainRepository;
+import cn.com.codequality.data.main.local.MainLocalDataSource;
+import cn.com.codequality.data.main.remote.MainRemoteDataSource;
 
 
 public class MainActivity extends AppCompatActivity {

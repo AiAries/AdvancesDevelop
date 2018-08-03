@@ -32,7 +32,7 @@ public class MainFragment extends BaseFragment implements MainContract.View {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         textView = new TextView(getContext());
         textView.setText("hello world");
-        textView.setTextColor(Color.WHITE);
+        textView.setTextColor(Color.BLACK);
         textView.setTextSize(36);
         return textView;
     }
