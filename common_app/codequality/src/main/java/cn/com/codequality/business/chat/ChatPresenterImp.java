@@ -66,20 +66,6 @@ public class ChatPresenterImp implements Presenter {
 
     @Override
     public void getTestJson() {
-//        Disposable disposable = mChatRepository.getTestJson().observeOn(mSchedulerProvider.ui())
-//                .subscribeOn(mSchedulerProvider.io())
-//                .subscribe(new Consumer<String>() {
-//                    @Override
-//                    public void accept(String s) {
-//                        mChatView.showTestJson(s);
-//                    }
-//                }, new Consumer<Throwable>() {
-//                    @Override
-//                    public void accept(Throwable throwable) {
-//                        mChatView.showTestJson(throwable.getMessage());
-//                    }
-//                });
-//        mCompositeDisposable.add(disposable);
         mChatRepository.getTestJson().observeOn(mSchedulerProvider.ui())
                 .subscribeOn(mSchedulerProvider.io())
                 .subscribe(new Subscriber<String>() {

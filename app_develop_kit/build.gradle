@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 
 android {
 
@@ -35,6 +37,8 @@ dependencies {
     api "com.android.support:design:$rootProject.ext.supportLibraryVersion"
     api "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion"
     api "com.android.support.constraint:constraint-layout:$rootProject.ext.constraintVersion"
+    api "android.arch.persistence.room:runtime:$rootProject.roomVersion"
+    kapt "android.arch.persistence.room:compiler:$rootProject.roomVersion"
 
     api "io.reactivex.rxjava2:rxjava:$rootProject.ext.rxjavaVersion"
     api "io.reactivex.rxjava2:rxandroid:$rootProject.ext.rxandroidVersion"

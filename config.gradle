@@ -23,4 +23,5 @@ ext {
     convertergsonVersion = '2.1.0'
     sqlbriteVersion = '2.0.0'
     loggingInterceptor ='3.4.1'
+    roomVersion = "1.0.0"
 }
