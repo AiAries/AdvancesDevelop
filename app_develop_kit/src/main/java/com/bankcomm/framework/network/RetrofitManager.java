@@ -14,9 +14,26 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import static okhttp3.internal.Util.checkDuration;
 
 /**
- * Created by A170860 on 2018/6/1.
- * 可以动态的修改BaseURl的路径
- * todo RetrofitApi的配置通过Builder来实现
+ * Created by A170860 on 2018/6/1.<pre>
+ * 可以动态的修改请求服务器的路径{@link RetrofitManager.Builder#baseUrl(String)}
+ * 修改连接超时时间{@link RetrofitManager.Builder#connectTimeout(int)}
+ * 修改读取超时时间{@link RetrofitManager.Builder#readTimeout(int)}
+ * 修改写入超时时间{@link RetrofitManager.Builder#writeTimeout(int)}
+ * </pre>
+ * <p>
+ * 获取默认配置的Retrofit的 for example
+ *  <pre><code>
+ *     Retrofit retrofit = RetrofitManager.newBuilder().build();
+ *     LoginApi loginApi = retrofit.create(LoginApi.class);
+ *  </code></pre>
+ *  </p>
+ *  <p>
+ * 获取修改服务器url的Retrofit example
+ *  <pre><code>
+ *     Retrofit retrofit = RetrofitManager.newBuilder().baseUrl("http://www.baidu.com").build();
+ *     LoginApi loginApi = retrofit.create(LoginApi.class);
+ *  </code></pre>
+ *  </p>
  */
 
 public final class RetrofitManager {
@@ -26,15 +43,6 @@ public final class RetrofitManager {
 
     private static RetrofitManager.Builder retrofitManagerBuilder;
     private static final Object Object = new Object();
-
-    public static Retrofit getRetrofit() {
-        synchronized (Object) {
-            if (retrofitManagerBuilder == null) {
-                retrofitManagerBuilder = new Builder();
-            }
-            return retrofitManagerBuilder.build();
-        }
-    }
 
     public static RetrofitManager.Builder newBuilder() {
         synchronized (Object) {

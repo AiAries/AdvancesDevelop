@@ -16,7 +16,7 @@ public class ChatRemoteDataSource implements ChatDataSource {
     @Override
     public Flowable<BaseEntity<Chat>> getChatData() {
 
-        return RetrofitManager.getRetrofit().create(ChatApi.class).getChatData(null);
+        return RetrofitManager.newBuilder().build().create(ChatApi.class).getChatData(null);
     }
 
     @Override

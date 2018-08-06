@@ -2,7 +2,6 @@ package cn.com.codequality.business.chat;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -12,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.bankcomm.ui.base.BaseFragment;
+import com.bankcomm.ui.view.dialogs.shade.IShade;
+import com.bankcomm.ui.view.dialogs.shade.ProgressShadeImp;
 
 import java.util.List;
 
@@ -31,7 +32,7 @@ public class ChatFragment extends BaseFragment implements ChatContract.View {
     private ChatAdapter mChatAdapter;
     private View mNoDataView;
     private RecyclerView mChatList;
-    private DialogFragment dialogFragment1;
+    private IShade mShade;
 
     @Override
     public void setPresenter(ChatContract.Presenter presenter) {
@@ -42,11 +43,17 @@ public class ChatFragment extends BaseFragment implements ChatContract.View {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        dialogFragment1 = new DialogFragment();
+        mShade = new ProgressShadeImp(getActivity());
         View view = inflater.inflate(R.layout.fragment_chat, container, false);
         mNoDataView = view.findViewById(R.id.no_data_view);
         mChatList = view.findViewById(R.id.chat_list);
         testJsonView = view.findViewById(R.id.test_json);
+        testJsonView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mShade.showDialog();
+            }
+        });
         mChatList.setLayoutManager(new LinearLayoutManager(getContext()));
         mChatList.addItemDecoration(new DividerItemDecoration(getContext(), DividerItemDecoration.HORIZONTAL));
         mChatAdapter = new ChatAdapter(mChatList, R.layout.recycler_chat);
@@ -86,11 +93,11 @@ public class ChatFragment extends BaseFragment implements ChatContract.View {
 
     @Override
     public void showWaitDialog() {
-        dialogFragment1.show(getActivity().getSupportFragmentManager(),"tag");
+        mShade.showDialog();
     }
 
     @Override
     public void dismissDialog() {
-        dialogFragment1.dismiss();
+        mShade.hideDialog();
     }
 }

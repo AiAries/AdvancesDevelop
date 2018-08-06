@@ -26,7 +26,7 @@ public class MainRemoteDataSource implements MainDataSource {
     @Override
     public Flowable<MainTabVo> getMainTabData() {
         Map<String, Object> params = getParams();
-        return RetrofitManager.getRetrofit().create(MainApi.class).getMainData(params);
+        return RetrofitManager.newBuilder().build().create(MainApi.class).getMainData(params);
     }
 
     /**s
@@ -34,7 +34,7 @@ public class MainRemoteDataSource implements MainDataSource {
      */
     public void getTabInfo() {
         Map<String, Object> params = getParams();
-        RetrofitManager.getRetrofit().create(MainApi.class).getMainData(params)
+        RetrofitManager.newBuilder().build().create(MainApi.class).getMainData(params)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(new Consumer<MainTabVo>() {

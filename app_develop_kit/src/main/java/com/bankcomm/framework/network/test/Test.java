@@ -23,7 +23,7 @@ public class Test {
 
 	public static void getByRetrofit() throws IOException{
 	
-		CommonApi commonApi = RetrofitManager.getRetrofit().create(CommonApi.class);
+		CommonApi commonApi = RetrofitManager.newBuilder().build().create(CommonApi.class);
 		Call<BaseEntity<User>> call = commonApi.getUser();
 		retrofit2.Response<BaseEntity<User>> resp = call.execute();
 		String string = resp.body().getData().get(0).getUsername()+"::"+
@@ -32,7 +32,7 @@ public class Test {
 	}
 	public static void loginByRetrofit() throws IOException{
 		
-		CommonApi commonApi = RetrofitManager.getRetrofit().create(CommonApi.class);
+		CommonApi commonApi = RetrofitManager.newBuilder().build().create(CommonApi.class);
 		retrofit2.Call<String> call = commonApi.login("lili", "1234");
 		retrofit2.Response<String> resp = call.execute();
 		String string = resp.body().toString();

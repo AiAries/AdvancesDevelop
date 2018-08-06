@@ -3,7 +3,7 @@ package com.bankcomm.ui.base;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import com.bankcomm.ui.helper.shade.IShade;
+import com.bankcomm.ui.view.dialogs.shade.IShade;
 
 /**
  * Created by A170860 on 2018/6/14.
