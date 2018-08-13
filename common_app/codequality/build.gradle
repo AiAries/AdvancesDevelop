@@ -14,10 +14,14 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         applicationId "cn.com.codequality"
-        versionCode 1
-        versionName "1.0"
+        versionCode 11
+        versionName "11.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        externalNativeBuild {
+            cmake {
+                cppFlags "-frtti -fexceptions"
+            }
+        }
     }
     signingConfigs {
         apply plugin: 'signing'
@@ -70,6 +74,11 @@ android {
 
         }
 
+    }
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
     }
 }
 
