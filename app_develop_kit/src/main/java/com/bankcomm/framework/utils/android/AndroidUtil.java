@@ -25,7 +25,7 @@ import android.text.TextWatcher;
 import android.util.DisplayMetrics;
 import android.widget.EditText;
 
-import com.bankcomm.framework.log.AresLog;
+import com.bankcomm.framework.log.AriesLog;
 import com.bankcomm.framework.utils.StringUtil;
 
 import java.io.ByteArrayInputStream;
@@ -113,8 +113,8 @@ public class AndroidUtil {
                 m_szUniqueID += Integer.toHexString(b1);
             }
             m_szUniqueID = m_szUniqueID.toUpperCase();
-            AresLog.i("--DeviceID----", m_szUniqueID);
-            AresLog.d("DeviceIdCheck",
+            AriesLog.i("--DeviceID----", m_szUniqueID);
+            AriesLog.d("DeviceIdCheck",
                     "DeviceId that generated MPreferenceActivity:"
                             + m_szUniqueID);
             byte[] a = null;
@@ -428,7 +428,7 @@ public class AndroidUtil {
             calendar.setTime(simpleDateFormat.parse(time));
             stringBuffer = new StringBuffer();
         } catch (Exception e) {
-            AresLog.e("System_Error", e.getMessage());
+            AriesLog.e("System_Error", e.getMessage());
             return null;
         }
         switch (calendar.get(Calendar.DAY_OF_WEEK)) {
@@ -518,7 +518,7 @@ public class AndroidUtil {
     public static String getIMEI(Context context) {
         try {
             TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-            AresLog.i("IMEI", telephonyManager.getSimSerialNumber());
+            AriesLog.i("IMEI", telephonyManager.getSimSerialNumber());
             return telephonyManager.getSimSerialNumber();
         } catch (Exception e) {
             return "";
@@ -640,13 +640,13 @@ public class AndroidUtil {
             inputStream = assetManager.open("config.properties");
             properties.load(inputStream);
         } catch (Exception e) {
-            AresLog.e("Sys_error", e.getMessage());
+            AriesLog.e("Sys_error", e.getMessage());
         } finally {
             if (null != inputStream) {
                 try {
                     inputStream.close();
                 } catch (Exception e) {
-                    AresLog.e("Sys_error", e.getMessage());
+                    AriesLog.e("Sys_error", e.getMessage());
                 }
 
             }
@@ -662,13 +662,13 @@ public class AndroidUtil {
             inputStream = assetManager.open("config.properties");
             properties.load(inputStream);
         } catch (Exception e) {
-            AresLog.e("Sys_error", e.getMessage());
+            AriesLog.e("Sys_error", e.getMessage());
         } finally {
             if (null != inputStream) {
                 try {
                     inputStream.close();
                 } catch (Exception e) {
-                    AresLog.e("Sys_error", e.getMessage());
+                    AriesLog.e("Sys_error", e.getMessage());
                 }
 
             }
@@ -684,13 +684,13 @@ public class AndroidUtil {
             inputStream = assetManager.open("config.properties");
             properties.load(inputStream);
         } catch (Exception e) {
-            AresLog.e("Sys_error", e.getMessage());
+            AriesLog.e("Sys_error", e.getMessage());
         } finally {
             if (null != inputStream) {
                 try {
                     inputStream.close();
                 } catch (Exception e) {
-                    AresLog.e("Sys_error", e.getMessage());
+                    AriesLog.e("Sys_error", e.getMessage());
                 }
             }
         }
@@ -705,13 +705,13 @@ public class AndroidUtil {
             inputStream = assetManager.open("config.properties");
             properties.load(inputStream);
         } catch (Exception e) {
-            AresLog.e("Sys_error", e.getMessage());
+            AriesLog.e("Sys_error", e.getMessage());
         } finally {
             if (null != inputStream) {
                 try {
                     inputStream.close();
                 } catch (Exception e) {
-                    AresLog.e("Sys_error", e.getMessage());
+                    AriesLog.e("Sys_error", e.getMessage());
                 }
             }
         }
@@ -721,14 +721,14 @@ public class AndroidUtil {
             properties.setProperty(key, value);
             properties.store(outputStream, null);
         } catch (Exception e) {
-            AresLog.e("Sys_error", e.getMessage());
+            AriesLog.e("Sys_error", e.getMessage());
         } finally {
             try {
                 if (null != outputStream) {
                     outputStream.close();
                 }
             } catch (Exception e) {
-                AresLog.e("Sys_error", e.getMessage());
+                AriesLog.e("Sys_error", e.getMessage());
             }
         }
     }
@@ -768,11 +768,11 @@ public class AndroidUtil {
             MessageDigest md = MessageDigest.getInstance("SHA1");
             b = md.digest(cert.getEncoded());
         } catch (NameNotFoundException e) {
-            AresLog.e("Sys_error", e.getMessage());
+            AriesLog.e("Sys_error", e.getMessage());
         } catch (CertificateException e) {
-            AresLog.e("Sys_error", e.getMessage());
+            AriesLog.e("Sys_error", e.getMessage());
         } catch (NoSuchAlgorithmException e) {
-            AresLog.e("Sys_error", e.getMessage());
+            AriesLog.e("Sys_error", e.getMessage());
         }
         return b;
     }
@@ -795,20 +795,20 @@ public class AndroidUtil {
      * 输出设备相关信息
      */
     public static void printDevice() {
-        AresLog.d("BOARD", Build.BOARD);// 主板
-        AresLog.d("BRAND", Build.BRAND);// android系统定制商 
-        AresLog.d("CPU_ABI", Build.CPU_ABI);// cpu指令集
-        AresLog.d("DEVICE", Build.DEVICE);// 设备参数 
-        AresLog.d("DISPLAY", Build.DISPLAY);// 显示屏参数
-        AresLog.d("FINGERPRINT", Build.FINGERPRINT);// 硬件名称
-        AresLog.d("HOST", Build.HOST);
-        AresLog.d("ID", Build.ID);// 修订版本列表 
-        AresLog.d("MANUFACTURER", Build.MANUFACTURER);// 硬件制造商 
-        AresLog.d("MODEL", Build.MODEL);// 版本 
-        AresLog.d("PRODUCT", Build.PRODUCT);// 手机制造商
-        AresLog.d("TAGS", Build.TAGS);// 描述build的标签 
-        AresLog.d("TIME", Build.TIME + "");// builder类型 
-        AresLog.d("USER", Build.USER);
+        AriesLog.d("BOARD", Build.BOARD);// 主板
+        AriesLog.d("BRAND", Build.BRAND);// android系统定制商 
+        AriesLog.d("CPU_ABI", Build.CPU_ABI);// cpu指令集
+        AriesLog.d("DEVICE", Build.DEVICE);// 设备参数 
+        AriesLog.d("DISPLAY", Build.DISPLAY);// 显示屏参数
+        AriesLog.d("FINGERPRINT", Build.FINGERPRINT);// 硬件名称
+        AriesLog.d("HOST", Build.HOST);
+        AriesLog.d("ID", Build.ID);// 修订版本列表 
+        AriesLog.d("MANUFACTURER", Build.MANUFACTURER);// 硬件制造商 
+        AriesLog.d("MODEL", Build.MODEL);// 版本 
+        AriesLog.d("PRODUCT", Build.PRODUCT);// 手机制造商
+        AriesLog.d("TAGS", Build.TAGS);// 描述build的标签 
+        AriesLog.d("TIME", Build.TIME + "");// builder类型 
+        AriesLog.d("USER", Build.USER);
     }
 
     /**

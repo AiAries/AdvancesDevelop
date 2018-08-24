@@ -2,7 +2,7 @@ package com.bankcomm.framework.encrypt;
 
 import android.util.Base64;
 
-import com.bankcomm.framework.log.AresLog;
+import com.bankcomm.framework.log.AriesLog;
 
 import java.io.UnsupportedEncodingException;
 import java.security.GeneralSecurityException;
@@ -101,7 +101,7 @@ public final class AESCryptUtil {
 
 		} catch (UnsupportedEncodingException e) {
 			if (DEBUG_LOG_ENABLED)
-				AresLog.e(TAG, "UnsupportedEncodingException ", e);
+				AriesLog.e(TAG, "UnsupportedEncodingException ", e);
 		} catch (NoSuchAlgorithmException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -159,13 +159,13 @@ public final class AESCryptUtil {
 			return new String(tmp);
 		} catch (UnsupportedEncodingException e) {
 			if (DEBUG_LOG_ENABLED)
-				AresLog.e(TAG, "UnsupportedEncodingException ", e);
+				AriesLog.e(TAG, "UnsupportedEncodingException ", e);
 		} catch (GeneralSecurityException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (Exception e){
 			e.printStackTrace();
-			AresLog.e(TAG, "Exception", e);
+			AriesLog.e(TAG, "Exception", e);
 		}
 		return "";
 	}
@@ -182,7 +182,7 @@ public final class AESCryptUtil {
 			return message;
 		} catch (UnsupportedEncodingException e) {
 			if (DEBUG_LOG_ENABLED)
-				AresLog.e(TAG, "UnsupportedEncodingException ", e);
+				AriesLog.e(TAG, "UnsupportedEncodingException ", e);
 		} catch (GeneralSecurityException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -235,12 +235,12 @@ public final class AESCryptUtil {
 
 	private static void log(String what, byte[] bytes) {
 		if (DEBUG_LOG_ENABLED)
-			AresLog.d(TAG, what + "[" + bytes.length + "] [" + bytesToHex(bytes) + "]");
+			AriesLog.d(TAG, what + "[" + bytes.length + "] [" + bytesToHex(bytes) + "]");
 	}
 
 	private static void log(String what, String value) {
 		if (DEBUG_LOG_ENABLED)
-			AresLog.d(TAG, what + "[" + value.length() + "] [" + value + "]");
+			AriesLog.d(TAG, what + "[" + value.length() + "] [" + value + "]");
 	}
 
 	private AESCryptUtil() {

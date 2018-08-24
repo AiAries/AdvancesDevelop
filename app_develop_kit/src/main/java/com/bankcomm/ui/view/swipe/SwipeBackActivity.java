@@ -3,7 +3,6 @@ package com.bankcomm.ui.view.swipe;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 
 public class SwipeBackActivity extends AppCompatActivity implements SwipeBackActivityBase {
     private SwipeBackActivityHelper mHelper;
@@ -21,13 +20,13 @@ public class SwipeBackActivity extends AppCompatActivity implements SwipeBackAct
         mHelper.onPostCreate();
     }
 
-    @Override
+   /* @Override
     public View findViewById(int id) {
         View v = super.findViewById(id);
         if (v == null && mHelper != null)
             return mHelper.findViewById(id);
         return v;
-    }
+    }*/
 
     @Override
     public SwipeBackLayout getSwipeBackLayout() {

@@ -30,16 +30,19 @@ public class SwipeBackActivityHelper {
         mSwipeBackLayout.addSwipeListener(new SwipeBackLayout.SwipeListener() {
             @Override
             public void onScrollStateChange(int state, float scrollPercent) {
+                System.out.println(state);
+                System.out.println(scrollPercent);
             }
 
             @Override
             public void onEdgeTouch(int edgeFlag) {
+                System.out.println("onEdgeTouch");
                 Utils.convertActivityToTranslucent(mActivity);
             }
 
             @Override
             public void onScrollOverThreshold() {
-
+                System.out.println("onScrollOverThreshold");
             }
         });
     }

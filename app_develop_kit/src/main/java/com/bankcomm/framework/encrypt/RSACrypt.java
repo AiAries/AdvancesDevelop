@@ -2,7 +2,7 @@ package com.bankcomm.framework.encrypt;
 
 import android.util.Base64;
 
-import com.bankcomm.framework.log.AresLog;
+import com.bankcomm.framework.log.AriesLog;
 import com.bankcomm.framework.utils.ArrayUtils;
 
 import java.io.ByteArrayInputStream;
@@ -44,7 +44,7 @@ public class RSACrypt {
 			try {
 				rsaPlus.initPemKey(null);
 			} catch (Exception e) {
-				AresLog.e("TAG", "init the cer ERROR!", e);
+				AriesLog.e("TAG", "init the cer ERROR!", e);
 			}
 		}
 		return rsaPlus;
@@ -56,7 +56,7 @@ public class RSACrypt {
 			try {
 				rsaPlus.initPemKey(pem);
 			} catch (Exception e) {
-				AresLog.e("TAG", "init the cer ERROR!", e);
+				AriesLog.e("TAG", "init the cer ERROR!", e);
 			}
 		}
 		return rsaPlus;

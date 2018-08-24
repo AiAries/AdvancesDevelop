@@ -2,7 +2,6 @@ package cn.com.codequality.business.games;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -10,12 +9,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bankcomm.framework.log.AresLog;
+import com.bankcomm.framework.log.AriesLog;
+import com.bankcomm.ui.base.BaseActivity;
+import com.bankcomm.ui.view.swipe.SwipeBackLayout;
 
 import cn.com.codequality.R;
 
 
-public class GameActivity extends AppCompatActivity {
+public class GameActivity extends BaseActivity {
     private String name = "zhangsan";
     private static final String TAG = "GameActivity";
     @Override
@@ -26,9 +27,9 @@ public class GameActivity extends AppCompatActivity {
 //        ConfigConstant
         int w = 3;
         int business = 0;
-        AresLog.d(TAG, "onCreate: ");
-        AresLog.i(TAG, "onCreate: business" + business);
-        AresLog.d(TAG, "onCreate: w " + w);
+        AriesLog.d(TAG, "onCreate: ");
+        AriesLog.i(TAG, "onCreate: business" + business);
+        AriesLog.d(TAG, "onCreate: w " + w);
         Log.d(TAG, "onCreate() returned: " + savedInstanceState);
         final EditText bracket = (EditText) findViewById(R.id.bracket);
         final TextView express = (TextView) findViewById(R.id.express);
@@ -123,6 +124,27 @@ public class GameActivity extends AppCompatActivity {
                      startActivity(intent);
                  }
              });
+
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        getSwipeBackLayout().addSwipeListener(new SwipeBackLayout.SwipeListener() {
+            @Override
+            public void onScrollStateChange(int state, float scrollPercent) {
+
+            }
+
+            @Override
+            public void onEdgeTouch(int edgeFlag) {
+
+            }
+
+            @Override
+            public void onScrollOverThreshold() {
+
+            }
+        });
+    }
 }

@@ -2,7 +2,7 @@ package cn.com.codequality.business.main_page;
 
 import android.support.annotation.NonNull;
 
-import com.bankcomm.framework.log.AresLog;
+import com.bankcomm.framework.log.AriesLog;
 import com.bankcomm.framework.utils.schedulers.SchedulerProvider;
 
 import cn.com.codequality.data.main.MainRepository;
@@ -59,12 +59,12 @@ public class MainPresenterImp implements MainContract.Presenter {
                     @Override
                     public void accept(MainTabVo mainTabVo) {
                         mMainView.setText(mainTabVo.getSTATUS());
-                        AresLog.d(TAG, "accept: mainTabVo" + mainTabVo.getSTATUS());
+                        AriesLog.d(TAG, "accept: mainTabVo" + mainTabVo.getSTATUS());
                     }
                 }, new Consumer<Throwable>() {
                     @Override
                     public void accept(Throwable throwable) {
-                        AresLog.d(TAG, "accept: throwable" + throwable);
+                        AriesLog.d(TAG, "accept: throwable" + throwable);
                         mMainView.setText(throwable.getMessage());
                     }
                 });

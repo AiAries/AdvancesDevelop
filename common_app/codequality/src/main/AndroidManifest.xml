@@ -13,9 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".business.main_page.MainActivity">
-
+            <action android:name="com.azp.enter.activity"></action>
         </activity>
-        <activity android:name=".business.games.TrainActivity"/>
+        <activity android:name=".business.games.GameActivity">
+            <action android:name="com.azp.enter.activity"></action>
+        </activity>
         <!-- 个推配置 -->
         <meta-data
             android:name="PUSH_APPID"
@@ -28,6 +30,11 @@
             android:value="${GETUI_APP_SECRET}"/>
 
         <activity android:name=".business.chat.ChatActivity">
+            <intent-filter>
+                <action android:name="com.azp.enter.activity"></action>
+            </intent-filter>
+        </activity>
+        <activity android:name=".business.enter.EnterListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

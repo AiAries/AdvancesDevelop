@@ -1112,6 +1112,10 @@ public class ViewDragHelper {
                     final float dx = x - mInitialMotionX[pointerId];
                     final float dy = y - mInitialMotionY[pointerId];
 
+                    if (Math.toDegrees(Math.atan(dx/dy))<45) {
+                        //当拖动的路线和y轴的角度小于45°时，父控件不拦截事件
+                        return false;
+                    }
                     reportNewEdgeDrags(dx, dy, pointerId);
                     if (mDragState == STATE_DRAGGING) {
                         // Callback might have started an edge drag
@@ -1566,15 +1570,15 @@ public class ViewDragHelper {
     private int getEdgeTouched(int x, int y) {
         int result = 0;
 
-        if (x < mParentView.getLeft() + mEdgeSize)
-            result = EDGE_LEFT;
-        if (y < mParentView.getTop() + mEdgeSize)
-            result = EDGE_TOP;
-        if (x > mParentView.getRight() - mEdgeSize)
-            result = EDGE_RIGHT;
-        if (y > mParentView.getBottom() - mEdgeSize)
-            result = EDGE_BOTTOM;
-
-        return result;
+//        if (x < mParentView.getLeft() + mEdgeSize)
+//            result = EDGE_LEFT;
+//        if (y < mParentView.getTop() + mEdgeSize)
+//            result = EDGE_TOP;
+//        if (x > mParentView.getRight() - mEdgeSize)
+//            result = EDGE_RIGHT;
+//        if (y > mParentView.getBottom() - mEdgeSize)
+//            result = EDGE_BOTTOM;
+        // change : 修改触摸边缘成，设置从哪个方向退出的边缘
+        return mTrackingEdges;
     }
 }

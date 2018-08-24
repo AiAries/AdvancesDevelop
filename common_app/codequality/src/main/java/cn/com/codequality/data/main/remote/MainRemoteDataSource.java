@@ -1,6 +1,6 @@
 package cn.com.codequality.data.main.remote;
 
-import com.bankcomm.framework.log.AresLog;
+import com.bankcomm.framework.log.AriesLog;
 import com.bankcomm.framework.network.RetrofitManager;
 import com.bankcomm.framework.utils.android.AndroidUtil;
 import com.bankcomm.ui.base.BaseApplication;
@@ -40,12 +40,12 @@ public class MainRemoteDataSource implements MainDataSource {
                 .subscribe(new Consumer<MainTabVo>() {
                                @Override
                                public void accept(MainTabVo result) throws Exception {
-                                   AresLog.d(TAG, "accept: result" + result.getSTATUS());
+                                   AriesLog.d(TAG, "accept: result" + result.getSTATUS());
                                }
                            }, new Consumer<Throwable>() {
                                @Override
                                public void accept(Throwable throwable) throws Exception {
-                                   AresLog.d(TAG, "accept: throwable" + throwable);
+                                   AriesLog.d(TAG, "accept: throwable" + throwable);
                                }
                            }
                 );

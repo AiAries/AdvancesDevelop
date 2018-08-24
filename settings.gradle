@@ -1,3 +1,3 @@
 rootProject.name='feiqiu'
-include ':app_develop_kit', ':patch_lib',
+include ':app_develop_kit', ':patchdemo',
         'common_app:codequality'

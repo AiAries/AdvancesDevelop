@@ -15,7 +15,7 @@ import android.util.Base64;
 import android.util.Patterns;
 import android.webkit.URLUtil;
 
-import com.bankcomm.framework.log.AresLog;
+import com.bankcomm.framework.log.AriesLog;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -203,7 +203,7 @@ public class StringUtil {
             try {
                 result = "" + fmt.parse(str);
             } catch (ParseException e) {
-                AresLog.e("TAG", "parse the double error!", e);
+                AriesLog.e("TAG", "parse the double error!", e);
             }
         }
         return result;
@@ -879,7 +879,7 @@ public class StringUtil {
             gzip.write(bytes);
             gzip.close();
         } catch (IOException e) {
-            AresLog.i("IDCardImg", "compassByGzipByte异常");
+            AriesLog.i("IDCardImg", "compassByGzipByte异常");
         }
         return out.toByteArray();
     }

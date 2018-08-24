@@ -8,7 +8,7 @@ import static com.bankcomm.framework.network.FrameworkConstant.ENABLE_LOG;
  * @author dcc
  * 
  */
-public class AresLog {
+public class AriesLog {
 	
 	private static boolean FLAG = ENABLE_LOG;
 

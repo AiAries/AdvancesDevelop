@@ -2,7 +2,7 @@ package com.bankcomm.framework.utils;
 
 import android.widget.EditText;
 
-import com.bankcomm.framework.log.AresLog;
+import com.bankcomm.framework.log.AriesLog;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
@@ -130,7 +130,7 @@ public class CommonUtil {
 		}
 
 		String afterMoney = moneyCommaEdit(strOriValue);
-		AresLog.i("txtSaveAmt", afterMoney + " " + txtSaveAmt.getText().toString().trim());
+		AriesLog.i("txtSaveAmt", afterMoney + " " + txtSaveAmt.getText().toString().trim());
 		if (!afterMoney.equals(txtSaveAmt.getText().toString().trim())) {
 			txtSaveAmt.setText(afterMoney);
 			txtSaveAmt.requestFocus();

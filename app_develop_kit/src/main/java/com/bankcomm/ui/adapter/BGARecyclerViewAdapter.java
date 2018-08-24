@@ -47,7 +47,7 @@ public abstract class BGARecyclerViewAdapter<M> extends RecyclerView.Adapter<BGA
      */
     private boolean mIsIgnoreCheckedChanged = true;
 
-    public BGARecyclerViewAdapter(RecyclerView recyclerView) {
+    private BGARecyclerViewAdapter(RecyclerView recyclerView) {
         mRecyclerView = recyclerView;
         mContext = mRecyclerView.getContext();
         mData = new ArrayList<>();

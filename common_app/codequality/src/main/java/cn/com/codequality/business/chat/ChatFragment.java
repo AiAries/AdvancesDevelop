@@ -1,5 +1,6 @@
 package cn.com.codequality.business.chat;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.DividerItemDecoration;
@@ -17,6 +18,7 @@ import com.bankcomm.ui.view.dialogs.shade.ProgressShadeImp;
 import java.util.List;
 
 import cn.com.codequality.R;
+import cn.com.codequality.business.games.GameActivity;
 import cn.com.codequality.data.chat.bean.Chat;
 
 import static com.bankcomm.framework.utils.Utils.checkNotNull;
@@ -51,7 +53,8 @@ public class ChatFragment extends BaseFragment implements ChatContract.View {
         testJsonView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mShade.showDialog();
+//                mShade.showDialog();
+                startActivity(new Intent(getContext(), GameActivity.class));
             }
         });
         mChatList.setLayoutManager(new LinearLayoutManager(getContext()));
