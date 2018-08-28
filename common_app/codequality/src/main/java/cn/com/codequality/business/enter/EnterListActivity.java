@@ -1,5 +1,6 @@
 package cn.com.codequality.business.enter;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -7,7 +8,10 @@ import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.view.ViewGroup;
 
+import com.bankcomm.ui.adapter.BGAOnRVItemClickListener;
 import com.bankcomm.ui.base.BaseActivity;
 
 import java.util.ArrayList;
@@ -39,7 +43,7 @@ public class EnterListActivity extends BaseActivity {
         return data;
     }
 
-    private void initView(List<String> data) {
+    private void initView(final List<String> data) {
         RecyclerView activityList = findViewById(R.id.activity_list);
         activityList.setLayoutManager(new LinearLayoutManager(this));
         activityList.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration
@@ -47,5 +51,14 @@ public class EnterListActivity extends BaseActivity {
         EnterListAdapter enterListAdapter = new EnterListAdapter(activityList, R.layout.recycler_chat);
         enterListAdapter.setData(data);
         activityList.setAdapter(enterListAdapter);
+        enterListAdapter.setOnRVItemClickListener(new BGAOnRVItemClickListener() {
+            @Override
+            public void onRVItemClick(ViewGroup parent, View itemView, int position) {
+                String className = data.get(position);
+                Intent intent = new Intent();
+                intent.setClassName(getApplicationContext(), className);
+                startActivity(intent);
+            }
+        });
     }
 }

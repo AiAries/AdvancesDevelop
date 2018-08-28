@@ -5,7 +5,7 @@ ext {
     compileSdkVersion = 26
     buildToolsVersion = '27.0.3'
 
-    // App dependencies
+    // App dependenciese
     supportLibraryVersion = '27.1.1'
     constraintVersion = '1.0.2'
     guavaVersion = '18.0'
