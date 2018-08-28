@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
 
 
     lintOptions {
@@ -86,9 +85,8 @@ dependencies {
     api fileTree(dir: 'libs', include: ['*.jar'])
     //noinspection GradleDynamicVersion
     api project(':app_develop_kit')
-    api "com.android.support.test.espresso:espresso-idling-resource:$rootProject.espressoVersion"
     // Dependencies for local unit tests
-    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    api "com.android.support.test.espresso:espresso-idling-resource:$rootProject.espressoVersion"
     testImplementation "junit:junit:$rootProject.ext.junitVersion"
     testImplementation "org.mockito:mockito-all:$rootProject.ext.mockitoVersion"
     testImplementation "org.hamcrest:hamcrest-all:$rootProject.ext.hamcrestVersion"
