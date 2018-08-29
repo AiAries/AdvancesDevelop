@@ -1,2 +1,2 @@
 rootProject.name='feiqiu'
-include ':app_develop_kit'
+include ':AppDevelopKit'
