@@ -16,7 +16,7 @@ ext {
     siteUrl = 'https://github.com/AiAries/AdvancesDevelop'
     gitUrl = 'https://github.com/AiAries/AdvancesDevelop.git'
 
-    libraryVersion = '0.9.3'
+    libraryVersion = '0.9.5'
 
     developerId = 'pzaorganization'
     developerName = 'pzaorga'

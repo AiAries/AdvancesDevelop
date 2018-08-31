@@ -45,3 +45,7 @@
 5.OkHttp --cookieJar 和 authenticator 机制
     Dispatcher 机制  retryOnConnectionFailure 重连接机制  ConnectionPool连接池机制  DEFAULT_PROTOCOLS
     DEFAULT_CONNECTION_SPECS
+
+6. 上传到bintray 仓库，执行下面两个命令
+    gradlew install
+    gradlew bintrayUpload
