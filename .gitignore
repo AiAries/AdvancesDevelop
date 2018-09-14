@@ -1,4 +1,6 @@
 *.iml
+/common_app/*.iml
+/app_develop_kit/*.iml
 .gradle
 /local.properties
 /.idea/libraries
