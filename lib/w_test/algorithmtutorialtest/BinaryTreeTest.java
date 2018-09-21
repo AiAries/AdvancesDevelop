@@ -1,7 +1,8 @@
 package cn.byhieg.algorithmtutorialtest;
 
-import cn.byhieg.algorithmtutorial.BinaryTree;
 import junit.framework.TestCase;
+
+import cn.byhieg.algorithmtutorial.BinaryTree;
 
 /**
  * Created by byhieg on 17/4/15.

@@ -1,3 +1,5 @@
+import javax.tools.JavaCompiler
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 apply from: file('gradle/check.gradle')
 buildscript {
@@ -17,5 +19,9 @@ buildscript {
             google()
             mavenCentral()
         }
+    }
+    tasks.withType(JavaCompiler){
+//    options.encoding="GBK"
+        options.encoding="UTF-8"
     }
 }
