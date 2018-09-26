@@ -1,51 +1,30 @@
+MVP 模板。MVP开发过程中一次性总是要生成几个文件，我们可以在模板中配置生成。
+操作步骤如下：
+一、自定义Gradle模板：
+有时候新建项目的时候，Gradle文件里对应的sdk版本总是不正确，这个时候我们就要自定义模板了。
+Android Studio安装目录\plugins\android\lib\templates\gradle-projects\NewAndroidModule\recipe.xml.ftl
+查找com.android.support:appcompat，即可修改对应的support:appcompat版本
 
+早期的版本在
+Android Studio安装目录\plugins\android\lib\templates\gradle-projects\NewAndroidModule\root\build.gradle.ftl
+可以修改compileSdkVersion和targetSdkVersion等信息，但是仔细看新版本的头有这么一句
+<#import “./shared_macros.ftl” as shared>
+所以，应该修改
+Android Studio安装目录\plugins\android\lib\templates\gradle-projects\NewAndroidModule\root\shared_macros.ftl
 
-1.  在构建打包时，需要注意切换debug环境，还是生产release环境，因为日志的打印开关是由ENABLE_LOG决定的
- buildTypes {
-        release {
-            minifyEnabled false
-            buildConfigField "boolean", "ENABLE_LOG", "false"
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-        debug{
-            minifyEnabled false
-            buildConfigField "boolean", "ENABLE_LOG", "true"
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
+二、MVP模板。MVP开发过程中一次性总是要新建很多文件，我们同样可以在模板里自己定义。
+AndroidStudio安装路径\plugins\android\lib\templates\activities
+复制EmptyActivity到同级目录重命名为MVPActivity，相关改动：
+template.xml只要更改根节点的name为name=”MVPActivity”即可。
+替换MVPActivity当前目录下的recipe.xml.ftl文件为app_develop_kit/recipe.xml.ftl
 
-2.  项目URL的配置的切换--这个通过主项目的差异化构建进行配置--已完成
-    techown.login.network.downloader.Constant.BASE_URL 服务器url
-    在主项目的Application--onCreate方法中初始化
-3.  项目代码风格的校验--checkstyle  自定义 --已完成
-    a.通过gradle脚本命令的方式进行校验
-        配置一个gradle文件，如../gradle/check.gradle  line 2 --> line 8
-    b.通过安装工具插件的方式
-        一。install :setting -- plugins--browse repositories -- checkstyle idle -- click install
-        二。config  :setting -- Other Setting -- CheckStyle -- Configuration File --click right add
+再进入AndroidStudio安装路\plugins\android\lib\templates\activities\MVPActivity\root\src\app_package，复制app_develop_kit/以下文件进去：
+MainActivity.java.ftl
+MainContract.java.ftl
+MainPresenter.java.ftl
 
-    a.b两种方式都需要配置一个checkstyle.xml文件，制定代码的检查规范。
-    注意：每次修改checkstyle.xml文件，都需要clean一下工程，Check才能生效。
+重启AndroidStudio，File –> New –> Activity –> MVP Activity即可。
 
-4.  代码的模板设计 Live Templates
-    现有的常用快捷方式
-    android.xml
-        lh      android:layout_height="$height$"
-        lhm     android:layout_height="match_parent"\
-        lhw     android:layout_height="wrap_content"
-        lw
-        lwm
-        lhw
-    android.log
-        logt    private static final String TAG = "$className$";
-        logd    android.util.Log.d(TAG, "$METHOD_NAME$: $content$");
-        logm    android.util.Log.d(TAG, $content$);//Log method name and its arguments
-        logr    android.util.Log.d(TAG, "$METHOD_NAME$() returned: " +  $result$);//Log result of this method
-        .....
-5.OkHttp --cookieJar 和 authenticator 机制
-    Dispatcher 机制  retryOnConnectionFailure 重连接机制  ConnectionPool连接池机制  DEFAULT_PROTOCOLS
-    DEFAULT_CONNECTION_SPECS
+---------------------
 
-6. 上传到bintray 仓库，执行下面两个命令
-    gradlew install
-    gradlew bintrayUpload
+本文来自 ithouse 的CSDN 博客 ，全文地址请点击：https://blog.csdn.net/ithouse/article/details/80416037?utm_source=copy
