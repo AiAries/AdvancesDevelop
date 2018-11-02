@@ -1,2 +1,3 @@
+include ':dagger_demo'
 rootProject.name='feiqiu'
 
