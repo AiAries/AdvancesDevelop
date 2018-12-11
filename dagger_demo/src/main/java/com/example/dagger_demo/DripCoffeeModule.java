@@ -9,7 +9,7 @@ public class DripCoffeeModule {
         return new ElectricHeater();
     }
 
-    @Provides static Pump providePump(Thermosiphon pump) {
+    /*@Provides static Pump providePump(Thermosiphon pump) {
         return pump;
-    }
+    }*/
 }
