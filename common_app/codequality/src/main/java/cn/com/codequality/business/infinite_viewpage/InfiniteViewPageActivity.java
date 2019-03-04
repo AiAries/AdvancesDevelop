@@ -23,7 +23,7 @@ public class InfiniteViewPageActivity extends AppCompatActivity {
     private UltraViewPager ultraViewPager;
     private List<ImageView> listviews;
     private List<Fragment> data = new ArrayList<>();
-    private int[] pics = {R.drawable.xu1, R.mipmap.ic_launcher_round, R.drawable.xu3};
+    private int[] pics = {R.mipmap.ic_launcher_round, R.mipmap.ic_launcher_round, R.mipmap.ic_launcher_round};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -1,6 +1,8 @@
 package cn.com.codequality.business.chat;
 
 import android.os.Bundle;
+import android.support.transition.Slide;
+import android.view.Gravity;
 
 import com.bankcomm.framework.utils.ActivityUtils;
 import com.bankcomm.framework.utils.schedulers.SchedulerProvider;
@@ -23,6 +25,12 @@ public class ChatActivity extends BaseActivity {
             chatFragment = new ChatFragment();
             ActivityUtils.addFragmentToActivity(getSupportFragmentManager(),chatFragment,R.id.main_container);
         }
+        // Defines enter transition for all fragment views
+        Slide slideTransition = new Slide(Gravity.LEFT);
+        slideTransition.setDuration(1000);
+        chatFragment.setEnterTransition(slideTransition);
+        chatFragment.setExitTransition(slideTransition);
+//        chatFragment.setReenterTransition(slideTransition);
         new ChatPresenterImp(
                 chatFragment,
                 ChatRepository.getInstance(new ChatRemoteDataSource(),new ChatLocalDataSource()),
