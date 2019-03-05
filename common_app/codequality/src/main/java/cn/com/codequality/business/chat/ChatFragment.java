@@ -65,8 +65,8 @@ public class ChatFragment extends BaseFragment implements ChatContract.View {
         changeBoundsTransition.setDuration(500);
 
         chatDetailFragment.setEnterTransition(slideTransition);
-//        chatDetailFragment.setAllowEnterTransitionOverlap(true);
-//        chatDetailFragment.setAllowReturnTransitionOverlap(true);
+        chatDetailFragment.setAllowEnterTransitionOverlap(true);
+        chatDetailFragment.setAllowReturnTransitionOverlap(true);
         chatDetailFragment.setSharedElementEnterTransition(changeBoundsTransition);
         testJsonView.setOnClickListener(new View.OnClickListener() {
             @Override
