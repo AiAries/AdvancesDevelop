@@ -2,6 +2,7 @@ package com.bankcomm.ui.base;
 
 import android.databinding.BaseObservable;
 
+import com.bankcomm.framework.log.AriesLog;
 import com.bankcomm.framework.utils.ActivityUtils;
 
 public abstract class BaseDataBindingActivity extends BaseActivity {
@@ -27,6 +28,7 @@ public abstract class BaseDataBindingActivity extends BaseActivity {
 
             if (retainedViewModel != null && retainedViewModel.getViewmodel() != null) {
                 // If the model was retained, return it.
+                AriesLog.d("findOrCreateViewModel",retainedViewModel.getViewmodel().getClass().getSimpleName()+"retained");
                 return retainedViewModel.getViewmodel();
             } else {
                 // There is no DemoViewModel yet, create it.
@@ -36,12 +38,10 @@ public abstract class BaseDataBindingActivity extends BaseActivity {
                         getSupportFragmentManager(),
                         ViewModelHolder.createContainer(viewModel),
                         tag);
+                AriesLog.d("findOrCreateViewModel",viewModel.getClass().getSimpleName()+"created");
                 return viewModel;
             }
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-            return null;
-        } catch (IllegalAccessException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }

@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.view.Gravity;
 import android.widget.Toast;
 
+import com.bankcomm.framework.log.AriesLog;
 import com.bankcomm.framework.utils.ActivityUtils;
 import com.bankcomm.ui.view.swipe.SwipeBackActivity;
 
@@ -29,20 +30,20 @@ public abstract class BaseActivity extends SwipeBackActivity {
             contentFrame) {
         T tasksFragment =
                 (T) getSupportFragmentManager().findFragmentById(contentFrame);
+        boolean isCreated = false;
         if (tasksFragment == null) {
             // Create the fragment
             try {
                 tasksFragment = fragmentClazz.newInstance();
-            } catch (InstantiationException e) {
-                e.printStackTrace();
-                return null;
-            } catch (IllegalAccessException e) {
+                isCreated = true;
+            } catch (Exception e) {
                 e.printStackTrace();
                 return  null;
             }
             ActivityUtils.addFragmentToActivity(
                     getSupportFragmentManager(), tasksFragment, contentFrame);
         }
+        AriesLog.d("findOrCreateViewFragment",isCreated?"created":"retained");
         return tasksFragment;
     }
     protected void toast(@NonNull String msg) {

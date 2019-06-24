@@ -13,12 +13,24 @@ public class BindDemoActivity extends BaseDataBindingActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bind_demo);
-        BindDemoFragment fragment = findOrCreateViewFragment(BindDemoFragment.class, R.id.content_frame);
-        DemoViewModel demoViewModel = findOrCreateViewModel(DemoViewModel.class, "BindDemoActivityTAG");
+        final BindDemoFragment fragment = findOrCreateViewFragment(BindDemoFragment.class, R.id.content_frame);
+        final DemoViewModel demoViewModel = findOrCreateViewModel(DemoViewModel.class, "BindDemoActivityTAG");
         //给viewmodel设置获取数据仓库
         //demoViewModel.setDataReposity();
         // Link View and DemoViewModel
         fragment.setViewModel(demoViewModel);
+        new Thread(){
+            @Override
+            public void run() {
+                super.run();
+                try {
+                    Thread.sleep(3000);
+                    demoViewModel.title.set("i am good boy");
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }.start();
     }
 
 
