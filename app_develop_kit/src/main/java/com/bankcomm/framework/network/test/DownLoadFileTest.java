@@ -15,19 +15,21 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class DownLoadFileTest {
-	public static String fileName = "twodimen2.png";
+	public static String fileName = "testJson.json";
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
-		downloadByOkHttp();
-//		downloadByUrlConnection();
+//		downloadByOkHttp();
+		downloadByUrlConnection();
 	}
 
 	public static void downloadByOkHttp() throws IOException {
 		final OkHttpClient client = new OkHttpClient();
 		Request request = new Request.Builder().url(
-				"http://127.0.0.1:8099/"+fileName).build();
+				"http://127.0.0.1:8080/"+fileName).build();
 		client.newBuilder().readTimeout(3, TimeUnit.SECONDS);
-		client.newCall(request).enqueue(new Callback() {
+		Call call = client.newCall(request);
+//		Response execute = call.execute();//同步阻塞执行。
+		call.enqueue(new Callback() {
 			
 			@Override
 			public void onResponse(Call call, Response response) throws IOException {
@@ -58,21 +60,24 @@ public class DownLoadFileTest {
 		HttpURLConnection openConnection = (HttpURLConnection) url.openConnection();
 		int responseCode = openConnection.getResponseCode();
 		System.out.println(responseCode);
-		System.out.println(openConnection.getHeaderField("Date"));
-		if (responseCode==200) {
+//		System.out.println(openConnection.getHeaderField("Date"));
+		if (responseCode == 200) {
 			InputStream inputStream = openConnection.getInputStream();
 			copyDataFromStream(inputStream);
+		} else {
+			System.out.printf("error--%d--",responseCode);
 		}
 		
 	}
 	public static void copyDataFromStream(InputStream in){
 		try {
-			FileOutputStream fos = new FileOutputStream(fileName);
+			FileOutputStream fos = new FileOutputStream("D:\\nodejs\\webservice\\"+fileName);
 			byte[] buf = new byte[8*1024]; 
-			int len = -1;
+			int len;
 			int totalLen = 0;
 			while((len =in.read(buf))!=-1){
 				fos.write(buf,0,len);
+                System.out.println(len);
 				totalLen+=len;
 			}
 			System.out.println(totalLen);

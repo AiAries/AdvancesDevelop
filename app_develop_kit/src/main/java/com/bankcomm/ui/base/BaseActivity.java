@@ -4,9 +4,11 @@ import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.Gravity;
 import android.widget.Toast;
 
+import com.bankcomm.framework.utils.ActivityUtils;
 import com.bankcomm.ui.view.swipe.SwipeBackActivity;
 
 /**
@@ -23,7 +25,26 @@ public abstract class BaseActivity extends SwipeBackActivity {
     public enum ToastLength {
         LONG, SHORT
     }
-
+    protected <T extends Fragment> T findOrCreateViewFragment(Class<T> fragmentClazz, int
+            contentFrame) {
+        T tasksFragment =
+                (T) getSupportFragmentManager().findFragmentById(contentFrame);
+        if (tasksFragment == null) {
+            // Create the fragment
+            try {
+                tasksFragment = fragmentClazz.newInstance();
+            } catch (InstantiationException e) {
+                e.printStackTrace();
+                return null;
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+                return  null;
+            }
+            ActivityUtils.addFragmentToActivity(
+                    getSupportFragmentManager(), tasksFragment, contentFrame);
+        }
+        return tasksFragment;
+    }
     protected void toast(@NonNull String msg) {
         toast(msg,null);
     }

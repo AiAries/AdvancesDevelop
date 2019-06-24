@@ -1,19 +1,26 @@
 package cn.com.codequality.business.databinding;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+
+import com.bankcomm.ui.base.BaseDataBindingActivity;
+
+import cn.com.codequality.R;
 
 
-public class BindDemoActivity extends AppCompatActivity  {
+public class BindDemoActivity extends BaseDataBindingActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        dataBinding.setVariable()
-
-//        DataBindingUtil.setContentView(this, );
-
+        setContentView(R.layout.activity_bind_demo);
+        BindDemoFragment fragment = findOrCreateViewFragment(BindDemoFragment.class, R.id.content_frame);
+        DemoViewModel demoViewModel = findOrCreateViewModel(DemoViewModel.class, "BindDemoActivityTAG");
+        //给viewmodel设置获取数据仓库
+        //demoViewModel.setDataReposity();
+        // Link View and DemoViewModel
+        fragment.setViewModel(demoViewModel);
     }
+
 
 
 }

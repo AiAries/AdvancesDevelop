@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+  <title>电子化进件</title>
+  <script src="./static/js/rem/adaptive.min.js"></script>
+  <script>
+    window['adaptive'].desinWidth = 750;
+    window['adaptive'].baseFont = 30;
+    window['adaptive'].maxWidth = 750;
+    window['adaptive'].init();
+  </script>
+</head>
+<body>
+
+<input id="photo_input" type="file" accept="image/*" capture="camera" hidden/>
+
+<script src="https://unpkg.com/vue@2.5.21/dist/vue.min.js"></script>
+
+<script src="https://unpkg.com/axios@0.18.0/dist/axios.min.js"></script>
+
+<div id="app"></div>
+<!-- built files will be auto injected -->
+<script type="text/javascript" src="/app.js"></script></body>
+</html>
