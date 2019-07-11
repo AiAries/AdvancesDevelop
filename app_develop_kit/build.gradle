@@ -62,22 +62,8 @@ dependencies {
 
     api "com.android.support.test.espresso:espresso-idling-resource:$rootProject.espressoVersion"
     // Dependencies for local unit tests
-    testApi"junit:junit:$rootProject.ext.junitVersion"
-    testApi"org.mockito:mockito-all:$rootProject.ext.mockitoVersion"
-    testApi"org.hamcrest:hamcrest-all:$rootProject.ext.hamcrestVersion"
+    testImplementation"junit:junit:$rootProject.ext.junitVersion"
+    testImplementation"org.mockito:mockito-all:$rootProject.ext.mockitoVersion"
+    testImplementation"org.hamcrest:hamcrest-all:$rootProject.ext.hamcrestVersion"
 
-    // Android Testing Support Library's runner and rules
-    androidTestApi"com.android.support.test:runner:$rootProject.ext.runnerVersion"
-    androidTestApi"com.android.support.test:rules:$rootProject.ext.runnerVersion"
-
-    // Dependencies for Android unit tests
-    androidTestApi"junit:junit:$rootProject.ext.junitVersion"
-    androidTestApi"org.mockito:mockito-core:$rootProject.ext.mockitoVersion"
-    androidTestApi'com.google.dexmaker:dexmaker:1.2'
-    androidTestApi'com.google.dexmaker:dexmaker-mockito:1.2'
-
-    // Espresso UI Testing
-    androidTestApi"com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
-    androidTestApi"com.android.support.test.espresso:espresso-contrib:$rootProject.espressoVersion"
-    androidTestApi"com.android.support.test.espresso:espresso-intents:$rootProject.espressoVersion"
 }
