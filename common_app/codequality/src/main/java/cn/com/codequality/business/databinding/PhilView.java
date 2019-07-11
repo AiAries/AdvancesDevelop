@@ -1,4 +1,3 @@
-/*
 package cn.com.codequality.business.databinding;
 
 import android.content.Context;
@@ -36,7 +35,6 @@ public class PhilView extends View {
             //防止死循环
 
             Log.d(TAG, "重复设置");
-            return;
         } else {
             Log.d(TAG, "setDisplay " + isDisplay);
             view.setVisibility(isDisplay ? View.VISIBLE : View.INVISIBLE);
@@ -78,4 +76,3 @@ public class PhilView extends View {
 
 //    原文：https://blog.csdn.net/zhangphil/article/details/77649256
 }
-*/

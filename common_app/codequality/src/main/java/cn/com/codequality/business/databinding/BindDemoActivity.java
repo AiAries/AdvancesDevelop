@@ -26,6 +26,7 @@ public class BindDemoActivity extends BaseDataBindingActivity {
                 try {
                     Thread.sleep(3000);
                     demoViewModel.title.set("i am good boy");
+                    demoViewModel.display.set(true);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
