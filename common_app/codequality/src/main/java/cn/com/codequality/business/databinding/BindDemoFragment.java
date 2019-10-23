@@ -25,7 +25,7 @@ public class BindDemoFragment extends BaseFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         fragBinding = BindFragBinding.inflate(inflater, container, false);
-//        fragBinding.setViewmodel(viewModel);
+        fragBinding.setViewmodel(viewModel);
         return fragBinding.getRoot();
     }
 

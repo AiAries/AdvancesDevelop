@@ -16,7 +16,7 @@ public class BindDemoActivity extends BaseDataBindingActivity {
         final BindDemoFragment fragment = findOrCreateViewFragment(BindDemoFragment.class, R.id.content_frame);
         final DemoViewModel demoViewModel = findOrCreateViewModel(DemoViewModel.class, "BindDemoActivityTAG");
         //给viewmodel设置获取数据仓库
-        //demoViewModel.setDataReposity();
+//        demoViewModel.setDataReposity();
         // Link View and DemoViewModel
         fragment.setViewModel(demoViewModel);
         new Thread(){
