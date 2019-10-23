@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="cn.com.codequality">
+    package="cn.com.codequality">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".base.MyApplication"
@@ -12,30 +12,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".business.main_page.MainActivity"/>
-        <activity android:name=".business.games.GameActivity"/>
-        <!-- 个推配置 -->
-        <meta-data
-            android:name="PUSH_APPID"
-            android:value="${GETUI_APP_ID}"/>
-        <meta-data
-            android:name="PUSH_APPKEY"
-            android:value="${GETUI_APP_KEY}"/>
-        <meta-data
-            android:name="PUSH_APPSECRET"
-            android:value="${GETUI_APP_SECRET}"/>
+        <activity android:name=".business.main_page.MainActivity" />
+        <activity android:name=".business.games.GameActivity" />
 
-        <activity android:name=".business.chat.ChatActivity"/>
+        <activity android:name=".business.chat.ChatActivity" />
         <activity android:name=".business.enter.EnterListActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".business.infinite_viewpage.InfiniteViewPageActivity"/>
-        <activity android:name=".business.databinding.BindDemoActivity">
-        </activity>
+        <activity android:name=".business.infinite_viewpage.InfiniteViewPageActivity" />
+        <activity android:name=".business.databinding.BindDemoActivity"></activity>
+        <activity android:name=".business.webview.WebViewActivity"></activity>
     </application>
 
 </manifest>

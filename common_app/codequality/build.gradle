@@ -55,23 +55,12 @@ android {
             dimension 'env'
             buildConfigField "boolean", "ENABLE_PRO_ENV", "false"
             buildConfigField "boolean", "ENABLE_CATCH_CRASHLOG", "true"
-            manifestPlaceholders = [
-                    GETUI_APP_ID    : "iLtcRTrZpB6pHmvBFRTUL2",
-                    GETUI_APP_KEY   : "nTBayrol6MAtlKDzvnFsk1",
-                    GETUI_APP_SECRET: "3Zvaaxt7H1Ad2eSTdlkyf2",
-            ]
-
         }
 
         uat {
             dimension 'env'
             buildConfigField "boolean", "ENABLE_PRO_ENV", "false"
             buildConfigField "boolean", "ENABLE_CATCH_CRASHLOG", "true"
-            manifestPlaceholders = [
-                    GETUI_APP_ID    : "iLtcRTrZpB6pHmvBFRTUL2",
-                    GETUI_APP_KEY   : "nTBayrol6MAtlKDzvnFsk1",
-                    GETUI_APP_SECRET: "3Zvaaxt7H1Ad2eSTdlkyf2",
-            ]
             applicationIdSuffix ".debug"
 
         }
@@ -94,6 +83,7 @@ dependencies {
     api project(':app_develop_kit')
     // Dependencies for local unit tests
     api "com.android.support.test.espresso:espresso-idling-resource:$rootProject.espressoVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     testImplementation "junit:junit:$rootProject.ext.junitVersion"
     testImplementation "org.mockito:mockito-all:$rootProject.ext.mockitoVersion"
     testImplementation "org.hamcrest:hamcrest-all:$rootProject.ext.hamcrestVersion"
