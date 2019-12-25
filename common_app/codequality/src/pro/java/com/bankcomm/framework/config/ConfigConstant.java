@@ -8,5 +8,5 @@ public class ConfigConstant {
     private ConfigConstant() {
 
     }
-    public static final String BASE_URL = "https://creditcardapp.bankcomm.com/mapp/";//mapp_2准生产环境，mapp生产环境
+    public static final String BASE_URL = "";//mapp_2准生产环境，mapp生产环境
 }

@@ -8,5 +8,5 @@ public class ConfigConstant {
     private ConfigConstant() {
 
     }
-    public static final String BASE_URL = "https://paymenttest.bankcomm.com/mmp_UAT/";//sit环境mmp_sit；uat环境mmp_uat
+    public static final String BASE_URL = "/mmp_UAT/";//sit环境mmp_sit；uat环境mmp_uat
 }
