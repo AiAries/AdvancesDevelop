@@ -6,7 +6,7 @@ import okhttp3.Interceptor;
 import okhttp3.Response;
 
 /**
- * Created by A170860 on 2018/6/4.
+ * Created by  on 2018/6/4.
  */
 @Deprecated
 public class HostSelectInterceptor implements Interceptor {

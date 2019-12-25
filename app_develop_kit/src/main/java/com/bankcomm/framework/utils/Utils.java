@@ -3,7 +3,7 @@ package com.bankcomm.framework.utils;
 import android.support.annotation.Nullable;
 
 /**
- * Created by A170860 on 2018/6/22.
+ * Created by  on 2018/6/22.
  */
 
 public class Utils {

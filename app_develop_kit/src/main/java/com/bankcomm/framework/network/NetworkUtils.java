@@ -14,7 +14,7 @@ import com.bankcomm.ui.base.BaseApplication;
 import java.util.List;
 
 /**
- * Created by A170860 on 2018/6/21.
+ * Created by  on 2018/6/21.
  */
 
 public class NetworkUtils {

@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentActivity;
 
 
 /**
- * Created by A170860 on 2018/6/14.
+ * Created by  on 2018/6/14.
  */
 
 public class ProgressShadeImp implements IShade {

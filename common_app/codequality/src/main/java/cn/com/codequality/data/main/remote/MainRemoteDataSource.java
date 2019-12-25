@@ -19,7 +19,7 @@ import io.reactivex.schedulers.Schedulers;
 import static android.content.ContentValues.TAG;
 
 /**
- * Created by A170860 on 2018/6/26.
+ * Created by  on 2018/6/26.
  */
 
 public class MainRemoteDataSource implements MainDataSource {

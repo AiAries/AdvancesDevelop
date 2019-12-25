@@ -6,7 +6,7 @@ import android.support.annotation.Nullable;
 import com.bankcomm.ui.view.dialogs.shade.IShade;
 
 /**
- * Created by A170860 on 2018/6/14.
+ * Created by  on 2018/6/14.
  * 带遮罩的网络请求的Activity
  */
 

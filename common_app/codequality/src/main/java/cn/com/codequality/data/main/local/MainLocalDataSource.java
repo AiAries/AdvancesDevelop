@@ -5,7 +5,7 @@ import cn.com.codequality.data.main.bean.MainTabVo;
 import io.reactivex.Flowable;
 
 /**
- * Created by A170860 on 2018/6/26.
+ * Created by  on 2018/6/26.
  */
 
 public class MainLocalDataSource implements MainDataSource {

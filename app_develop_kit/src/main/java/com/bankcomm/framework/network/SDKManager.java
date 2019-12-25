@@ -5,7 +5,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 
 /**
- * Created by A170860 on 2018/6/21.
+ * Created by  on 2018/6/21.
  */
 
 class SDKManager {

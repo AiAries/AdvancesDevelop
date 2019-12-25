@@ -12,7 +12,7 @@ import okio.GzipSink;
 import okio.Okio;
 
 /**
- * Created by A170860 on 2018/6/6.
+ * Created by  on 2018/6/6.
  */
 
 public class GzipRequestInterceptor implements Interceptor{

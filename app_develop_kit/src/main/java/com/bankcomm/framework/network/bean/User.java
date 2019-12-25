@@ -1,7 +1,7 @@
 package com.bankcomm.framework.network.bean;
 
 /**
- * Created by A170860 on 2018/6/1.
+ * Created by  on 2018/6/1.
  */
 
 public class User {

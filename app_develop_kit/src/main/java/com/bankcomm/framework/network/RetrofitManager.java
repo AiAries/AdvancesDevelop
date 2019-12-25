@@ -14,7 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import static okhttp3.internal.Util.checkDuration;
 
 /**
- * Created by A170860 on 2018/6/1.<pre>
+ * Created by  on 2018/6/1.<pre>
  * 可以动态的修改请求服务器的路径{@link RetrofitManager.Builder#baseUrl(String)}
  * 修改连接超时时间{@link RetrofitManager.Builder#connectTimeout(int)}
  * 修改读取超时时间{@link RetrofitManager.Builder#readTimeout(int)}

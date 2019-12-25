@@ -1,46 +1,46 @@
-1.²é¿´AndroidÓ¦ÓÃ°üÃû¡¢ActivityµÄ¼¸¸ö·½·¨
+1.ï¿½é¿´AndroidÓ¦ï¿½Ã°ï¿½ï¿½ï¿½ï¿½ï¿½Activityï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	1.logcat.
-	Çå³ýlogcatÄÚÈÝ£¬Ê¹ÓÃÃüÁîadb logcat -c
-.	Æô¶¯logcat£¬Ê¹ÓÃÃüÁîadb logcat ActivityManager:I *:s
-	2.²¹³ä£ºÊ¹ÓÃadb shell dumpsys window | findstr mCurrentFocus  ÃüÁî²é¿´µ±Ç°ÔËÐÐµÄ°üÃûºÍActivity¸üÇåÎúÒ»Ð©
+	ï¿½ï¿½ï¿½logcatï¿½ï¿½ï¿½Ý£ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½adb logcat -c
+.	ï¿½ï¿½ï¿½ï¿½logcatï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½adb logcat ActivityManager:I *:s
+	2.ï¿½ï¿½ï¿½ä£ºÊ¹ï¿½ï¿½adb shell dumpsys window | findstr mCurrentFocus  ï¿½ï¿½ï¿½ï¿½é¿´ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ÐµÄ°ï¿½ï¿½ï¿½ï¿½ï¿½Activityï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Ð©
 http://blog.csdn.net/jlminghui/article/details/40622103
 	3.adb shell dumpsys package techown.card -- find   all info of apk.
-	4.adb shell dumpsys package [packageName] |findstr xxx -- ²éÑ¯Ä³¸öµ¥Ò»ÐÅÏ¢.
+	4.adb shell dumpsys package [packageName] |findstr xxx -- ï¿½ï¿½Ñ¯Ä³ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ï¢.
 
-2.»ìÏýÅäÖÃ
+2.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 #Warning:android.support.v4.app.ActivityCompat21$SharedElementCallbackImpl: 
 #can't find superclass or interface android.app.SharedElementCallback
 #
 -dontwarn android.**
-3.gradle ÅäÖÃcompileOption   
+3.gradle ï¿½ï¿½ï¿½ï¿½compileOption   
 	compileOptions{
-        compileOptions.encoding="GBK"//ÐÞ¸ÄµÄÊÇÏîÄ¿µÄ½âÂë¸ñÊ½
+        compileOptions.encoding="GBK"//ï¿½Þ¸Äµï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½Ä½ï¿½ï¿½ï¿½ï¿½Ê½
     }
-	Èç¹ûÏîÄ¿ÊÇ£Ç£Â£Ë±àÒëµÄ»°£¬android studio ÐèÒªÐÞ¸Äide encoding ºÍbuild.gradle ÎÄ¼þÖÐÐÞ¸ÄÈç3.
+	ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½Ç£Ç£Â£Ë±ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½android studio ï¿½ï¿½Òªï¿½Þ¸ï¿½ide encoding ï¿½ï¿½build.gradle ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½ï¿½ï¿½3.
 	
 
-svn£º
-svn cleanup   ½âËø
-svn update --set-depth empty		Ç¿ÖÆÉ¾³ýµ±Ç°Ä¿Â¼ÏÂµÄËùÓÐÎÄ¼þ
-svn update --set-depth infinity		¸üÐÂËùÓÐÎÄ¼þ
+svnï¿½ï¿½
+svn cleanup   ï¿½ï¿½ï¿½ï¿½
+svn update --set-depth empty		Ç¿ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½Ç°Ä¿Â¼ï¿½Âµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
+svn update --set-depth infinity		ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 
-adb shell pm list packages -3 //²é¿´ÓÃ»§°²×°ËùÓÐµÄ°ü
+adb shell pm list packages -3 //ï¿½é¿´ï¿½Ã»ï¿½ï¿½ï¿½×°ï¿½ï¿½ï¿½ÐµÄ°ï¿½
 
-adb shell am force-stop packageName //¹Ø±Õµ±Ç°µÄÓ¦ÓÃ
-adb install -r packageName  //¸²¸Ç°²×°
+adb shell am force-stop packageName //ï¿½Ø±Õµï¿½Ç°ï¿½ï¿½Ó¦ï¿½ï¿½
+adb install -r packageName  //ï¿½ï¿½ï¿½Ç°ï¿½×°
 adb shell am set-debug-app packageName
-adb shell am start -n techown.card/.activity.Main  Æô¶¯Main activity
-adb shell am start -n techown.login/.LoginActivity Æô¶¯µÇÂ½
-adb shell am start -n com.techown.merchant/.activity.MainMerchantActivity Æô¶¯ÉÌ»§Ö÷Ò³Ãæ
+adb shell am start -n techown.card/.activity.Main  ï¿½ï¿½ï¿½ï¿½Main activity
+adb shell am start -n techown.login/.LoginActivity ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â½
+adb shell am start -n com.techown.merchant/.activity.MainMerchantActivity ï¿½ï¿½ï¿½ï¿½ï¿½Ì»ï¿½ï¿½ï¿½Ò³ï¿½ï¿½
 
-//²é¿´Ö¸¶¨µÄÈÕÖ¾	adb logcat -h ²é¿´Ê¹ÓÃ¹æÔò
+//ï¿½é¿´Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾	adb logcat -h ï¿½é¿´Ê¹ï¿½Ã¹ï¿½ï¿½ï¿½
 adb logcat  dd:E
-//adb shell pm -h ²é¿´ËùÓÐpmÃüÁîµÄÊ¹ÓÃÖúÊÖ
+//adb shell pm -h ï¿½é¿´ï¿½ï¿½ï¿½ï¿½pmï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 adb shell am permission
 
 adb shell am stack list
 adb shell am start -n com.bankcomm.testapp/.MainActivity
-C:\Users\A170860>adb shell am -h
+C:\Users\>adb shell am -h
 usage: am [subcommand] [options]
 usage: am start [-D] [-W] [-P <FILE>] [--start-profiler <FILE>]
                [--sampling INTERVAL] [-R COUNT] [-S] [--opengl-trace]

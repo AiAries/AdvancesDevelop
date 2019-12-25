@@ -8,7 +8,7 @@ import okhttp3.Response;
 import okhttp3.Route;
 
 /**
- * Created by A170860 on 2018/6/27.
+ * Created by  on 2018/6/27.
  */
 
 public class ClientAuthenticator implements Authenticator {
