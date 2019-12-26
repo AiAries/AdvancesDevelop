@@ -10,7 +10,7 @@ import retrofit2.http.GET;
 import retrofit2.http.QueryMap;
 
 /**
- * Created by A170860 on 2018/6/22.
+ * Created by  on 2018/6/22.
  */
 
 public interface ChatApi {

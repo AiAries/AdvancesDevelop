@@ -7,7 +7,7 @@ import com.bankcomm.framework.network.FrameworkConstant;
 import com.bankcomm.ui.base.BaseApplication;
 
 /**
- * Created by A170860 on 2018/6/4.
+ * Created by  on 2018/6/4.
  */
 
 public class MyApplication extends BaseApplication {

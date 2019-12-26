@@ -1,7 +1,7 @@
 package cn.com.codequality.extension.extension;
 
 /**
- * Created by A170860 on 2018/6/7.
+ * Created by  on 2018/6/7.
  */
 public abstract class Plant {
     private String roots;

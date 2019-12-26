@@ -13,7 +13,7 @@ import cn.com.codequality.R;
 
 
 /**
- * Created by A170860 on 2018/6/19.
+ * Created by  on 2018/6/19.
  */
 
 public class TrainActivity extends AppCompatActivity {

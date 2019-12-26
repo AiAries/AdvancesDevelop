@@ -8,7 +8,7 @@ import java.net.UnknownHostException;
 import javax.net.ssl.SSLSocketFactory;
 
 /**
- * Created by A170860 on 2018/6/27.
+ * Created by  on 2018/6/27.
  */
 
 public class CustomSSLSocketFactory extends SSLSocketFactory{

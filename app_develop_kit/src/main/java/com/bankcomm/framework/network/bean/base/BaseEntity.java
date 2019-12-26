@@ -3,7 +3,7 @@ package com.bankcomm.framework.network.bean.base;
 import java.util.List;
 
 /**
- * Created by A170860 on 2018/6/1.
+ * Created by  on 2018/6/1.
  */
 
 public class BaseEntity<T> {

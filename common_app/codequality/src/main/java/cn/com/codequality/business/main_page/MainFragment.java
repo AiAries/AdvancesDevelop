@@ -13,7 +13,7 @@ import com.bankcomm.ui.base.BaseFragment;
 import static com.bankcomm.framework.utils.Utils.checkNotNull;
 
 /**
- * Created by A170860 on 2018/6/22.
+ * Created by  on 2018/6/22.
  */
 
 public class MainFragment extends BaseFragment implements MainContract.View {

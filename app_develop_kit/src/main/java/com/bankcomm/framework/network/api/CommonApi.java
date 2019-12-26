@@ -8,7 +8,7 @@ import retrofit2.http.Field;
 import retrofit2.http.GET;
 
 /**
- * Created by A170860 on 2018/6/1.
+ * Created by  on 2018/6/1.
  * 公用的接口
  */
 
