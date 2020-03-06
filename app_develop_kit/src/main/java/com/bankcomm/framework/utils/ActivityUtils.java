@@ -33,7 +33,6 @@ public class ActivityUtils {
     /**
      * The {@code fragment} is added to the container view with id {@code frameId}. The operation is
      * performed by the {@code fragmentManager}.
-     *
      */
     public static void addFragmentToActivity(@NonNull FragmentManager fragmentManager,
                                              @NonNull Fragment fragment, int frameId) {
@@ -50,33 +49,52 @@ public class ActivityUtils {
         }
         fragmentManager.beginTransaction().add(frameId, fragment).commit();
     }
+
+    public static void addFragmentToActivity(@NonNull FragmentManager fragmentManager,
+                                             @NonNull Fragment fragment, String tag) {
+
+//        checkNotNull(fragmentManager);
+//        checkNotNull(fragment);
+        hideFragments(fragmentManager);
+        List<Fragment> fragments = fragmentManager.getFragments();
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        for (Fragment fragment1 : fragments) {
+            if (fragment1.getClass().getName().equals(fragment.getClass().getName())) {
+                transaction.remove(fragment1).commit();
+            }
+        }
+        fragmentManager.beginTransaction().add(fragment, tag).commit();
+    }
+
     private static void addFragmentToActivity(@NonNull FragmentManager fragmentManager,
                                               @NonNull Fragment fragment, String tag, int frameId) {
 
 //        checkNotNull(fragmentManager);
 //        checkNotNull(fragment);
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.add(frameId,fragment,tag);
+        transaction.add(frameId, fragment, tag);
         transaction.commit();
     }
+
     public static <T> T showFragmentToActivity(@NonNull FragmentManager fragmentManager, int frameId, Class<T> tClass) {
         return showFragmentToActivity(fragmentManager, frameId, tClass, null);
     }
+
     public static <T> T showFragmentToActivity(@NonNull FragmentManager fragmentManager, int frameId, Class<T> tClass, Bundle bundle) {
 
         try {
             hideFragments(fragmentManager);
             String name = tClass.getName();
-            System.out.println("fragment name "+name);
+            System.out.println("fragment name " + name);
             Fragment fragment1 = fragmentManager.findFragmentByTag(name);
             if (fragment1 == null) {
                 Class<?> aClass = Class.forName(name);
                 fragment1 = (Fragment) aClass.newInstance();
-                if (bundle!=null) {
+                if (bundle != null) {
 
                     fragment1.setArguments(bundle);
                 }
-                ActivityUtils.addFragmentToActivity(fragmentManager, fragment1, name,frameId);
+                ActivityUtils.addFragmentToActivity(fragmentManager, fragment1, name, frameId);
             } else {
                 fragmentManager.beginTransaction().show(fragment1).commit();
             }
@@ -86,15 +104,16 @@ public class ActivityUtils {
         } catch (InstantiationException e) {
             throw new RuntimeException(e.getMessage());
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e.getMessage()+tClass.getName() + "必须是Fragment的全类名");
+            throw new RuntimeException(e.getMessage() + tClass.getName() + "必须是Fragment的全类名");
         }
 
     }
-    private static void hideFragments(@NonNull FragmentManager fragmentManager){
+
+    private static void hideFragments(@NonNull FragmentManager fragmentManager) {
         List<Fragment> fragments = fragmentManager.getFragments();
-        if (fragments!=null&&fragments.size()>0) {
+        if (fragments != null && fragments.size() > 0) {
             for (Fragment fragment : fragments) {
-                if (fragment!=null&&fragment.isVisible()) {
+                if (fragment != null && fragment.isVisible()) {
                     fragmentManager.beginTransaction().hide(fragment).commit();
                 }
             }
