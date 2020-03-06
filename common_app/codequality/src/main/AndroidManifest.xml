@@ -2,8 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.com.codequality">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:name=".base.MyApplication"
         android:allowBackup="true"
@@ -13,8 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".business.main_page.MainActivity" />
-        <activity android:name=".business.games.GameActivity" />
 
+        <activity android:name=".business.games.GameActivity" />
         <activity android:name=".business.chat.ChatActivity" />
         <activity android:name=".business.enter.EnterListActivity">
             <intent-filter>
@@ -24,8 +22,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".business.infinite_viewpage.InfiniteViewPageActivity" />
-        <activity android:name=".business.databinding.BindDemoActivity"></activity>
-        <activity android:name=".business.webview.WebViewActivity"></activity>
+        <activity android:name=".business.databinding.BindDemoActivity" />
+        <activity android:name=".business.webview.WebViewActivity" />
+        <activity android:name=".business.custom_view.CustomViewActivity" />
+
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

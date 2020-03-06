@@ -1,4 +1,4 @@
-package cn.com.codequality.business.databinding;
+package cn.com.codequality.business.custom_view.view;
 
 import android.content.Context;
 import android.graphics.Canvas;

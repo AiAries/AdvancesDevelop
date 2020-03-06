@@ -24,13 +24,10 @@ import android.support.v4.app.FragmentTransaction;
 
 import java.util.List;
 
-import static com.google.gson.internal.$Gson$Preconditions.checkNotNull;
-
 /**
  * This provides methods to help Activities load their UI.
  */
 public class ActivityUtils {
-
     public static final String TAG = ActivityUtils.class.getCanonicalName();
 
     /**
@@ -44,9 +41,14 @@ public class ActivityUtils {
 //        checkNotNull(fragmentManager);
 //        checkNotNull(fragment);
         hideFragments(fragmentManager);
+        List<Fragment> fragments = fragmentManager.getFragments();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        transaction.add(frameId, fragment);
-        transaction.commit();
+        for (Fragment fragment1 : fragments) {
+            if (fragment1.getClass().getName().equals(fragment.getClass().getName())) {
+                transaction.remove(fragment1).commit();
+            }
+        }
+        fragmentManager.beginTransaction().add(frameId, fragment).commit();
     }
     private static void addFragmentToActivity(@NonNull FragmentManager fragmentManager,
                                               @NonNull Fragment fragment, String tag, int frameId) {
