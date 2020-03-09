@@ -1,3 +1,4 @@
 rootProject.name='feiqiu'
 include ':app_develop_kit',
         'common_app:codequality'
+include 'common_app:qrmodule'
