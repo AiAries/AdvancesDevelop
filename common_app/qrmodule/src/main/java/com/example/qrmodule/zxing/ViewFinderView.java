@@ -10,8 +10,7 @@ import android.graphics.Point;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.View;
-
-import com.example.a170860.qrdemo.R;
+import com.example.qrmodule.R;
 
 public class ViewFinderView extends View implements IViewFinder {
     private static final String TAG = "ViewFinderView";

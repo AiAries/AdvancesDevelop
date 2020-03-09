@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
-import com.example.a170860.qrdemo.R;
+import com.example.qrmodule.R;
 
 
 public abstract class BarcodeScannerView extends FrameLayout implements Camera.PreviewCallback  {
