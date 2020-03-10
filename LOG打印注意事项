@@ -1,0 +1,20 @@
+@Override
+    public void dealSuccess(String rspMsg, Context context, IBlack black) {
+        if (black instanceof ZJBlackBean11) {
+            // 保存法人身份证是否需要打标的标记。 respMsg == focus  需要打标
+            DBUtils db = new DBUtils(context);
+            String num;
+            if (context instanceof CompanyInformation2Activity) {
+                num = ZZZR_SearchMerchant2.num;
+            } else {
+                return;
+            }
+            db.updateData(context, "companyinfo",
+                    new String[]{"IS_LEGAL_PIC_TAG"}, new String[]{rspMsg}, "Id=?",
+                    new String[]{num});
+            Log.w("className","methodName: variableName "+variableValue);
+        }
+    }
+
+    #打印日志，一定要具体到 className   methodName  variableName   variableValue
+    方便查询和排除问题。
