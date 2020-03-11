@@ -1,4 +1,5 @@
 rootProject.name='feiqiu'
 include ':app_develop_kit',
-        'common_app:codequality'
+        'common_app:codequality',
+        'common_app:qrmodule'
 include ':lib-kotlin-learn'
