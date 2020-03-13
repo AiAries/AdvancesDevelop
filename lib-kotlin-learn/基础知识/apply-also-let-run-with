@@ -1,0 +1,66 @@
+apply和also 返回引用者本身
+let和run 返回最后一行
+
+/with函数有返回值，返回值是函数体中最后一行表达式
+val str = "I love kotlin"
+        val array = str.toCharArray()
+        val builder = StringBuilder()
+        //with函数有返回值，返回值是函数体中最后一行表达式
+    val result= with(builder){
+            for (ch in array){
+                this.append(ch.toInt())
+                //this 可以省略
+              //   append(ch.toInt())
+            }
+        //最后一行表达式为返回值
+        toString()
+        }
+
+
+var str : String = "abc"
+
+    fun testApply(){
+        println("Apply")
+        var str0 = str.apply {
+            this.toUpperCase()
+            println(this)
+        }
+        println(str0)
+    }
+
+    fun testAlso(){
+        println("also")
+        var str0 = str.also {
+            it.toUpperCase()
+            println(it)
+        }
+        println(str0)
+    }
+
+    fun testLet(){
+        println("let")
+        var str0 = str.let {
+            it.toUpperCase()
+            println(it)
+            Unit
+        }
+        println(str0)
+    }
+
+    fun testRun(){
+        println("run")
+        var str0 = str.run {
+            this.toUpperCase()
+            this.length
+            UInt
+        }
+        println(str0)
+    }
+
+    fun testWith(){
+        println("with")
+        with(str){
+            str = "1111"
+
+        }
+    }

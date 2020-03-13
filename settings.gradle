@@ -3,3 +3,4 @@ include ':app_develop_kit',
         'common_app:codequality',
         'common_app:qrmodule'
 include ':lib-kotlin-learn'
+include ':common_app:cuishou'

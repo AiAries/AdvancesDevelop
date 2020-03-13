@@ -1,0 +1,5 @@
+Kotlin  有八种基本数据类型，和Java对应，写法上都是以大写开头，比如 整数 Int
+
+Kotlin 中实现显示转换类型，需要用到对应的函数
+    var n1:Int = 3   // var n1 = 13 //整数默认Int
+    var d1:Double  = n1.toDouble()
