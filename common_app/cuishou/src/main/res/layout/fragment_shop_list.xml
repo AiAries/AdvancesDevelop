@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_">
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="@dimen/vl_px_1820"
+        android:layout_height="@dimen/vl_px_70"
+        android:layout_marginTop="@dimen/vl_px_50"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/TextStyle.Gray3.Size30.Center.BGBlue"
+            android:layout_width="@dimen/vl_px_144"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="序号" />
+
+        <View
+            android:layout_width="@dimen/vl_px_2"
+            android:layout_height="match_parent"
+            android:background="@color/color_list_title" />
+
+        <View
+            android:layout_width="@dimen/vl_px_2"
+            android:layout_height="match_parent"
+            android:background="@color/color_list_title" />
+
+        <TextView
+            style="@style/TextStyle.Gray3.Size30.Center.BGBlue"
+            android:layout_width="@dimen/vl_px_478"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="门店名称" />
+
+        <TextView
+            style="@style/TextStyle.Gray3.Size30.Center.BGBlue"
+            android:layout_width="@dimen/vl_px_678"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text=" 门店地址" />
+
+        <View
+            android:layout_width="@dimen/vl_px_2"
+            android:layout_height="match_parent"
+            android:background="@color/color_list_title" />
+
+        <TextView
+            style="@style/TextStyle.Gray3.Size30.Center.BGBlue"
+            android:layout_width="@dimen/vl_px_514"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="操作" />
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/shop_list_content"
+        android:layout_width="@dimen/vl_px_1820"
+        android:layout_height="@dimen/vl_px_880"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/shop_list_pre"
+            style="@style/ButtonStyleWt40"
+            android:layout_width="@dimen/vl_px_270"
+            android:layout_height="@dimen/vl_px_74"
+            android:layout_marginRight="@dimen/vl_px_138"
+            android:text="@string/btn_pre"
+            />
+        <Button
+            android:id="@+id/shop_list_save"
+            style="@style/ButtonStyleWt40"
+            android:layout_width="@dimen/vl_px_270"
+            android:layout_height="@dimen/vl_px_74"
+            android:layout_marginRight="@dimen/vl_px_138"
+            android:text="@string/btn_save"
+            />
+        <Button
+            android:id="@+id/shop_list_add"
+            style="@style/ButtonStyleWt40"
+            android:layout_width="@dimen/vl_px_270"
+            android:layout_height="@dimen/vl_px_74"
+            android:layout_marginRight="@dimen/vl_px_138"
+            android:text="继续添加"
+            />
+        <Button
+            android:id="@+id/shop_list_submit"
+            style="@style/ButtonStyleWt40"
+            android:layout_width="@dimen/vl_px_270"
+            android:layout_height="@dimen/vl_px_74"
+            android:text="提交"
+            android:layout_marginBottom="@dimen/vl_px_70"
+            />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

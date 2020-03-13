@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_">
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="@dimen/vl_px_1820"
+        android:layout_height="@dimen/vl_px_70"
+        android:layout_marginTop="@dimen/vl_px_50"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/TextStyle.Gray3.Size30.Center.BGBlue"
+            android:layout_width="@dimen/vl_px_204"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="序号" />
+
+        <View
+            android:layout_width="@dimen/vl_px_2"
+            android:layout_height="match_parent"
+            android:background="@color/color_list_title" />
+
+
+        <TextView
+            style="@style/TextStyle.Gray3.Size30.Center.BGBlue"
+            android:layout_width="@dimen/vl_px_268"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="账户名称" />
+        <View
+            android:layout_width="@dimen/vl_px_2"
+            android:layout_height="match_parent"
+            android:background="@color/color_list_title" />
+
+        <TextView
+            style="@style/TextStyle.Gray3.Size30.Center.BGBlue"
+            android:layout_width="@dimen/vl_px_528"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text=" 开户银行账户" />
+
+        <View
+            android:layout_width="@dimen/vl_px_2"
+            android:layout_height="match_parent"
+            android:background="@color/color_list_title" />
+
+        <TextView
+            style="@style/TextStyle.Gray3.Size30.Center.BGBlue"
+            android:layout_width="@dimen/vl_px_298"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text=" 是否默认" />
+
+        <View
+            android:layout_width="@dimen/vl_px_2"
+            android:layout_height="match_parent"
+            android:background="@color/color_list_title" />
+
+
+        <TextView
+            style="@style/TextStyle.Gray3.Size30.Center.BGBlue"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="操作" />
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/clear_list_content"
+        android:layout_width="@dimen/vl_px_1820"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/vl_px_700"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/clear_list_pre"
+            style="@style/ButtonStyleWt40"
+            android:layout_width="@dimen/vl_px_270"
+            android:layout_height="@dimen/vl_px_74"
+            android:layout_marginRight="@dimen/vl_px_138"
+            android:text="@string/btn_pre"
+            android:layout_marginBottom="@dimen/vl_px_70"
+            />
+        <Button
+            android:id="@+id/clear_list_save"
+            style="@style/ButtonStyleWt40"
+            android:layout_width="@dimen/vl_px_270"
+            android:layout_height="@dimen/vl_px_74"
+            android:layout_marginRight="@dimen/vl_px_138"
+            android:text="@string/btn_save"
+            android:layout_marginBottom="@dimen/vl_px_70"
+            />
+        <Button
+            android:id="@+id/clear_list_add"
+            style="@style/ButtonStyleWt40"
+            android:layout_width="@dimen/vl_px_270"
+            android:layout_height="@dimen/vl_px_74"
+            android:layout_marginRight="@dimen/vl_px_138"
+            android:layout_marginBottom="@dimen/vl_px_70"
+            android:text="继续添加"
+            />
+        <Button
+            android:id="@+id/clear_next"
+            style="@style/ButtonStyleWt40"
+            android:layout_width="@dimen/vl_px_270"
+            android:layout_height="@dimen/vl_px_74"
+            android:text="@string/btn_next"
+            android:layout_marginBottom="@dimen/vl_px_70"
+            />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

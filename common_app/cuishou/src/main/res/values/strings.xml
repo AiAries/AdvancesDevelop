@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">NewMerchantNew</string>
+    <string name="title_activity_faster_enter">FasterEnterActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="btn_save">保存</string>
+    <string name="btn_pre">上一步</string>
+    <string name="btn_next">下一步</string>
+    <string name="btn_search">查询</string>
+    <string name="tv_clear_account_name">账户名称</string>
+    <string name="btn_clear_account_search">本行账户查询</string>
+    <string name="tv_clear_bank_number">开户银行账号</string>
+    <string name="tv_clear_account_property">账户性质</string>
+    <string name="tv_clear_account_number">清算行行号</string>
+    <string name="tv_clear_bank_name">开户银行名称</string>
+    <string name="tv_clear_account_type">清算账户类型</string>
+    <string name="tv_clear_card">卡/折</string>
+    <string name="btn_clear_oppen_account_allow">开户许可证</string>;
+    <string name="btn_clear_oppen_account_describe">开户情况说明</string>
+    <!--中文英文  11000-->
+    <string name="input_type_11000">1</string>
+    <!--中文英文数字无特殊符号 括号不成对   11100-->
+    <string name="input_type_11100">2</string>
+    <!--大写英文数字无特殊符号 括号成对   01100-->
+    <string name="input_type_01101">3</string>
+</resources>

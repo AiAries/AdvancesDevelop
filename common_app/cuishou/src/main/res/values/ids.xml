@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="register_star_id" type="id"/>
+    <item name="companyinfos_1_stv1" type="id"/>
+    <item name="companyinfos_2_stv0" type="id"/>
+    <item name="companyinfos_3_stv0" type="id"/>
+    <item name="company_3_stv" type="id" />
+    <item name="company_5_stv" type="id"/>
+    <item name="company_6_stv" type="id"/>
+    <item name="company_9_stv" type="id"/>
+    <item name="companyinfo_24_stv0" type="id"/>
+    <item name="companyinfos_3_stv1" type="id"/>
+    <item name="company_7_stv" type="id"/>
+</resources>

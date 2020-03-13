@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1F72B3</color>
+    <color name="colorPrimaryDark">#243BB9</color>
+    <color name="colorAccent">#D81B60</color>
+    <!--输入文字hint颜色-->
+    <color name="input_text_hint_color">#807D7D</color>
+    <!--输入文字标签颜色-->
+    <color name="input_text_label_color">#2B2B2B</color>
+    <!--输入文字标签颜色-->
+    <color name="input_text_color">#2B2B2B</color>
+    <color name="white">#ffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="dialog_shadow_75">#757575</color>
+    <color name="black">#000000</color>
+    <color name="dark_blue">#243BB9</color>
+    <color name="light_blue">#1F72B3</color>
+    <color name="light_light_blue">#000000</color>
+    <color name="bg_">#F6F8FA</color>
+    <color name="star_color">#FE1212</color>
+    <color name="gray9">#999999</color>
+    <color name="gray3">#333333</color>
+    <color name="button_gray">#F0F0F0</color>
+    <color name="color_5CB7FB">#5CB7FB</color>
+    <color name="separate_line">#f6f8ff</color>
+    <color name="color_list_title">#AED1FA</color>
+    <color name="item_bg">#F4F9FF</color>
+</resources>
