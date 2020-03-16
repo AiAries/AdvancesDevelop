@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--朋友圈内容-->
+    <string-array name="comment_contents">
+        <item>今天天气很晴朗，风和日丽，适合出去郊游。</item>
+        <item>武汉加油，中国加油,我们必将战胜疫情，脱下口罩，恢复生产。</item>
+        <item>上传到中间件的数据包有三种，外访、协查、协查补件</item>
+        <item>3.测试时下发到PDA数据方法：
+外访:修改此表数据 TJB_VISIT_CASEMAIN 如下字段： USERID业代工号（自己测试设备的工号）、CREATETIME创建时间、STATUS更新状态为0（未下发）：</item>
+    </string-array>
+    <string-array name="nums">
+        <item>@string/btn_next</item>
+        <item>@string/btn_pre</item>
+        <item>@string/btn_search</item>
+    </string-array>
+</resources>

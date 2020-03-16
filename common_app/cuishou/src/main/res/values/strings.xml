@@ -25,4 +25,5 @@
     <string name="input_type_11100">2</string>
     <!--大写英文数字无特殊符号 括号成对   01100-->
     <string name="input_type_01101">3</string>
+
 </resources>
