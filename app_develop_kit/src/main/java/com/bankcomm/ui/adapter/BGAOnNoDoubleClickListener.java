@@ -19,7 +19,7 @@ package com.bankcomm.ui.adapter;
 import android.view.View;
 
 /**
- * 作者:王浩 邮件:bingoogolapple@gmail.com
+ * jack
  * 创建时间:16/11/13 上午11:41
  * 描述:
  */

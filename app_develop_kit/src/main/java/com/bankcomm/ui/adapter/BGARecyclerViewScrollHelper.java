@@ -21,7 +21,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 /**
- * 作者:王浩 邮件:bingoogolapple@gmail.com
+ * jack
  * 创建时间:17/1/9 下午9:27
  * 描述:RecyclerView 滚动到指定位置帮助类。参考的 http://blog.csdn.net/tyzlmjj/article/details/49227601
  */

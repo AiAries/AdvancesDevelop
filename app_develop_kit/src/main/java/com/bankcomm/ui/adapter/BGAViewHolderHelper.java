@@ -37,10 +37,15 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bankcomm.ui.adapter.intfc.BGAOnItemChildCheckedChangeListener;
+import com.bankcomm.ui.adapter.intfc.BGAOnItemChildClickListener;
+import com.bankcomm.ui.adapter.intfc.BGAOnItemChildLongClickListener;
+import com.bankcomm.ui.adapter.intfc.BGAOnRVItemChildTouchListener;
+
 /**
- * 作者:王浩 邮件:bingoogolapple@gmail.com
+ * jack
  * 创建时间:15/5/26 17:06
- * 描述:为AdapterView和RecyclerView的item设置常见属性（链式编程）
+ * 描述:为RecyclerView的item设置常见属性（链式编程）
  */
 public class BGAViewHolderHelper implements View.OnLongClickListener, CompoundButton.OnCheckedChangeListener, View.OnTouchListener {
     protected final SparseArrayCompat<View> mViews;
@@ -220,10 +225,6 @@ public class BGAViewHolderHelper implements View.OnLongClickListener, CompoundBu
                 }
                 if (!recyclerViewAdapter.isIgnoreCheckedChanged()) {
                     mOnItemChildCheckedChangeListener.onItemChildCheckedChanged(mRecyclerView, buttonView, getPosition(), isChecked);
-                }
-            } else if (mAdapterView != null) {
-                if (!((BGAAdapterViewAdapter) mAdapterView.getAdapter()).isIgnoreCheckedChanged()) {
-                    mOnItemChildCheckedChangeListener.onItemChildCheckedChanged(mAdapterView, buttonView, getPosition(), isChecked);
                 }
             }
         }

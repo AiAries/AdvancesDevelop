@@ -22,7 +22,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 /**
- * 作者:王浩 邮件:bingoogolapple@gmail.com
+ * jack
  * 创建时间:17/1/9 下午11:12
  * 描述:
  */

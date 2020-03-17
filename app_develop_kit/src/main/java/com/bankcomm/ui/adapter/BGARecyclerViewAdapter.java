@@ -23,13 +23,21 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.bankcomm.ui.adapter.intfc.BGAOnItemChildCheckedChangeListener;
+import com.bankcomm.ui.adapter.intfc.BGAOnItemChildClickListener;
+import com.bankcomm.ui.adapter.intfc.BGAOnItemChildLongClickListener;
+import com.bankcomm.ui.adapter.intfc.BGAOnRVItemChildTouchListener;
+import com.bankcomm.ui.adapter.intfc.BGAOnRVItemClickListener;
+import com.bankcomm.ui.adapter.intfc.BGAOnRVItemLongClickListener;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * @param <M> 适配的数据类型
+ *           @param <R> 任意自定义的RecyclerView的子类
  */
-public abstract class BGARecyclerViewAdapter<M> extends RecyclerView.Adapter<BGARecyclerViewHolder> {
+public abstract class BGARecyclerViewAdapter<M,R extends RecyclerView> extends RecyclerView.Adapter<BGARecyclerViewHolder> {
     protected int mDefaultItemLayoutId;
     protected Context mContext;
     protected List<M> mData;
@@ -41,19 +49,19 @@ public abstract class BGARecyclerViewAdapter<M> extends RecyclerView.Adapter<BGA
     protected BGAOnRVItemChildTouchListener mOnRVItemChildTouchListener;
     protected BGAHeaderAndFooterAdapter mHeaderAndFooterAdapter;
 
-    protected RecyclerView mRecyclerView;
+    protected R mRecyclerView;
     /**
      * 在填充数据列表时，忽略选中状态变化
      */
     private boolean mIsIgnoreCheckedChanged = true;
 
-    private BGARecyclerViewAdapter(RecyclerView recyclerView) {
+    private BGARecyclerViewAdapter(R recyclerView) {
         mRecyclerView = recyclerView;
         mContext = mRecyclerView.getContext();
         mData = new ArrayList<>();
     }
 
-    public BGARecyclerViewAdapter(RecyclerView recyclerView, int defaultItemLayoutId) {
+    public BGARecyclerViewAdapter(R recyclerView, int defaultItemLayoutId) {
         this(recyclerView);
         mDefaultItemLayoutId = defaultItemLayoutId;
     }

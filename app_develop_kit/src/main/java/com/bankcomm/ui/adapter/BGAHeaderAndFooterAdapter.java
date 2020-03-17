@@ -24,7 +24,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * 作者:王浩 邮件:bingoogolapple@gmail.com
+ * jack
  * 创建时间:16/11/26 下午10:15
  * 描述:该类参考的 https://github.com/hongyangAndroid/baseAdapter/blob/master/baseadapter-recyclerview/src/main/java/com/zhy/adapter/recyclerview/wrapper/HeaderAndFooterWrapper.java
  */

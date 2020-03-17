@@ -10,8 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.bankcomm.ui.adapter.BGAOnRVItemClickListener;
-import com.bankcomm.ui.adapter.BGARecyclerViewAdapter;
+import com.bankcomm.ui.adapter.intfc.BGAOnRVItemClickListener;
+import com.bankcomm.ui.adapter.BGARecyclerViewDefaultAdapter;
 import com.bankcomm.ui.adapter.BGAViewHolderHelper;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
@@ -22,7 +22,7 @@ import java.util.List;
 public class GalleryDialog extends Dialog {
 
 
-    private final BGARecyclerViewAdapter<PicBean> adapter;
+    private final BGARecyclerViewDefaultAdapter<PicBean> adapter;
     private final View takePicView;
 
     public List<PicBean> getData() {
@@ -54,7 +54,7 @@ public class GalleryDialog extends Dialog {
         takePicView.setOnClickListener(listener);
         recyclerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
 
-        adapter = new BGARecyclerViewAdapter<PicBean>(recyclerView, R.layout.item_dialog_gallery) {
+        adapter = new BGARecyclerViewDefaultAdapter<PicBean>(recyclerView, R.layout.item_dialog_gallery) {
             @Override
             protected void fillData(BGAViewHolderHelper helper, int position, PicBean model) {
                 ImageView imageView = helper.getView(R.id.iv_gallery);

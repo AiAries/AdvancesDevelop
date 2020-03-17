@@ -14,13 +14,15 @@
  * limitations under the License.
  */
 
-package com.bankcomm.ui.adapter;
+package com.bankcomm.ui.adapter.intfc;
 
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.bankcomm.ui.adapter.BGARecyclerViewHolder;
+
 /**
- * 作者:王浩 邮件:bingoogolapple@gmail.com
+ * jack
  * 创建时间:15/5/28 上午7:28
  * 描述:RecyclerView的item中子控件触摸事件监听器
  */

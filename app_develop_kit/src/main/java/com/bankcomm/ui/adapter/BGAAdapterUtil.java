@@ -31,7 +31,7 @@ import android.util.TypedValue;
 import java.util.List;
 
 /**
- * 作者:王浩 邮件:bingoogolapple@gmail.com
+ * jack
  * 创建时间:17/1/6 上午4:04
  * 描述:
  */

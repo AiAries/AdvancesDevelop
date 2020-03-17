@@ -11,7 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.bankcomm.ui.adapter.BGAOnRVItemClickListener;
+import com.bankcomm.ui.adapter.intfc.BGAOnRVItemClickListener;
 import com.bankcomm.ui.base.BaseActivity;
 
 import java.util.ArrayList;

@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.bankcomm.ui.adapter;
+package com.bankcomm.ui.adapter.intfc;
 
 import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * 作者:王浩 邮件:bingoogolapple@gmail.com
+ * jack
  * 创建时间:15/5/28 上午7:28
  * 描述:RecyclerView的item点击事件监听器
  */

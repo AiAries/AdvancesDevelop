@@ -7,7 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import com.bankcomm.ui.adapter.BGARecyclerViewAdapter;
+import com.bankcomm.ui.adapter.BGARecyclerViewDefaultAdapter;
 import com.bankcomm.ui.adapter.BGAViewHolderHelper;
 import com.bankcomm.ui.base.BaseActivity;
 
@@ -25,7 +25,7 @@ public class CustomViewActivity extends BaseActivity {
         RecyclerView customList = findViewById(R.id.custom_view_list);
         customList.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
-        BGARecyclerViewAdapter<CustomViewBean> adapter = new BGARecyclerViewAdapter<CustomViewBean>(customList, R.layout.item_custom_view) {
+        BGARecyclerViewDefaultAdapter<CustomViewBean> adapter = new BGARecyclerViewDefaultAdapter<CustomViewBean>(customList, R.layout.item_custom_view) {
 
             @Override
             protected void fillData(BGAViewHolderHelper helper, int position, CustomViewBean model) {

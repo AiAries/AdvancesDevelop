@@ -30,7 +30,7 @@ import com.bankcomm.framework.R;
 
 
 /**
- * 作者:王浩 邮件:bingoogolapple@gmail.com
+ * jack
  * 创建时间:17/1/9 下午9:45
  * 描述:
  */

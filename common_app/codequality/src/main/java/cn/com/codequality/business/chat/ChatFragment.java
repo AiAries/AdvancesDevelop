@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.bankcomm.ui.adapter.BGAOnRVItemClickListener;
+import com.bankcomm.ui.adapter.intfc.BGAOnRVItemClickListener;
 import com.bankcomm.ui.base.BaseFragment;
 import com.bankcomm.ui.view.dialogs.shade.IShade;
 import com.bankcomm.ui.view.dialogs.shade.ProgressShadeImp;
