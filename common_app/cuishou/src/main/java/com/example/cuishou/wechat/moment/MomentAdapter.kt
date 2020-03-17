@@ -7,7 +7,6 @@ import com.bankcomm.ui.adapter.BGARecyclerViewAdapter
 import com.bankcomm.ui.adapter.BGAViewHolderHelper
 import com.example.cuishou.R
 import java.io.File
-import java.util.*
 
 class MomentAdapter(recyclerView: IdleLoadPicRecyclerView?, defaultItemLayoutId: Int)
     : BGARecyclerViewAdapter<MomentDynamicInfo,IdleLoadPicRecyclerView>(recyclerView, defaultItemLayoutId) {
@@ -22,17 +21,17 @@ class MomentAdapter(recyclerView: IdleLoadPicRecyclerView?, defaultItemLayoutId:
         }
         val picAdapter = PicAdapter(rvPicList, R.layout.item_moment_pic)
         rvPicList.adapter = picAdapter
-        picAdapter.data = getPic()
+        picAdapter.data = getPic(position)
 //        picAdapter.isIdleState = mRecyclerView.isIdleState
 //        Log.v("scroll","isIdle:${picAdapter.isIdleState}")
 
     }
     @SuppressLint("SdCardPath")
-    private fun getPic(): MutableList<PicBean> {
+    private fun getPic(position: Int): MutableList<PicBean> {
         val moments: MutableList<PicBean> = arrayListOf()
         val picDir = File("/sdcard/TJB/Merchant/company/1/companyphoto/pic/")
         val list = picDir.listFiles()
-        var nums = generateRandom9Num(arrayListOf());
+        var nums = generateRandom9Num(arrayListOf(),position);
         nums.forEach() {
             val element = PicBean(list!![it].absolutePath)
                 moments.add(element)
@@ -46,14 +45,12 @@ class MomentAdapter(recyclerView: IdleLoadPicRecyclerView?, defaultItemLayoutId:
         return moments
 
     }
-    private fun generateRandom9Num(args:MutableList<Int>): MutableList<Int> {
+    private fun generateRandom9Num(args: MutableList<Int>, position: Int): MutableList<Int> {
         var i:Int = 0
 //        var dd = intArrayOf(0,0,0,0,0,0,0,0,0)
         while (i < 9){
-            var element = Random().nextInt(26)
-            println(element)
+            var element = if((position + i)>25) 25 else position + i
             args.add(element)
-//            dd[i] = element
             i++
         }
         return args;
