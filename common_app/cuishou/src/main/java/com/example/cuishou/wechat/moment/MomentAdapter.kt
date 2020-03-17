@@ -3,7 +3,6 @@ package com.example.cuishou.wechat.moment
 import android.annotation.SuppressLint
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import com.bankcomm.ui.adapter.BGARecyclerViewAdapter
 import com.bankcomm.ui.adapter.BGAViewHolderHelper
 import com.example.cuishou.R
@@ -24,8 +23,8 @@ class MomentAdapter(recyclerView: IdleLoadPicRecyclerView?, defaultItemLayoutId:
         val picAdapter = PicAdapter(rvPicList, R.layout.item_moment_pic)
         rvPicList.adapter = picAdapter
         picAdapter.data = getPic()
-        picAdapter.isIdleState = mRecyclerView.isIdleState
-        Log.v("scroll","isIdle:${picAdapter.isIdleState}")
+//        picAdapter.isIdleState = mRecyclerView.isIdleState
+//        Log.v("scroll","isIdle:${picAdapter.isIdleState}")
 
     }
     @SuppressLint("SdCardPath")
