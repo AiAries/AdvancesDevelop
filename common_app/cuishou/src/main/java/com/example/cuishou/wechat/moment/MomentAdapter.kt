@@ -10,9 +10,9 @@ import com.example.cuishou.R
 import java.io.File
 import java.util.*
 
-class MomentAdapter(recyclerView: RecyclerView?, defaultItemLayoutId: Int)
-    : BGARecyclerViewAdapter<MomentDynamicInfo>(recyclerView, defaultItemLayoutId) {
-    public  var isIdle = true
+class MomentAdapter(recyclerView: IdleLoadPicRecyclerView?, defaultItemLayoutId: Int)
+    : BGARecyclerViewAdapter<MomentDynamicInfo,IdleLoadPicRecyclerView>(recyclerView, defaultItemLayoutId) {
+//    public  var isIdle = true
     override fun fillData(helper: BGAViewHolderHelper?, position: Int, model: MomentDynamicInfo?) {
         helper!!.getTextView(R.id.name)!!.text = model!!.name
         helper.getTextView(R.id.content)!!.text = model.content
@@ -24,8 +24,8 @@ class MomentAdapter(recyclerView: RecyclerView?, defaultItemLayoutId: Int)
         val picAdapter = PicAdapter(rvPicList, R.layout.item_moment_pic)
         rvPicList.adapter = picAdapter
         picAdapter.data = getPic()
-        picAdapter.isIdleState = isIdle
-        Log.v("scroll","isIdle:$isIdle")
+        picAdapter.isIdleState = mRecyclerView.isIdleState
+        Log.v("scroll","isIdle:${picAdapter.isIdleState}")
 
     }
     @SuppressLint("SdCardPath")

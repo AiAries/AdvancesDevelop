@@ -9,7 +9,7 @@ import com.bumptech.glide.Glide
 import com.example.cuishou.R
 
 class PicAdapter(recyclerView: RecyclerView?, defaultItemLayoutId: Int) :
-        BGARecyclerViewAdapter<PicBean>(recyclerView, defaultItemLayoutId) {
+        BGARecyclerViewAdapter<PicBean,RecyclerView>(recyclerView, defaultItemLayoutId) {
     public  var isIdleState:Boolean = true;
 
     override fun fillData(helper: BGAViewHolderHelper?, position: Int, model: PicBean?) {
