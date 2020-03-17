@@ -12,6 +12,7 @@ import android.util.Log
  */
 class IdleLoadPicRecyclerView(context: Context, attrs: AttributeSet?) : RecyclerView(context, attrs) {
     public var isIdleState = true
+    private var isScrollUp = true
     private var mFirstVisibleItemPosition: Int = -1
     private var mLastVisibleItemPosition: Int = -1
 //    private lateinit var listener: OnScrollListener
@@ -19,27 +20,41 @@ class IdleLoadPicRecyclerView(context: Context, attrs: AttributeSet?) : Recycler
         addOnScrollListener(object : OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 super.onScrolled(recyclerView, dx, dy)
+                isScrollUp = dy>0
+                Log.v("IdleLoadPicRecyclerView","onScrolled:$dy")
             }
 
             override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                 super.onScrollStateChanged(recyclerView, newState)
                 val b = RecyclerView.SCROLL_STATE_IDLE == newState
+                //记录滚动的状态
                 isIdleState = b
                 if (b) {
-//                    var para = recyclerView.getChildAt(0).layoutParams as RecyclerView.LayoutParams
-//                    var position = para.viewAdapterPosition
                     val linearLayoutManager: LinearLayoutManager = recyclerView.layoutManager as LinearLayoutManager
                     val firstVisibleItemPosition = linearLayoutManager.findFirstVisibleItemPosition()
                     val lastVisibleItemPosition = linearLayoutManager.findLastVisibleItemPosition()
-                    val unloadFirstViewPosition: Int = getUnloadFirstViewPosition(firstVisibleItemPosition)
-                    if (unloadFirstViewPosition > lastVisibleItemPosition) {
-                        return
+                    if (isScrollUp) {
+                        val unloadFirstViewPosition: Int = getUnloadFirstViewPosition(firstVisibleItemPosition)
+                        Log.v("idle", "firstVisibleItemPosition:$firstVisibleItemPosition\n" +
+                                "lastVisibleItemPosition:$lastVisibleItemPosition" + "unloadFirstViewPosition:$unloadFirstViewPosition")
+                        if (unloadFirstViewPosition > lastVisibleItemPosition) {
+                            return
+                        }
+                        recyclerView.adapter!!.notifyItemRangeChanged(unloadFirstViewPosition,
+                                lastVisibleItemPosition - unloadFirstViewPosition + 1, false)
+
+                    } else {
+                        val unloadLastViewPosition: Int = getUnloadLastViewPosition(lastVisibleItemPosition)
+                        Log.v("idle", "firstVisibleItemPosition:$firstVisibleItemPosition\n" +
+                                "lastVisibleItemPosition:$lastVisibleItemPosition\n" + "unloadLastViewPosition:$unloadLastViewPosition")
+                        if (unloadLastViewPosition < firstVisibleItemPosition) {
+                            return
+                        }
+                        recyclerView.adapter!!.notifyItemRangeChanged(firstVisibleItemPosition,
+                                unloadLastViewPosition - firstVisibleItemPosition + 1, false)
+
                     }
-                    recyclerView.adapter!!.notifyItemRangeChanged(unloadFirstViewPosition,
-                            lastVisibleItemPosition - unloadFirstViewPosition + 1, false)
-                    Log.v("idle", "firstVisibleItemPosition:$firstVisibleItemPosition\n" +
-                            "lastVisibleItemPosition:$lastVisibleItemPosition" + "unloadFirstViewPosition:$unloadFirstViewPosition")
-//                    recyclerView.adapter!!.notifyDataSetChanged()
+
                     mFirstVisibleItemPosition = firstVisibleItemPosition
                     mLastVisibleItemPosition = lastVisibleItemPosition
                 }
@@ -50,6 +65,13 @@ class IdleLoadPicRecyclerView(context: Context, attrs: AttributeSet?) : Recycler
                 var a = firstVisibleItemPosition
                 while (a in mFirstVisibleItemPosition..mLastVisibleItemPosition) {
                     a++
+                }
+                return a
+            }
+            private fun getUnloadLastViewPosition(lastVisibleItemPosition: Int): Int {
+                var a = lastVisibleItemPosition
+                while (a in mFirstVisibleItemPosition..mLastVisibleItemPosition) {
+                    a--
                 }
                 return a
             }
