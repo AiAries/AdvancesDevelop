@@ -196,5 +196,14 @@
         <item name="android:layout_height">@dimen/vl_px_140</item>
     </style>
 
+    <!--dialog theme-->
+    <style name="FullScreen" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="FullScreen.Transparent" >
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
 
 </resources>
