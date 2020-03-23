@@ -11,11 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppCompatTheme">
         <activity android:name=".wechat.moment.MomentActivity">
-            <intent-filter>
+           <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
         <activity android:name=".wechat.moment.DragImageActivity" />
         <activity android:name=".MainActivity">

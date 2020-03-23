@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
-import com.bumptech.glide.request.RequestOptions;
+//import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+//import com.bumptech.glide.request.RequestOptions;
 import com.example.cuishou.R;
 import com.example.cuishou.Test1.MyFragment;
 import com.example.cuishou.view.dragview.DragViewActivity;
@@ -43,10 +43,12 @@ public class TestActivity3 extends Activity {
                 open();
             }
         });
-        RequestOptions options3 = new RequestOptions()
-                .centerCrop()
-                .priority(Priority.HIGH);
-        Glide.with(context).load("http://p3.pstatp.com/large/pgc-image/1530136376452729ffef687").transition(DrawableTransitionOptions.withCrossFade()).apply(options3).into(v1);
+//        RequestOptions options3 = new RequestOptions()
+//                .centerCrop()
+//                .priority(Priority.HIGH);
+        Glide.with(context).load("http://p3.pstatp.com/large/pgc-image/1530136376452729ffef687")
+                /*.transition(DrawableTransitionOptions.withCrossFade()).apply(options3)*/
+                .into(v1);
 
     }
     public void open(){

@@ -6,8 +6,8 @@ import android.view.View;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
-import com.bumptech.glide.request.RequestOptions;
+//import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+//import com.bumptech.glide.request.RequestOptions;
 import com.example.cuishou.R;
 import com.example.cuishou.view.dragview.DragFragment;
 import com.example.cuishou.view.dragview.PinchImageView;
@@ -33,10 +33,12 @@ public class MyFragment extends DragFragment {
     @Override
     public void initView() {
         dragview= (PinchImageView) view.findViewById(R.id.dragview);
-        RequestOptions options3 = new RequestOptions()
-                .centerCrop()
-                .priority(Priority.HIGH);
-        Glide.with(getContext()).load("http://p3.pstatp.com/large/pgc-image/1530136376452729ffef687").transition(DrawableTransitionOptions.withCrossFade()).apply(options3).into(dragview);
+//        RequestOptions options3 = new RequestOptions()
+//                .centerCrop()
+//                .priority(Priority.HIGH);
+        Glide.with(getContext()).load("http://p3.pstatp.com/large/pgc-image/1530136376452729ffef687")
+                /*.transition(DrawableTransitionOptions.withCrossFade()).apply(options3)*/
+                .into(dragview);
     }
 
     @Override
