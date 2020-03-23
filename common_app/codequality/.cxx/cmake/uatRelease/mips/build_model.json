@@ -1,0 +1,81 @@
+{
+  "variant": {
+    "module": {
+      "rootBuildGradleFolder": "E:\\pda-project\\Login_js",
+      "sdkFolder": "D:\\aizp\\android-sdk-windows",
+      "isNativeCompilerSettingsCacheEnabled": false,
+      "isBuildOnlyTargetAbiEnabled": true,
+      "splitsAbiFilterSet": [],
+      "intermediatesFolder": "E:\\pda-project\\Login_js\\common_app\\codequality\\build\\intermediates",
+      "gradleModulePathName": ":common_app:codequality",
+      "moduleRootFolder": "E:\\pda-project\\Login_js\\common_app\\codequality",
+      "makeFile": "E:\\pda-project\\Login_js\\common_app\\codequality\\CMakeLists.txt",
+      "buildSystem": "CMAKE",
+      "compilerSettingsCacheFolder": "E:\\pda-project\\Login_js\\.cxx",
+      "cxxFolder": "E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx",
+      "ndkFolder": "D:\\aizp\\android-sdk-windows\\android-ndk-r13b",
+      "ndkVersion": "13.1.3345770",
+      "ndkSupportedAbiList": [
+        "ARMEABI",
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64",
+        "MIPS",
+        "MIPS64"
+      ],
+      "ndkDefaultAbiList": [
+        "ARMEABI",
+        "ARMEABI_V7A",
+        "ARM64_V8A",
+        "X86",
+        "X86_64",
+        "MIPS",
+        "MIPS64"
+      ],
+      "cmakeToolchainFile": "."
+    },
+    "buildSystemArgumentList": [],
+    "cFlagList": [],
+    "cppFlagsList": [
+      "-frtti -fexceptions"
+    ],
+    "variantName": "uatRelease",
+    "soFolder": "E:\\pda-project\\Login_js\\common_app\\codequality\\build\\intermediates\\cmake\\uatRelease\\lib",
+    "objFolder": "E:\\pda-project\\Login_js\\common_app\\codequality\\build\\intermediates\\cmake\\uatRelease\\obj",
+    "jsonFolder": "E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cmake\\uatRelease",
+    "gradleBuildOutputFolder": "E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cxx\\uatRelease",
+    "isDebuggableEnabled": false,
+    "validAbiList": [
+      "ARMEABI",
+      "ARMEABI_V7A",
+      "ARM64_V8A",
+      "X86",
+      "X86_64",
+      "MIPS",
+      "MIPS64"
+    ],
+    "buildTargetSet": []
+  },
+  "abi": "MIPS",
+  "abiPlatformVersion": 19,
+  "cxxBuildFolder": "E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cmake\\uatRelease\\mips",
+  "jsonFile": "E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cmake\\uatRelease\\mips\\android_gradle_build.json",
+  "gradleBuildOutputFolder": "E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cxx\\uatRelease\\mips",
+  "objFolder": "E:\\pda-project\\Login_js\\common_app\\codequality\\build\\intermediates\\cmake\\uatRelease\\obj\\mips",
+  "buildCommandFile": "E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cmake\\uatRelease\\mips\\build_command.txt",
+  "buildOutputFile": "E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cmake\\uatRelease\\mips\\build_output.txt",
+  "modelOutputFile": "E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cmake\\uatRelease\\mips\\build_model.json",
+  "cmake": {
+    "cmakeListsWrapperFile": "E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cxx\\uatRelease\\mips\\CMakeLists.txt",
+    "toolchainWrapperFile": "E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cxx\\uatRelease\\mips\\android_gradle_build.toolchain.cmake",
+    "buildGenerationStateFile": "E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cxx\\uatRelease\\mips\\build_generation_state.json",
+    "cacheKeyFile": "E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cxx\\uatRelease\\mips\\compiler_cache_key.json",
+    "compilerCacheUseFile": "E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cxx\\uatRelease\\mips\\compiler_cache_use.json",
+    "compilerCacheWriteFile": "E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cxx\\uatRelease\\mips\\compiler_cache_write.json",
+    "toolchainSettingsFromCacheFile": "E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cxx\\uatRelease\\mips\\compiler_settings_cache.cmake",
+    "cmakeWrappingBaseFolder": "."
+  },
+  "jsonGenerationLoggingRecordFile": "E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cmake\\uatRelease\\mips\\json_generation_record.json",
+  "compileCommandsJsonFile": "E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cmake\\uatRelease\\mips\\compile_commands.json"
+}

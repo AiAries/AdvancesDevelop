@@ -1,0 +1,15 @@
+Executable : D:\aizp\android-sdk-windows\cmake\3.6.4111459\bin\cmake.exe
+arguments : 
+-HE:\pda-project\Login_js\common_app\codequality
+-BE:\pda-project\Login_js\common_app\codequality\.cxx\cmake\uatDebug\armeabi-v7a
+-DANDROID_ABI=armeabi-v7a
+-DANDROID_PLATFORM=android-19
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=E:\pda-project\Login_js\common_app\codequality\build\intermediates\cmake\uatDebug\obj\armeabi-v7a
+-DCMAKE_BUILD_TYPE=Debug
+-DANDROID_NDK=D:\aizp\android-sdk-windows\android-ndk-r13b
+-DCMAKE_CXX_FLAGS=-frtti -fexceptions
+-DCMAKE_TOOLCHAIN_FILE=D:\aizp\android-sdk-windows\android-ndk-r13b\build\cmake\android.toolchain.cmake
+-DCMAKE_MAKE_PROGRAM=D:\aizp\android-sdk-windows\cmake\3.6.4111459\bin\ninja.exe
+-GAndroid Gradle - Ninja
+jvmArgs : 
+

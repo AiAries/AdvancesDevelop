@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "E:\\pda-project\\Login_js\\common_app\\codequality\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "D:\\aizp\\android-sdk-windows\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cmake\\proDebug\\armeabi --target clean"
+  ],
+  "libraries": {
+    "patch-lib-Debug-armeabi": {
+      "artifactName": "patch-lib",
+      "buildCommand": "D:\\aizp\\android-sdk-windows\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cmake\\proDebug\\armeabi --target patch-lib",
+      "abi": "armeabi",
+      "output": "E:\\pda-project\\Login_js\\common_app\\codequality\\build\\intermediates\\cmake\\proDebug\\obj\\armeabi\\libpatch-lib.so"
+    }
+  }
+}

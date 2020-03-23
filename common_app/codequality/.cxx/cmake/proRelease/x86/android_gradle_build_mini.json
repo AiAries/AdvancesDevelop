@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "E:\\pda-project\\Login_js\\common_app\\codequality\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "D:\\aizp\\android-sdk-windows\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cmake\\proRelease\\x86 --target clean"
+  ],
+  "libraries": {
+    "patch-lib-Release-x86": {
+      "artifactName": "patch-lib",
+      "buildCommand": "D:\\aizp\\android-sdk-windows\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cmake\\proRelease\\x86 --target patch-lib",
+      "abi": "x86",
+      "output": "E:\\pda-project\\Login_js\\common_app\\codequality\\build\\intermediates\\cmake\\proRelease\\obj\\x86\\libpatch-lib.so"
+    }
+  }
+}

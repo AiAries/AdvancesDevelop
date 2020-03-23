@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "E:\\pda-project\\Login_js\\common_app\\codequality\\CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "D:\\aizp\\android-sdk-windows\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cmake\\proDebug\\x86_64 --target clean"
+  ],
+  "libraries": {
+    "patch-lib-Debug-x86_64": {
+      "artifactName": "patch-lib",
+      "buildCommand": "D:\\aizp\\android-sdk-windows\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\pda-project\\Login_js\\common_app\\codequality\\.cxx\\cmake\\proDebug\\x86_64 --target patch-lib",
+      "abi": "x86_64",
+      "output": "E:\\pda-project\\Login_js\\common_app\\codequality\\build\\intermediates\\cmake\\proDebug\\obj\\x86_64\\libpatch-lib.so"
+    }
+  }
+}

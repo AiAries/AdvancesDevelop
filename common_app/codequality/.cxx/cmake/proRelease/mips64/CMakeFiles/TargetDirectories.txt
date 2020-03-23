@@ -1,0 +1,3 @@
+E:/pda-project/Login_js/common_app/codequality/.cxx/cmake/proRelease/mips64/CMakeFiles/patch-lib.dir
+E:/pda-project/Login_js/common_app/codequality/.cxx/cmake/proRelease/mips64/CMakeFiles/edit_cache.dir
+E:/pda-project/Login_js/common_app/codequality/.cxx/cmake/proRelease/mips64/CMakeFiles/rebuild_cache.dir
