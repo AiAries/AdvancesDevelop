@@ -8,15 +8,15 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.bumptech.glide.request.RequestOptions;
-import com.yanxuwen.dragview.DragFragment;
-import com.yanxuwen.dragview.PinchImageView;
-import com.yanxuwen.dragviewlayout.R;
+import com.example.cuishou.R;
+import com.example.cuishou.view.dragview.DragFragment;
+import com.example.cuishou.view.dragview.PinchImageView;
 
 /**
  * Created by yanxuwen on 2018/6/15.
  */
 
-public class MyFragment extends DragFragment{
+public class MyFragment extends DragFragment {
     PinchImageView dragview;
     @Override
     public View getDragView() {

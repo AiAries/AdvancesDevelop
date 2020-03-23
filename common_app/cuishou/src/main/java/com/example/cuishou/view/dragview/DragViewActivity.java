@@ -15,6 +15,8 @@ import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.ImageView;
 
+import com.example.cuishou.R;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;

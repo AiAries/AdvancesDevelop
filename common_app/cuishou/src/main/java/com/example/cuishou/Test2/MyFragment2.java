@@ -5,14 +5,15 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.TextView;
 
-import com.yanxuwen.dragview.DragFragment;
-import com.yanxuwen.dragviewlayout.R;
+import com.example.cuishou.R;
+import com.example.cuishou.view.dragview.DragFragment;
+
 
 /**
  * Created by yanxuwen on 2018/6/15.
  */
 
-public class MyFragment2 extends DragFragment{
+public class MyFragment2 extends DragFragment {
     TextView text;
     @Override
     public View getDragView() {

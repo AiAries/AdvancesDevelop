@@ -7,10 +7,17 @@ import com.bumptech.glide.Glide
 import com.example.cuishou.R
 
 class DragImageActivity: AppCompatActivity() {
+    private lateinit var mImageView: ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_big_img_preview)
-        val imgBig = findViewById<ImageView>(R.id.imageView)
-        Glide.with(applicationContext).load("").into(imgBig)
+        mImageView = findViewById<ImageView>(R.id.imageView)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val imgUrl = intent.getStringExtra("imgUrl")
+        Glide.with(applicationContext).load(imgUrl).into(mImageView)
     }
 }

@@ -29,7 +29,7 @@ class MomentAdapter(recyclerView: IdleLoadPicRecyclerView?, defaultItemLayoutId:
     @SuppressLint("SdCardPath")
     private fun getPic(position: Int): MutableList<PicBean> {
         val moments: MutableList<PicBean> = arrayListOf()
-        val picDir = File("/sdcard/TJB/Merchant/company/1/companyphoto/pic/")
+        val picDir = File("/sdcard/pic/")
         val list = picDir.listFiles()
         var nums = generateRandom9Num(arrayListOf(),position);
         nums.forEach() {
