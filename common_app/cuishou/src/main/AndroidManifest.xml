@@ -18,6 +18,19 @@
             </intent-filter>
         </activity>
         <activity android:name=".wechat.moment.DragImageActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Test1.TestActivity"/>
+        <activity
+            android:name=".Test2.TestActivity2"/>
+        <activity
+            android:name=".Test3.TestActivity3"/>
     </application>
 
 </manifest>
