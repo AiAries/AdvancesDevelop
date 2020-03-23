@@ -11,30 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppCompatTheme">
         <activity android:name=".wechat.moment.MomentActivity">
-           <!-- <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
-        </activity>
-        <activity android:name=".wechat.moment.DragImageActivity" />
-<<<<<<< HEAD
-        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Test1.TestActivity"/>
-        <activity
-            android:name=".Test2.TestActivity2"/>
-        <activity
-            android:name=".Test3.TestActivity3"/>
-        <activity android:name=".view.dragview.DragViewActivity" />
-=======
->>>>>>> parent of 4151dac... 新增拖拽view
+        <activity android:name=".wechat.moment.DragImageActivity" />
     </application>
 
 </manifest>
