@@ -10,8 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".business.handlerloop.HandlerLoopActivity"></activity>
         <activity android:name=".business.main_page.MainActivity" />
-
         <activity android:name=".business.games.GameActivity" />
         <activity android:name=".business.chat.ChatActivity" />
         <activity android:name=".business.enter.EnterListActivity">
@@ -25,7 +25,6 @@
         <activity android:name=".business.databinding.BindDemoActivity" />
         <activity android:name=".business.webview.WebViewActivity" />
         <activity android:name=".business.custom_view.CustomViewActivity" />
-
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

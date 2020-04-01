@@ -17,7 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".wechat.moment.DragImageActivity" />
+        <activity android:name=".wechat.moment.DragImageActivity"
+            android:theme="@style/FullScreen.Transparent"
+            />
     </application>
 
 </manifest>

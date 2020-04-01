@@ -201,7 +201,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
     </style>
-    <style name="FullScreen.Transparent" >
+    <style name="FullScreen.Transparent" parent="AppCompatTheme">
         <item name="android:windowIsTranslucent">true</item>
     </style>
 
