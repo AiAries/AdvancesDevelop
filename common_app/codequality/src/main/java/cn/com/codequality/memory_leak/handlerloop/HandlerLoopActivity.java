@@ -1,4 +1,4 @@
-package cn.com.codequality.business.handlerloop;
+package cn.com.codequality.memory_leak.handlerloop;
 
 import android.os.Handler;
 import android.os.Looper;
@@ -18,6 +18,7 @@ public class HandlerLoopActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_handler_loop);
     }
+//   静态，且子线程创建， 会导致当前activity泄露
     static Handler handler;
     private Runnable runnable;
     @Override
@@ -36,8 +37,11 @@ public class HandlerLoopActivity extends AppCompatActivity {
                     }
                 };
                 Log.v("handler", "::: loop" );
-//                Looper.loop();
+//                Looper.loop();//会导致当前activity泄露
                 Log.v("handler", "::: end" );
+//                while(true){
+//
+//                }
             }
         };
         new Thread(runnable).start();
@@ -53,10 +57,10 @@ public class HandlerLoopActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        handler.removeCallbacks(runnable);
-        Message msg = handler.obtainMessage();
-        msg.what = 66;
-        handler.sendMessageDelayed(msg,1000);
+//        handler.removeCallbacks(runnable);
+//        Message msg = handler.obtainMessage();
+//        msg.what = 66;
+//        handler.sendMessageDelayed(msg,1000);
         Log.v("handler", "::: onDestroy" );
     }
 }
