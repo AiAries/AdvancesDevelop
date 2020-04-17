@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="@dimen/vl_px_1820"
+        android:layout_height="@dimen/vl_px_140"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/clear_id"
+            style="@style/TextStyle.Gray3.Size30.Center"
+            android:layout_width="@dimen/vl_px_204"
+            android:layout_height="match_parent"
+            android:text="序号" />
+
+        <View
+            android:layout_width="@dimen/vl_px_2"
+            android:layout_height="match_parent"
+            android:background="@color/separate_line" />
+
+
+        <TextView
+            android:id="@+id/clear_account_name"
+            style="@style/TextStyle.Gray3.Size30.P22P30"
+            android:layout_width="@dimen/vl_px_268"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:maxLines="2"
+            android:singleLine="false"
+            tools:text="李富贵火锅店李富贵火锅店李富贵火锅店李富贵火" />
+        <View
+            android:layout_width="@dimen/vl_px_2"
+            android:layout_height="match_parent"
+            android:background="@color/separate_line" />
+
+        <TextView
+            android:id="@+id/clear_open_bank_account_num"
+            style="@style/TextStyle.Gray3.Size30.P22P30"
+            android:layout_width="@dimen/vl_px_528"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:maxLines="2"
+            android:singleLine="false"
+            tools:text="门店地址门店地址门店地址门店地址门店地址门店地址门店地址门店地址门店地址" />
+
+        <View
+            android:layout_width="@dimen/vl_px_2"
+            android:layout_height="match_parent"
+            android:background="@color/separate_line" />
+
+        <LinearLayout
+
+            android:layout_width="@dimen/vl_px_298"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
+            <TextView
+                style="@style/TextStyle.Gray3.Size32.BoxBorder.DownPic"
+                android:layout_width="@dimen/vl_px_170"
+                android:layout_height="@dimen/vl_px_60"
+                android:gravity="left|center_vertical"
+                android:id="@+id/clear_default"
+                android:text=" 是" />
+        </LinearLayout>
+        <View
+            android:layout_width="@dimen/vl_px_2"
+            android:layout_height="match_parent"
+            android:background="@color/separate_line" />
+
+        <LinearLayout
+            android:layout_width="@dimen/vl_px_514"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            >
+
+            <Button
+                android:id="@+id/clear_list_update"
+                style="@style/ButtonStyleBk32"
+                android:layout_width="@dimen/vl_px_128"
+                android:layout_height="@dimen/vl_px_60"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/vl_px_92"
+                android:text="修改"
+                tools:layout_editor_absoluteY="74dp" />
+
+            <Button
+                android:id="@+id/clear_list_delete"
+                style="@style/ButtonStyleBk32"
+                android:layout_width="@dimen/vl_px_128"
+                android:layout_height="@dimen/vl_px_60"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/vl_px_70"
+                android:text="删除"
+                tools:layout_editor_absoluteY="74dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
