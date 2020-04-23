@@ -1,5 +1,8 @@
 package cn.com.codequality.data.chat.api;
 
+import android.os.Build;
+import android.support.annotation.RequiresApi;
+
 import com.bankcomm.framework.network.bean.base.BaseEntity;
 
 import java.util.Map;
@@ -19,4 +22,10 @@ public interface ChatApi {
     Flowable<BaseEntity<Chat>> getChatData(@QueryMap Map<String, Object> options);
     @GET("testJson.json")
     Flowable<String> getData();
+
+    @RequiresApi(api = Build.VERSION_CODES.N)
+    public  static void get(){
+        System.out.println(a);
+    }
+    int a = 1 ;
 }

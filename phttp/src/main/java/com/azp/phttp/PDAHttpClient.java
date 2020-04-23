@@ -1,21 +1,11 @@
 package com.azp.phttp;
 
 import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.text.TextUtils;
 
-import com.bankcomm.data.resources.local.MyDatabaseHelper;
-import com.common.Constant;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
-import com.techown.net.Compress;
-import com.techown.net.DESUtil;
-import com.techown.net.Des;
-import com.techown.net.HttpconnectionActivity;
-import com.techown.net.SSLClient;
-import com.techown.net.SecretkeyUtil;
 
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
@@ -24,7 +14,6 @@ import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-import java.util.zip.GZIPInputStream;
 
 import javax.net.ssl.HttpsURLConnection;
 
@@ -42,41 +31,14 @@ public class PDAHttpClient {
         }
         return httpClient;
     }
+    private String baseUrl;
 
-    private String username;
-    private String imei;
-    private String identity;
+    public String getBaseUrl() {
+        return baseUrl;
+    }
 
-    private void getdata(Context con) {
-        Context friendContext = null;
-        SQLiteDatabase sld = null;
-        Cursor cur = null;
-        try {
-            friendContext = con.createPackageContext("techown.login",
-                    Context.CONTEXT_IGNORE_SECURITY);
-            MyDatabaseHelper myHelper = new MyDatabaseHelper(friendContext,
-                    "techown_login.db", Constant.loginDBVer);
-            sld = myHelper.getWritableDatabase();
-            cur = sld.rawQuery("select * from EntityUser", new String[]{});
-            while (cur.moveToNext()) {
-                for (int i = 0; i < 1; i++) {
-                    if (cur.getString(i) != null) {
-                        username = cur
-                                .getString(cur.getColumnIndex("username"));
-                        imei = cur.getString(cur.getColumnIndex("imei"));
-                        identity = cur
-                                .getString(cur.getColumnIndex("identity"));
-                    }
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-            if (cur != null)
-                cur.close();
-            if (sld != null)
-                sld.close();
-        }
+    public void setBaseUrl(String baseUrl) {
+        this.baseUrl = baseUrl;
     }
 
     /**
@@ -97,31 +59,24 @@ public class PDAHttpClient {
 
     }
 
-    private <T> void executeRequest(Context con, HashMap<String, String> param, MessageModel messageModel, Callback<T> callback) {
-        if (username == null || imei == null || identity == null) {
-            getdata(con.getApplicationContext());
-        }
+    private <T> void executeRequest(Context con, HashMap<String, String> param, MessageModel messageModel,Callback<T> callback) {
         final CallbackWrap<T> callbackWrap = new CallbackWrap<>(callback);
         try {
-            URL url = new URL(HttpconnectionActivity.uriAPI);
-            SSLClient.initializeSSLContext();
+            URL url = new URL(baseUrl);
+//            SSLClient.initializeSSLContext();
             final HttpsURLConnection conn = (HttpsURLConnection) url.openConnection();
             conn.setRequestMethod("POST");
             conn.setConnectTimeout(25 * 1000);
             conn.setDoOutput(true);
             conn.setDoInput(true);
             conn.setUseCaches(false);
-            conn.setRequestProperty("wms-identity", identity);
-            conn.setRequestProperty("wms-message", messageModel.getMessage());
             conn.setRequestProperty("wms-encrypt", "3des");
-            conn.setRequestProperty("wms-compress", "gzip");
-            conn.setRequestProperty("wms-model", messageModel.getModel());
             OutputStream os = conn.getOutputStream();
             //todo 当请求主体没有参数的时候，需处理
             String params = mapToJsonString(param);
             byte[] bs = params.getBytes("UTF-8");
-            bs = Compress.compress(bs);
-            bs = Des.EncryptMode(SecretkeyUtil.getKey(username, imei), bs);
+//            bs = Compress.compress(bs);
+//            bs = Des.EncryptMode(SecretkeyUtil.getKey(username, imei), bs);
             os.write(bs);
             os.flush();
             os.close();
@@ -136,13 +91,13 @@ public class PDAHttpClient {
                 ));
             } else {
                 InputStream in = conn.getInputStream();
-                if ("3des".equals(conn.getHeaderField("wms-encrypt"))) {
-                    in = DESUtil.decrypt(in,
-                            SecretkeyUtil.getKey(username, imei));// 员工号和手机imei号
-                }
-                if ("gzip".equals(conn.getHeaderField("wms-compress"))) {
-                    in = new GZIPInputStream(in);
-                }
+//                if ("3des".equals(conn.getHeaderField("wms-encrypt"))) {
+//                    in = DESUtil.decrypt(in,
+//                            SecretkeyUtil.getKey(username, imei));// 员工号和手机imei号
+//                }
+//                if ("gzip".equals(conn.getHeaderField("wms-compress"))) {
+//                    in = new GZIPInputStream(in);
+//                }
                 ByteArrayOutputStream bos = new ByteArrayOutputStream();
                 int i = 0;
                 while ((i = in.read()) != -1) {
