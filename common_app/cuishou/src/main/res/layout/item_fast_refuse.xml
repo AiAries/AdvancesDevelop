@@ -1,0 +1,98 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout5"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/vl_px_140">
+
+
+        <TextView
+
+            android:id="@+id/refuse_item_companyName"
+            style="@style/TextStyle.Gray3.Size28"
+            android:layout_width="@dimen/vl_px_320"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="商户名称" />
+
+        <View
+            android:layout_width="@dimen/vl_px_2"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:id="@+id/refuse_item_shState"
+            style="@style/TextStyle.Gray3.Size28"
+            android:layout_width="@dimen/vl_px_232"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="商户状态" />
+
+        <View
+            android:layout_width="@dimen/vl_px_2"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/refuse_item_refusePerson"
+            style="@style/TextStyle.Gray3.Size28"
+            android:layout_width="@dimen/vl_px_206"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="拒件人员" />
+
+        <View
+            android:layout_width="@dimen/vl_px_2"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/refuse_item_refuseDate"
+            style="@style/TextStyle.Gray3.Size28"
+            android:singleLine="false"
+            android:layout_width="@dimen/vl_px_274"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="日期" />
+
+        <View
+            android:layout_width="@dimen/vl_px_2"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/refuse_item_refuseReason"
+            style="@style/TextStyle.Gray3.Size28"
+            android:layout_width="@dimen/vl_px_582"
+            android:layout_height="match_parent"
+            android:singleLine="false"
+            android:gravity="center"
+            android:text="原因" />
+
+        <View
+            android:layout_width="@dimen/vl_px_2"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/item_refuse_deal"
+                style="@style/ButtonStyleBk32"
+                android:layout_width="@dimen/vl_px_128"
+                android:layout_height="@dimen/vl_px_60"
+                android:gravity="center"
+                android:text="处理"
+                tools:layout_editor_absoluteY="74dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

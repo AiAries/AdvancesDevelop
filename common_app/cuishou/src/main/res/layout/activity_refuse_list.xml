@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_"
+    tools:ignore="MissingDefaultResource">
+
+    <TextView
+        android:id="@+id/textView5"
+        style="@style/TextStyle.LightBlue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/vl_px_70"
+        android:gravity="center"
+        android:text="快速进件拒件处理"
+        android:textSize="@dimen/vl_px_36" />
+
+    <TextView
+        android:id="@+id/textView9"
+        style="@style/TextStyle.Black.Size36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/vl_px_20"
+        android:layout_marginRight="@dimen/vl_px_20"
+        android:text="城市"
+        app:layout_constraintBottom_toBottomOf="@+id/refuse_cityName"
+        app:layout_constraintEnd_toStartOf="@+id/refuse_cityName"
+        app:layout_constraintTop_toTopOf="@+id/refuse_cityName" />
+
+    <TextView
+        android:id="@+id/textView7"
+        style="@style/TextStyle.Black.Size36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="提交人"
+        app:layout_constraintBottom_toBottomOf="@+id/refuse_submitMan"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toTopOf="@+id/refuse_submitMan" />
+
+    <TextView
+        android:id="@+id/textView8"
+        style="@style/TextStyle.Black.Size36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="商户名称"
+        app:layout_constraintBottom_toBottomOf="@+id/refuse_companyName"
+        app:layout_constraintEnd_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/refuse_companyName" />
+
+    <TextView
+        android:id="@+id/textView6"
+        style="@style/TextStyle.Black.Size36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/vl_px_20"
+        android:layout_marginRight="@dimen/vl_px_20"
+        android:text="省份"
+        app:layout_constraintBottom_toBottomOf="@+id/refuse_provinceName"
+        app:layout_constraintEnd_toStartOf="@+id/refuse_provinceName"
+        app:layout_constraintTop_toTopOf="@+id/refuse_provinceName" />
+
+    <TextView
+        android:id="@+id/refuse_provinceName"
+        style="@style/TextStyle.Gray3.Size32.BoxBorder.DownPic"
+        android:layout_width="@dimen/vl_px_400"
+        android:layout_height="@dimen/vl_px_70"
+        android:layout_marginRight="@dimen/vl_px_162"
+        app:layout_constraintEnd_toStartOf="@+id/refuse_cityName"
+        app:layout_constraintTop_toTopOf="@+id/refuse_cityName" />
+
+    <TextView
+        android:id="@+id/refuse_cityName"
+        style="@style/TextStyle.Gray3.Size32.BoxBorder.DownPic"
+        android:layout_width="@dimen/vl_px_400"
+        android:layout_height="@dimen/vl_px_70"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="@dimen/vl_px_462"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/refuse_submitMan"
+        style="@style/TextStyle.Gray3.Size32.BoxBorder"
+        android:layout_width="@dimen/vl_px_400"
+        android:layout_height="@dimen/vl_px_70"
+        android:layout_marginTop="@dimen/vl_px_20"
+        android:hint="A170854"
+        app:layout_constraintEnd_toEndOf="@+id/refuse_cityName"
+        app:layout_constraintStart_toStartOf="@+id/refuse_cityName"
+        app:layout_constraintTop_toBottomOf="@+id/refuse_cityName" />
+
+    <TextView
+        android:id="@+id/refuse_companyName"
+        style="@style/TextStyle.Gray3.Size32.BoxBorder"
+        android:layout_width="@dimen/vl_px_400"
+        android:layout_height="@dimen/vl_px_70"
+        app:layout_constraintBottom_toBottomOf="@+id/refuse_submitMan"
+        app:layout_constraintEnd_toEndOf="@+id/refuse_provinceName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/refuse_provinceName"
+        app:layout_constraintTop_toTopOf="@+id/refuse_submitMan" />
+
+    <Button
+        android:id="@+id/refuse_company_search"
+        style="@style/ButtonStyleBk32"
+        android:layout_width="@dimen/vl_px_128"
+        android:layout_height="@dimen/vl_px_60"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/vl_px_32"
+        android:text="查询"
+        app:layout_constraintBottom_toBottomOf="@+id/refuse_submitMan"
+        app:layout_constraintStart_toEndOf="@+id/refuse_submitMan"
+        app:layout_constraintTop_toTopOf="@+id/refuse_submitMan" />
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="@dimen/vl_px_1820"
+        android:layout_height="@dimen/vl_px_70"
+        android:layout_marginTop="@dimen/vl_px_20"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/refuse_company_search"
+        >
+
+        <TextView
+            style="@style/TextStyle.Gray3.Size30.Center.BGBlue"
+            android:layout_width="@dimen/vl_px_320"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="商户名称" />
+
+        <View
+            android:layout_width="@dimen/vl_px_2"
+            android:layout_height="match_parent"
+            android:background="@color/color_list_title" />
+
+
+        <TextView
+            style="@style/TextStyle.Gray3.Size30.Center.BGBlue"
+            android:layout_width="@dimen/vl_px_232"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="商户状态" />
+
+        <View
+            android:layout_width="@dimen/vl_px_2"
+            android:layout_height="match_parent"
+            android:background="@color/color_list_title" />
+
+        <TextView
+            style="@style/TextStyle.Gray3.Size30.Center.BGBlue"
+            android:layout_width="@dimen/vl_px_206"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="拒件人员" />
+
+        <View
+            android:layout_width="@dimen/vl_px_2"
+            android:layout_height="match_parent"
+            android:background="@color/color_list_title" />
+
+        <TextView
+            style="@style/TextStyle.Gray3.Size30.Center.BGBlue"
+            android:layout_width="@dimen/vl_px_274"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="拒件日期" />
+
+        <View
+            android:layout_width="@dimen/vl_px_2"
+            android:layout_height="match_parent"
+            android:background="@color/color_list_title" />
+
+        <TextView
+            style="@style/TextStyle.Gray3.Size30.Center.BGBlue"
+            android:layout_width="@dimen/vl_px_582"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="拒件原因" />
+
+        <View
+            android:layout_width="@dimen/vl_px_2"
+            android:layout_height="match_parent"
+            android:background="@color/color_list_title" />
+
+        <TextView
+            style="@style/TextStyle.Gray3.Size30.Center.BGBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="操作" />
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/lv_company_refuse"
+        android:layout_width="@dimen/vl_px_1820"
+        android:layout_height="@dimen/vl_px_640"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout5"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+        <Button
+            android:id="@+id/refuse_company_return"
+            style="@style/ButtonStyleWt40"
+            android:layout_width="@dimen/vl_px_250"
+            android:layout_height="@dimen/vl_px_74"
+            android:layout_marginRight="@dimen/vl_px_84"
+            android:text="返回" />
+
+        <Button
+            android:id="@+id/refuse_company_shouye"
+            style="@style/ButtonStyleWt40"
+            android:layout_width="@dimen/vl_px_250"
+            android:layout_height="@dimen/vl_px_74"
+            android:layout_marginRight="@dimen/vl_px_84"
+            android:text="首页" />
+
+        <Button
+            android:id="@+id/refuse_company_shangye"
+            style="@style/ButtonStyleWt40"
+            android:layout_width="@dimen/vl_px_250"
+            android:layout_height="@dimen/vl_px_74"
+            android:layout_marginRight="@dimen/vl_px_30"
+            android:text="上页" />
+
+        <TextView
+            android:id="@+id/refuse_company_pagenum"
+            style="@style/TextStyle.Gray3.Size32"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="@dimen/vl_px_30"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/black"
+            tools:text="1/3" />
+        <Button
+            android:id="@+id/refuse_company_xiaye"
+            style="@style/ButtonStyleWt40"
+            android:layout_width="@dimen/vl_px_250"
+            android:layout_height="@dimen/vl_px_74"
+            android:layout_marginRight="@dimen/vl_px_84"
+            android:text="下页" />
+        <Button
+            android:id="@+id/refuse_company_moye"
+            style="@style/ButtonStyleWt40"
+            android:layout_width="@dimen/vl_px_250"
+            android:layout_height="@dimen/vl_px_74"
+            android:layout_marginBottom="@dimen/vl_px_70"
+            android:text="末页" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

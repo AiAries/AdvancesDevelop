@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/vl_px_182">
+
+
+    <LinearLayout
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout3"
+        android:layout_marginTop="@dimen/vl_px_300"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/qingsuan_back"
+            style="@style/ButtonStyleWt40"
+            android:layout_width="@dimen/vl_px_270"
+            android:layout_height="wrap_content"
+            android:text="上一步"
+            />
+
+        <Button
+            android:id="@+id/qingsuan_next"
+            style="@style/ButtonStyleWt40"
+            android:layout_width="@dimen/vl_px_270"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/vl_px_280"
+            android:text="下一步"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vl_px_64"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout2">
+
+        <LinearLayout
+            android:layout_width="@dimen/vl_px_200"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/vl_px_26">
+
+            <TextView
+                style="@style/TextStyle.RedStar.Size36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/city_star"
+                android:hint="0"
+                android:text="*" />
+
+            <TextView
+                style="@style/TextStyle.Black.Size36"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="注册城市" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/merchant_province"
+            style="@style/TextStyle.Gray3.Size32.BoxBorder.DownPic"
+            android:layout_width="@dimen/vl_px_400"
+            android:layout_height="@dimen/vl_px_70"
+            android:hint="省份" />
+
+        <TextView
+            android:id="@+id/merchant_city"
+            style="@style/TextStyle.Gray3.Size32.BoxBorder.DownPic"
+            android:layout_width="@dimen/vl_px_400"
+            android:layout_height="@dimen/vl_px_70"
+            android:layout_marginLeft="@dimen/vl_px_20"
+            android:hint="城市" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="@dimen/vl_px_200"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/vl_px_26">
+
+            <TextView
+                style="@style/TextStyle.RedStar.Size36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bizType_star"
+                android:hint="0"
+                android:text="*" />
+
+            <TextView
+                style="@style/TextStyle.Black.Size36"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="证照类型" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/merchant_lic_type"
+            style="@style/TextStyle.Gray3.Size32.BoxBorder.DownPic"
+            android:layout_width="@dimen/vl_px_820"
+            android:layout_height="@dimen/vl_px_70"
+            android:hint="请选择证照类型" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vl_px_64"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout1">
+
+        <LinearLayout
+            android:layout_width="@dimen/vl_px_200"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/vl_px_26">
+
+            <TextView
+                style="@style/TextStyle.RedStar.Size36"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/register_star_id"
+                android:hint="0"
+                android:text="*" />
+
+            <TextView
+                style="@style/TextStyle.Black.Size36"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="注册证件号" />
+        </LinearLayout>
+
+        <com.example.cuishou.view.ListenEditText
+            android:inputType="text"
+            app:star_id="@+id/register_star_id"
+            app:tip_content_regx="[A-Z0-9-]{1,20}"
+            app:tip_content="注册证件号仅能输入1-20位大写英文字母、数字、英文符号“-”"
+            android:imeOptions="actionDone"
+            android:id="@+id/merchant_register_no"
+            style="@style/TextStyle.Gray3.Size32.BoxBorder"
+            android:maxLength="20"
+            android:imeActionLabel="完成"
+            android:layout_width="@dimen/vl_px_820"
+            android:layout_height="@dimen/vl_px_70" />
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
