@@ -1,12 +1,14 @@
 package com.bankcomm.framework.network;
 
 
-import com.bankcomm.framework.BuildConfig;
 import com.bankcomm.framework.network.listener.ConcurrentPrintingEventListener;
+import com.bankcomm.ui.base.BaseApplication;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
+import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -60,7 +62,7 @@ public final class RetrofitManager {
         public Builder() {
 
             // 指定缓存路径,缓存大小 50Mb
-//            Cache cache = new Cache(new File(BaseApplication.mGlobalApp.getCacheDir(), "HttpCache"), 1024 * 1024 * 50);
+            Cache cache = new Cache(new File(BaseApplication.mGlobalApp.getCacheDir(), "HttpCache"), 1024 * 1024 * 50);
 
             // Cookie 持久化
 //            ClearableCookieJar cookieJar =
@@ -78,9 +80,9 @@ public final class RetrofitManager {
                     .retryOnConnectionFailure(true)
                     .eventListenerFactory(ConcurrentPrintingEventListener.FACTORY);
             //LOG拦截器的配置
-            if (BuildConfig.DEBUG) {
+//            if (BuildConfig.DEBUG) {
                 okHttpBuilder = SDKManager.initInterceptor(okHttpBuilder);
-            }
+//            }
 
             retrofitBuilder = new Retrofit.Builder();
             retrofitBuilder.baseUrl(FrameworkConstant.BASE_URL)

@@ -18,5 +18,6 @@ public interface CommonApi {
     Call<String> login(@Field("username") String username, @Field("password") String password);
 
     @GET("testJson.json")
+
     Call<BaseEntity<User>> getUser();
 }

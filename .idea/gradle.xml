@@ -14,13 +14,13 @@
             <option value="$PROJECT_DIR$/app_develop_kit" />
             <option value="$PROJECT_DIR$/common_app" />
             <option value="$PROJECT_DIR$/common_app/codequality" />
-            <option value="$PROJECT_DIR$/common_app/cuishou" />
+            <option value="$PROJECT_DIR$/common_app/moment" />
             <option value="$PROJECT_DIR$/common_app/qrmodule" />
             <option value="$PROJECT_DIR$/lib-kotlin-learn" />
+            <option value="$PROJECT_DIR$/phttp" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
-        <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
     </option>
   </component>

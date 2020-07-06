@@ -8,6 +8,12 @@ import android.support.test.runner.AndroidJUnit4;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import okhttp3.Call;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+
 import static org.junit.Assert.*;
 
 
@@ -25,6 +31,11 @@ public class ExampleInstrumentedTest {
         Context appContext = InstrumentationRegistry.getTargetContext();
 
         assertEquals("cn.com.codequality", appContext.getPackageName());
+        OkHttpClient okHttpClient = new OkHttpClient();
+        Request request = new Request.Builder().addHeader("content","txt")
+                .put(RequestBody.create(MediaType.parse("txet"),"i am it boy ")).build();
+        Call call = okHttpClient.newCall(request);
+        call.
     }
 }
 

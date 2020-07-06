@@ -1,8 +1,7 @@
 package com.example.lib_kotlin_learn
 
-import org.junit.Test
-
 import org.junit.Before
+import org.junit.Test
 
 class ApplyAlsoLetRunWithTest {
 

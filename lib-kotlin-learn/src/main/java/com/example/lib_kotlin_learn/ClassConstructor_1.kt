@@ -13,7 +13,7 @@ open class AAA {
 
     init {
         println("222")
-    }
+        }
 }
 
 class BBB : AAA {
