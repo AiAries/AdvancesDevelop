@@ -1,4 +1,4 @@
-package com.example.jawabasic.yinyong;
+package com.example.jawabasic.reference;
 
 import java.lang.ref.SoftReference;
 import java.lang.ref.WeakReference;
@@ -11,5 +11,4 @@ class TestYY {
     private SoftReference<String> stringSoftReference =new SoftReference<String>("ddd");
     WeakReference<String> weakReference;//the garbage collector clear
     //unreachable reachable  finalize
-
 }

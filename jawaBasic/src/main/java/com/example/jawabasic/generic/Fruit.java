@@ -1,4 +1,4 @@
-package com.example.jawabasic.fanxing;
+package com.example.jawabasic.generic;
 
 import java.util.List;
 
