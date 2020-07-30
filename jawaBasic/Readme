@@ -1,2 +1,12 @@
-1.generic  泛型
-2. reference 引用
+1.generic 泛型  泛型 逆变与协变
+2.hashmap 原理，为什么线程不安全 ，  hashmap hashset
+3.retrofit 设计模式
+4.okhttp 原理
+5.glide 缓存机制 urlcache
+6.activity 启动模式
+7.内存优化 方式  ，解决方案
+
+8. reference 引用 软引用 soft，弱引用，虚引用 weak，强引用
+一个线程只有一个Looper  ，LocalThread《Looper》  hashmap  key  thread的名字
+9.gradle 打包的流程
+10.httpclient httpUrlConnection 区别

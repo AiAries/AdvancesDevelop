@@ -30,6 +30,8 @@ class Test2{
 
         fruits2.add(new Orange());//消费者
         fruits2.add(new Apple());
+        fruits2.add(new Fruit());
+//        fruits2.add(new Object());//编译不过
 //        fruits2.add(new ShengXian());//编译不过
 
 //        fruit3.add(new Object());//编译不过
