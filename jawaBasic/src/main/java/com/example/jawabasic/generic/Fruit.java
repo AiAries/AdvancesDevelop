@@ -17,24 +17,24 @@ class Apple extends Fruit {
 }
 
 /**
- * æ³•åˆ™ PECS  producer extends  consumer super
+ * ·¨Ôò PECS  producer extends  consumer super
  */
 class Test2{
-    private List<? extends Fruit> fruits;//åå˜
-    private List<? super Fruit> fruits2;//é€†å˜ å®šä¹‰äº†æ³›å‹çš„ä¸‹é™ å¿…é¡»æ˜¯Fruitçš„çˆ¶ç±»
+    private List<? extends Fruit> fruits;//Ğ­±ä
+    private List<? super Fruit> fruits2;//Äæ±ä ¶¨ÒåÁË·ºĞÍµÄÏÂÏŞ ±ØĞëÊÇFruitµÄ¸¸Àà
     private List<?> fruit3;
     public void addFruit(){
-        //ç¼–è¯‘ä¸è¿‡ï¼Œ<? extends Fruit> æ³›å‹å®šä¹‰äº†ä¸Šé™ï¼Œå¯ä»¥æ˜¯orange Apple ç­‰Fruitçš„å­ç±»
+        //±àÒë²»¹ı£¬<? extends Fruit> ·ºĞÍ¶¨ÒåÁËÉÏÏŞ£¬¿ÉÒÔÊÇorange Apple µÈFruitµÄ×ÓÀà
 //        fruits.add(new Orange());
-        Fruit fruit = fruits.get(0);//ç”Ÿäº§è€…
+        Fruit fruit = fruits.get(0);//Éú²úÕß
 
-        fruits2.add(new Orange());//æ¶ˆè´¹è€…
+        fruits2.add(new Orange());//Ïû·ÑÕß
         fruits2.add(new Apple());
         fruits2.add(new Fruit());
-//        fruits2.add(new Object());//ç¼–è¯‘ä¸è¿‡
-//        fruits2.add(new ShengXian());//ç¼–è¯‘ä¸è¿‡
+//        fruits2.add(new Object());//±àÒë²»¹ı
+//        fruits2.add(new ShengXian());//±àÒë²»¹ı
 
-//        fruit3.add(new Object());//ç¼–è¯‘ä¸è¿‡
-//        fruit3.add(new Orange());//ç¼–è¯‘ä¸è¿‡
+//        fruit3.add(new Object());//±àÒë²»¹ı
+//        fruit3.add(new Orange());//±àÒë²»¹ı
     }
 }
