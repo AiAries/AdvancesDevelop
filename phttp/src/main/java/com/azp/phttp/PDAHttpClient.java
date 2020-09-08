@@ -165,7 +165,7 @@ public class PDAHttpClient {
         }
     }
 
-    public class F200Exception extends Exception {
+    public static class F200Exception extends Exception {
         public F200Exception(String message) {
             super(message);
         }

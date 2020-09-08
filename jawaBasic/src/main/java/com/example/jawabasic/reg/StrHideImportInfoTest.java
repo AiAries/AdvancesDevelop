@@ -60,7 +60,7 @@ class StrHideImportInfoTest {
         int len = cardNum.length();
 
          if (len == 16||len == 19) {
-             int n = 8;//ä¿ç•™å‰4å4ï¼Œä¸­é—´æ¢æˆæ˜Ÿæ˜Ÿ
+             int n = 8;//±£ÁôÇ°4ºó4£¬ÖĞ¼ä»»³ÉĞÇĞÇ
             StringBuilder sb = new StringBuilder();
             for (int i = 0; i < len-n; i++) {
                 sb.append("*");

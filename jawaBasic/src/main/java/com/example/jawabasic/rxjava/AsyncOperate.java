@@ -2,6 +2,7 @@ package com.example.jawabasic.rxjava;
 
 class AsyncOperate {
     public static void main(String[] arg) {
+        System.out.println("start");
          Observable.create(
                 new Observable.OnSubscribe<Integer>(){
 
@@ -24,7 +25,7 @@ class AsyncOperate {
 
                     @Override
                     public void onNext(Integer integer) {
-
+                        System.out.println(integer);
                     }
                 }
         );
