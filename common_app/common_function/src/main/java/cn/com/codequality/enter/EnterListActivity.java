@@ -1,4 +1,4 @@
-package cn.com.codequality.business.enter;
+package cn.com.codequality.enter;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;

@@ -1,4 +1,4 @@
-package cn.com.codequality.business.enter;
+package cn.com.codequality.enter;
 
 import android.support.v7.widget.RecyclerView;
 

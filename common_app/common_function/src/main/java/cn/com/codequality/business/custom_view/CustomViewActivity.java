@@ -1,11 +1,8 @@
 package cn.com.codequality.business.custom_view;
 
-import android.graphics.Canvas;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 
 import com.bankcomm.ui.adapter.BGARecyclerViewDefaultAdapter;
 import com.bankcomm.ui.adapter.BGAViewHolderHelper;
@@ -15,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import cn.com.codequality.R;
-import cn.com.codequality.business.databinding.BindDemoActivity;
+import cn.com.codequality.business.chat.ChatActivity;
 
 public class CustomViewActivity extends BaseActivity {
     @Override
@@ -43,7 +40,7 @@ public class CustomViewActivity extends BaseActivity {
         List<CustomViewBean> data = new ArrayList<>();
         CustomViewBean e = new CustomViewBean();
         e.setCustomViewName("圆形背景，打标文字");
-        e.setCustomView2ActivityClazz(BindDemoActivity.class);
+        e.setCustomView2ActivityClazz(ChatActivity.class);
         data.add(e);
         return data;
     }

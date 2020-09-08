@@ -11,10 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".memory_leak.handlerloop.HandlerLoopActivity"></activity>
-        <activity android:name=".business.main_page.MainActivity" />
-        <activity android:name=".business.games.GameActivity" />
         <activity android:name=".business.chat.ChatActivity" />
-        <activity android:name=".business.enter.EnterListActivity">
+        <activity android:name=".enter.EnterListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,7 +20,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".business.infinite_viewpage.InfiniteViewPageActivity" />
-        <activity android:name=".business.databinding.BindDemoActivity" />
         <activity android:name=".business.webview.WebViewActivity" />
         <activity android:name=".business.custom_view.CustomViewActivity" />
     </application>
