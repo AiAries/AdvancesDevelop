@@ -1,7 +1,9 @@
+include ':common_app:rxjava_demo'
+include ':common_app:dagger_demo'
 include ':jawaBasic'
 rootProject.name='feiqiu'
 include ':app_develop_kit',
-        'common_app:codequality',
+        'common_app:common_function',
         'common_app:qrmodule'
 include ':lib-kotlin-learn'
 include ':common_app:cuishou'

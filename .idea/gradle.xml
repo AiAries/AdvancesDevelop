@@ -13,9 +13,11 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app_develop_kit" />
             <option value="$PROJECT_DIR$/common_app" />
-            <option value="$PROJECT_DIR$/common_app/codequality" />
+            <option value="$PROJECT_DIR$/common_app/common_function" />
             <option value="$PROJECT_DIR$/common_app/cuishou" />
+            <option value="$PROJECT_DIR$/common_app/dagger_demo" />
             <option value="$PROJECT_DIR$/common_app/qrmodule" />
+            <option value="$PROJECT_DIR$/common_app/rxjava_demo" />
             <option value="$PROJECT_DIR$/jawaBasic" />
             <option value="$PROJECT_DIR$/lib-kotlin-learn" />
             <option value="$PROJECT_DIR$/phttp" />
