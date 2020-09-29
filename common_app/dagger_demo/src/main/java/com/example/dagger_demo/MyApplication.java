@@ -15,8 +15,8 @@ public class MyApplication extends Application implements HasAndroidInjector {
     @Override
     public void onCreate() {
         super.onCreate();
-        DaggerAppComponent.create()
-                .inject(this);
+        DaggerAppComponent.builder().appModule(new AppModule(this))
+                .build().inject(this);
     }
 
     @Override

@@ -2,7 +2,6 @@ package cn.com.codequality.base;
 
 
 import com.bankcomm.framework.BuildConfig;
-import com.bankcomm.framework.config.ConfigConstant;
 import com.bankcomm.framework.network.FrameworkConstant;
 import com.bankcomm.ui.base.BaseApplication;
 
@@ -19,7 +18,7 @@ public class MyApplication extends BaseApplication {
     }
 
     private void initConfig() {
-        FrameworkConstant.BASE_URL = ConfigConstant.BASE_URL;
+//        FrameworkConstant.BASE_URL = ConfigConstant.BASE_URL;
         FrameworkConstant.ENABLE_LOG = BuildConfig.DEBUG;
     }
 }

@@ -1,11 +1,12 @@
-package com.example.dagger_demo;
+package com.example.dagger_demo.main;
 
 import dagger.Subcomponent;
 import dagger.android.AndroidInjector;
 
-@Subcomponent(modules = {LocalTasksModule.class})
+@Subcomponent(modules = {})
 public interface MainActivitySubComponent extends AndroidInjector<MainActivity> {
     @Subcomponent.Factory
-    public interface Factory extends AndroidInjector.Factory<MainActivity> {}
+    interface Factory extends AndroidInjector.Factory<MainActivity> {
 
+    }
 }
