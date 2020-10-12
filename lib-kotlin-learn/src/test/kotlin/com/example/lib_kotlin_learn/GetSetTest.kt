@@ -1,8 +1,6 @@
 package com.example.lib_kotlin_learn
 
 import org.junit.Before
-
-import org.junit.Assert.*
 import org.junit.Test
 
 class GetSetTest {

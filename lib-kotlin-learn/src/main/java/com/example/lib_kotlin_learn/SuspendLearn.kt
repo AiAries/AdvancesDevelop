@@ -1,7 +1,9 @@
 package com.example.lib_kotlin_learn
 
+import kotlin.coroutines.coroutineContext
+
 @Suppress("ImplicitThis")
-class SuspendLearn {
+object SuspendLearn {
     private suspend fun test1() {
         Thread.sleep(1000)
         println("test1")
@@ -12,18 +14,15 @@ class SuspendLearn {
         println("test2")
     }
 
-    private fun test() {
-        Thread {
-            kotlin.run {
-//                test1()
-//                test2()
-            }
-        }.start()
-
+    private suspend fun test() {
+        coroutineContext.also {
+            test1()
+            test2()
+        }
         println("done")
     }
-//    fun main(strs:Array){
-//
-//    }
+    @JvmStatic
+     fun main(strs:Array<String>){
+    }
 
 }
