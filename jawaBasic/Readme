@@ -1,12 +1,25 @@
 1.generic 泛型  泛型 逆变与协变
-2.hashmap 原理，为什么线程不安全 ，  hashmap hashset
-3.retrofit 设计模式
+2.hashmap 原理，为什么线程不安全 ，
+    hashmap,底层是个Entity数组，当发生hash冲突时，hashmap是采用链表的方式来解决的，
+    hashtable类是线程安全的，它使用synchronize来做线程安全，全局只有一把锁，在线程竞争比较激烈的情况下
+    hashtable的效率较低。
+    所以在需要线程安全的情况下，推荐使用ConcurrentHashMap，否则使用HashMap即可。
+
+3.retrofit 设计模式  --动态代理模式
 4.okhttp 原理
 5.glide 缓存机制 urlcache
 6.activity 启动模式
+    standard  标准　　默认模式，每次start,都是新的一个页面。
+    singleTask 主界面应用 ，未创建-则创建，已创建--重用-onNewIntent--处理数据刷新，清除堆栈里上面的activity
+    singleTop  聊天界面应用,不在堆栈顶-则创建，在堆栈顶--则重用-onNewIntent--处理数据刷新。
+    singleInstance 如浏览器主界面，整个系统只保留一份实例，所有其它应用共享它。
 7.内存优化 方式  ，解决方案
 
-8. reference 引用 软引用 soft，弱引用，虚引用 weak，强引用
+8. reference 引用 软引用 soft，弱引用 weak，强引用
+    软引用：在内存发生溢出前，内存不够分配新的对象时，系统将这些软引用对象进行二次回收，如果内存还是不够就会抛出OOM
+        内存够用够分配，软引用的对象不会被系统GC回收，内存不足，就会被系统回收。
+    弱引用：在系统发生GC的时候，如果没有强引用指向它，它会被系统回收，如果有强引用指向它，则不会被回收。
+
 一个线程只有一个Looper  ，LocalThread《Looper》  hashmap  key  thread的名字
 9.gradle 打包的流程
 10.httpclient httpUrlConnection 区别

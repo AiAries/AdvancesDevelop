@@ -28,7 +28,7 @@ public class HandlerLoopActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Log.v("handler", "::: start" );
-                Looper.prepare();
+                Looper.prepare();//在当前线程创建了一个Looper关联当前线程
                 handler = new Handler(){
                     @Override
                     public void handleMessage(@NonNull Message msg) {

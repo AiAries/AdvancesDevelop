@@ -1,6 +1,7 @@
 package com.example.jawabasic.hash;
 
 import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 
@@ -8,7 +9,7 @@ class HashMapTest {
     private static ScheduledExecutorService executor = Executors.newScheduledThreadPool(3);
     public static void main(String[] arg){
         HashMap<String,String> hashMap = new HashMap<>();
-
+        ConcurrentHashMap<String,String> hmap = new ConcurrentHashMap<>();
         long start = System.currentTimeMillis();
         for (int i = 0; i < 15; i++) {
             System.out.println("=============="+i);

@@ -45,3 +45,6 @@
 5.OkHttp --cookieJar 和 authenticator 机制
     Dispatcher 机制  retryOnConnectionFailure 重连接机制  ConnectionPool连接池机制  DEFAULT_PROTOCOLS
     DEFAULT_CONNECTION_SPECS
+
+    handler  looper.prepared()   messageQueen(时序队列)  message
+    ActivityThread   启动时候 就创建了 一个 looper

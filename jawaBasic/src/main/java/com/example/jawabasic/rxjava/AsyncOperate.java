@@ -4,8 +4,7 @@ class AsyncOperate {
     public static void main(String[] arg) {
         System.out.println("start");
          Observable.create(
-                new Observable.OnSubscribe<Integer>(){
-
+                new Observable.ObservableOnSubscribe<Integer>(){
                     @Override
                     public void call(Subscriber<Integer> subscriber) {
                         subscriber.onNext(66);
@@ -15,7 +14,7 @@ class AsyncOperate {
                 new Subscriber<Integer>(){
                     @Override
                     public void onCompleted() {
-
+                        System.out.println("onCompleted");
                     }
 
                     @Override
