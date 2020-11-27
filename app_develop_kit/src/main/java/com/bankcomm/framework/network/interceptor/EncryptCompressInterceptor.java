@@ -24,7 +24,8 @@ import okio.Okio;
 import okio.Source;
 
 /**
- * 请求和响应都配置压缩和加解密
+ * <h1>请求发回特殊处理</h1>
+ * <p>根据请求头字段标识是否需要对请求和响应都配置压缩和加解密</p>
  */
 public class EncryptCompressInterceptor implements Interceptor {
     private String identity;

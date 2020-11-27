@@ -1,6 +1,6 @@
 package com.bankcomm.ui.base;
 
-import android.databinding.BaseObservable;
+import androidx.databinding.BaseObservable;
 
 import com.bankcomm.framework.log.AriesLog;
 import com.bankcomm.framework.utils.ActivityUtils;
