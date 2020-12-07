@@ -12,7 +12,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".memory_leak.handlerloop.HandlerLoopActivity"></activity>
         <activity android:name=".business.chat.ChatActivity" />
-        <activity android:name=".enter.EnterListActivity">
+        <activity android:name=".enter.EnterListActivity"
+            android:launchMode="singleInstance"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -1,4 +1,4 @@
-1.generic 泛型  泛型 逆变与协变
+1.generic 泛型  泛型 逆变与协变 --rxjava框架用的多
 2.hashmap 原理，为什么线程不安全 ，
     hashmap,底层是个Entity数组，当发生hash冲突时，hashmap是采用链表的方式来解决的，
     hashtable类是线程安全的，它使用synchronize来做线程安全，全局只有一把锁，在线程竞争比较激烈的情况下
@@ -7,14 +7,18 @@
 
 3.retrofit 设计模式  --动态代理模式
 4.okhttp 原理
-5.glide 缓存机制 urlcache
+5.glide 缓存机制 urlcache　　二次优化，GIF加载的问题
+
 6.activity 启动模式
     standard  标准　　默认模式，每次start,都是新的一个页面。
     singleTask 主界面应用 ，未创建-则创建，已创建--重用-onNewIntent--处理数据刷新，清除堆栈里上面的activity
     singleTop  聊天界面应用,不在堆栈顶-则创建，在堆栈顶--则重用-onNewIntent--处理数据刷新。
     singleInstance 如浏览器主界面，整个系统只保留一份实例，所有其它应用共享它。
-7.内存优化 方式  ，解决方案
-
+7.内存优化 方式  ，解决方案 https://juejin.cn/post/6844903897958449166
+    1.流的操作，记得及时关闭资源
+    2.数据库的操作，用完，记得关闭数据库
+    3.缩小Apk大小。
+    4.避免内存泄漏--handler ，单列类不恰当使用上下文context，尽量使用Application
 8. reference 引用 软引用 soft，弱引用 weak，强引用
     软引用：在内存发生溢出前，内存不够分配新的对象时，系统将这些软引用对象进行二次回收，如果内存还是不够就会抛出OOM
         内存够用够分配，软引用的对象不会被系统GC回收，内存不足，就会被系统回收。
@@ -22,4 +26,52 @@
 
 一个线程只有一个Looper  ，LocalThread《Looper》  hashmap  key  thread的名字
 9.gradle 打包的流程
+    1）aapt   为res目录下的资源生成R.java文件， 同时为AndroidMainfest.xml 生成Mainfest.java文件
+
+    2）aidl  把项目中自定义的aidl文件生成相应的Java代码文件
+
+    3）javac  把项目中所有Java代码编译成class 文件。 包括三部分java代码，自己写的业务逻辑代码，aapt 生成的Java文件，aidl生成的Java文件。
+
+    4）proguard 混淆同时生成proguardMapping.txt , 这一步是可选的。
+
+    5）dex  将所有的class 文件(包括第三方库的class文件) 转换为dex文件
+
+    6）aapt  打包，将res目录下的资源，assets目录下文件，打包成一个.ap_文件
+
+    7）apkbuilder , 将所有dex文件，ap_文件，AndroidMainfest.xml打包为.apk文件, 这是一个未签名的apk包
+
+    8）jarsigner 对apk 进行签名
+
+    9） zipalign  对要发布的apk文件进行对齐操作，以便运行时节省内存
 10.httpclient httpUrlConnection 区别
+
+    在一般情况下，如果只是需要向Web站点的某个简单页面提交请求并获取服务器响应，HttpURLConnection完全可以胜任。
+    但在绝大部分情况下，Web站点的网页可能没这么简单，这些页面并不是通过一个简单的URL就可访问的，
+    可能需要用户登录而且具有相应的权限才可访问该页面。在这种情况下，就需要涉及Session、Cookie的处理了，
+    如果打算使用HttpURLConnection来处理这些细节，当然也是可能实现的，只是处理起来难度就大了。
+
+    为了更好地处理向Web站点请求，包括处理Session、Cookie等细节问题，Apache开源组织提供了一个HttpClient项目，
+    看它的名称就知道，它是一个简单的HTTP客户端（并不是浏览器）
+    Android 6.0 版本移除了对Apache HTTP客户端的支持。如果您的应用使用该客户端，并以 Android 2.3（API 级别为9）或更高版本为目标平台，
+    请改用 HttpURLConnection 类。此API效率更高，能够通过透明压缩和响应缓存减少网络使用，并可最大限度降低耗电量。
+    要继续使用 Apache HTTP API，须先在 build.gradle 文件中声明以下编译时依赖项：
+
+    android {
+
+        useLibrary  'org.apache.http.legacy'
+
+    }
+
+11.耗电量优化
+12.网络优化
+13.RSA DES　加密过程，配合OK HTTP二次封装使用
+１４.分类加载的处理逻辑，以及整个app的分页加载抽象封装逻辑
+
+
+＃＃　样式的封装
+＃＃　ui框架的封装
+＃＃　网络请求通用错误的处理封装
+
+
+
+
