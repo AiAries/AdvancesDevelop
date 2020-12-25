@@ -49,6 +49,7 @@ public class HandlerLoopActivity extends AppCompatActivity {
     }
     private int count;
     public void sendMessage(View view) {
+        //message 有一个消息池，可以复用。
         Message message = handler.obtainMessage();
         message.what = count++;
         handler.sendMessage(message);

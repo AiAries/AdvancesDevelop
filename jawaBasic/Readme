@@ -1,4 +1,4 @@
-1.generic 泛型  泛型 逆变与协变
+1.generic 泛型  泛型 逆变与协变 --rxjava框架用的多
 2.hashmap 原理，为什么线程不安全 ，
     hashmap,底层是个Entity数组，当发生hash冲突时，hashmap是采用链表的方式来解决的，
     hashtable类是线程安全的，它使用synchronize来做线程安全，全局只有一把锁，在线程竞争比较激烈的情况下
@@ -7,14 +7,18 @@
 
 3.retrofit 设计模式  --动态代理模式
 4.okhttp 原理
-5.glide 缓存机制 urlcache
+5.glide 缓存机制 urlcache　　二次优化，GIF加载的问题
+
 6.activity 启动模式
     standard  标准　　默认模式，每次start,都是新的一个页面。
     singleTask 主界面应用 ，未创建-则创建，已创建--重用-onNewIntent--处理数据刷新，清除堆栈里上面的activity
     singleTop  聊天界面应用,不在堆栈顶-则创建，在堆栈顶--则重用-onNewIntent--处理数据刷新。
     singleInstance 如浏览器主界面，整个系统只保留一份实例，所有其它应用共享它。
-7.内存优化 方式  ，解决方案
-
+7.内存优化 方式  ，解决方案 https://juejin.cn/post/6844903897958449166
+    1.流的操作，记得及时关闭资源
+    2.数据库的操作，用完，记得关闭数据库
+    3.缩小Apk大小。
+    4.避免内存泄漏--handler ，单列类不恰当使用上下文context，尽量使用Application
 8. reference 引用 软引用 soft，弱引用 weak，强引用
     软引用：在内存发生溢出前，内存不够分配新的对象时，系统将这些软引用对象进行二次回收，如果内存还是不够就会抛出OOM
         内存够用够分配，软引用的对象不会被系统GC回收，内存不足，就会被系统回收。
@@ -22,4 +26,75 @@
 
 一个线程只有一个Looper  ，LocalThread《Looper》  hashmap  key  thread的名字
 9.gradle 打包的流程
+    1）aapt   为res目录下的资源生成R.java文件， 同时为AndroidMainfest.xml 生成Mainfest.java文件
+
+    2）aidl  把项目中自定义的aidl文件生成相应的Java代码文件
+
+    3）javac  把项目中所有Java代码编译成class 文件。 包括三部分java代码，自己写的业务逻辑代码，aapt 生成的Java文件，aidl生成的Java文件。
+
+    4）proguard 混淆同时生成proguardMapping.txt , 这一步是可选的。
+
+    5）dex  将所有的class 文件(包括第三方库的class文件) 转换为dex文件
+
+    6）aapt  打包，将res目录下的资源，assets目录下文件，打包成一个.ap_文件
+
+    7）apkbuilder , 将所有dex文件，ap_文件，AndroidMainfest.xml打包为.apk文件, 这是一个未签名的apk包
+
+    8）jarsigner 对apk 进行签名
+
+    9） zipalign  对要发布的apk文件进行对齐操作，以便运行时节省内存
 10.httpclient httpUrlConnection 区别
+
+    在一般情况下，如果只是需要向Web站点的某个简单页面提交请求并获取服务器响应，HttpURLConnection完全可以胜任。
+    但在绝大部分情况下，Web站点的网页可能没这么简单，这些页面并不是通过一个简单的URL就可访问的，
+    可能需要用户登录而且具有相应的权限才可访问该页面。在这种情况下，就需要涉及Session、Cookie的处理了，
+    如果打算使用HttpURLConnection来处理这些细节，当然也是可能实现的，只是处理起来难度就大了。
+
+    为了更好地处理向Web站点请求，包括处理Session、Cookie等细节问题，Apache开源组织提供了一个HttpClient项目，
+    看它的名称就知道，它是一个简单的HTTP客户端（并不是浏览器）
+    Android 6.0 版本移除了对Apache HTTP客户端的支持。如果您的应用使用该客户端，并以 Android 2.3（API 级别为9）或更高版本为目标平台，
+    请改用 HttpURLConnection 类。此API效率更高，能够通过透明压缩和响应缓存减少网络使用，并可最大限度降低耗电量。
+    要继续使用 Apache HTTP API，须先在 build.gradle 文件中声明以下编译时依赖项：
+
+    android {
+
+        useLibrary  'org.apache.http.legacy'
+
+    }
+
+11.耗电量优化
+    https://developer.android.google.cn/topic/performance/power/battery-historian?hl=zh_cn
+12.移动端网络优化
+    1. 连接复用
+    节省连接建立时间，如开启 keep-alive。
+    2. 请求合并
+     如果某个页面内请求过多，也可以考虑做一定的请求合并。
+    3. 减小请求数据大小
+    (1) 对于 POST 请求，Body 可以做 Gzip 压缩，如日志。
+    4. 缓存静态资源
+    5. 减小返回数据大小
+    (1) 压缩一般 API 数据使用 Gzip 压缩，下图是之前测试的 Gzip 压缩前后对比图。
+    (2) 精简数据格式如 JSON 代替 XML，WebP 代替其他图片格式。关注公众号 codekk，回复 20 查看关于 WebP 的介绍。
+    (3) 对于不同的设备不同网络返回不同的内容 如不同分辨率图片大小。
+    (4) 增量更新需要数据更新时，可考虑增量更新。如常见的服务端进行 bsdiff，客户端进行 bspatch。
+    (5) 大文件下载支持断点续传，并缓存 Http Resonse 的 ETag 标识，下次请求时带上，从而确定是否数据改变过，
+    未改变则直接返回 304。
+    6. 数据缓存缓存获取到的数据，在一定的有效时间内再次请求可以直接从缓存读取数据。
+    三、其他优化手段这类优化方式在性能优化系列总篇中已经有过完整介绍
+    1. 预取包括预连接、预取数据。
+    2. 分优先级、延迟部分请求将不重要的请求延迟，这样既可以削峰减少并发、又可以和后面类似的请求做合并。
+    3. 多连接对于较大文件，如大图片、文件下载可考虑多连接。 需要控制请求的最大并发量，毕竟移动端网络受限。
+    四、监控优化需要通过数据对比才能看出效果，所以监控系统必不可少，通过前后端的数据监控确定调优效果。
+13.RSA DES　加密过程，配合OK HTTP二次封装使用
+    服务器用RSA私钥给DES密钥加密，DES密钥给正文加密，一同传输给客户端，然后客户端用RSA公钥 解密服务器传递过来的DES密钥，用于
+    解密传输的密文，每一次DES密钥都不同，达到动态加密。
+１４.分类加载的处理逻辑，以及整个app的分页加载抽象封装逻辑
+
+
+＃＃　样式的封装
+＃＃　ui框架的封装
+＃＃　网络请求通用错误的处理封装
+
+
+
+
