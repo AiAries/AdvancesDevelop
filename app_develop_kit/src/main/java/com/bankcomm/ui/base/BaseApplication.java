@@ -1,7 +1,8 @@
 package com.bankcomm.ui.base;
 
 import android.app.Application;
-import android.support.multidex.MultiDex;
+
+import androidx.multidex.MultiDex;
 
 /**
  * Created by  on 2018/6/21.
