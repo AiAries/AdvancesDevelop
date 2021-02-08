@@ -1,0 +1,7 @@
+通过方法来指定泛型
+<T> T httpRequest(Class<T> z,String name);
+
+通过类来指定泛型
+class  Response<T> {
+    T onSuccess();
+}
